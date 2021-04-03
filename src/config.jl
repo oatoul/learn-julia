@@ -1,5 +1,6 @@
 export get_config
 import Cambrian.get_config
+import Dates
 
 "overrides Cambrian.get_config(::Dict), converts function names to functions and tracks arity"
 function get_config(config::Dict)
@@ -15,5 +16,6 @@ function get_config(config::Dict)
     end
     config["two_arity"] = two_arity
     config["functions"] = functions
+    config["id"] = replace(string(Dates.now()),":" => "_")
     (; (Symbol(k)=>v for (k, v) in config)...)
 end

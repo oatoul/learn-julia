@@ -3,9 +3,9 @@ seed: 0
 d_fitness: 1
 n_population: 5
 n_elite: 1
-n_gen: 100000
-log_gen: 100
-save_gen: 0
+n_gen: 100
+log_gen: 10
+save_gen: 10
 m_rate: 0.1
 # CartesianGeneticProgramming.jl settings
 rows: 3

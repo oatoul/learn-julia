@@ -1,4 +1,4 @@
-export CGPEvolution
+export CGPEvolution, save_gen
 
 import Cambrian.populate, Cambrian.evaluate
 
@@ -14,7 +14,7 @@ populate(e::CGPEvolution) = Cambrian.oneplus_populate(e)
 evaluate(e::CGPEvolution) = Cambrian.fitness_evaluate(e, e.fitness)
 
 function CGPEvolution(cfg::NamedTuple, fitness::Function;
-                      logfile=string("logs/", cfg.id, ".csv"))
+                      logfile=string("logs/", replace(cfg.id,":" => "_"), ".csv"))
     logger = CambrianLogger(logfile)
     population = Cambrian.initialize(CGPInd, cfg)
     CGPEvolution(cfg, logger, population, fitness, 0)
