@@ -29,3 +29,24 @@ function process(ind::CGPInd, inputs::Array{Float64})::Array{Float64}
     set_inputs(ind, inputs)
     process(ind)
 end
+
+function process(ind::CGPInd)::Array{Bool}
+    for i in eachindex(ind.nodes)
+        n = ind.nodes[i]
+        if n.active
+            ind.buffer[i] = n.f(ind.buffer[n.x], ind.buffer[n.y])
+        end
+    end
+    get_outputs(ind)
+end
+
+function set_inputs(ind::CGPInd, inputs::Array{Bool})::Nothing
+    for i in eachindex(inputs)
+        ind.buffer[i] = inputs[i]
+    end
+end
+
+function process(ind::CGPInd, inputs::Array{Bool})::Array{Bool}
+    set_inputs(ind, inputs)
+    process(ind)
+end

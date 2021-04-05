@@ -21,8 +21,8 @@ X, Y = data_setup()
 function evaluate(ind::CGPInd, X::AbstractArray, Y::AbstractArray)
     accuracy = 0.0
     for i in 1:size(X, 1)
-        out = process(ind, convert(Array{Float64}, collect(X[i])))
-        if out == Y[i]
+        out = process(ind, collect(X[i]))
+        if out[1] == Y[i]
             accuracy += 1
         end
     end
