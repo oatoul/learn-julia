@@ -11,5 +11,6 @@ include("process.jl")
 include("mutation.jl")
 include("crossover.jl")
 include("evolution.jl")
+include("step.jl")
 
 end
