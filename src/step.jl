@@ -41,7 +41,7 @@ function step!(e::AbstractEvolution)
     evaluate(e)
     generation(e)
 
-    if (e.population[end].fitness[1] > 0.3)
+    if (e.population[end].fitness[1] > 0.9)
         println(summary(e.population[end]))
     end
 
@@ -50,6 +50,13 @@ function step!(e::AbstractEvolution)
     end
     if ((e.config.save_gen > 0) && mod(e.gen, e.config.save_gen) == 0)
         save_gen(e)
+    end
+end
+
+function runBN!(e::AbstractEvolution)
+    step!(e)
+    while(e.population[end].fitness[1] < 0.9 && e.gen < e.config.n_gen)
+        step!(e)
     end
 end
 
