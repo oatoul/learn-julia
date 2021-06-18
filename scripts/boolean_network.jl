@@ -1,4 +1,3 @@
-using DataFrames: insert_single_column!
 using CartesianGeneticProgramming
 using Cambrian
 using CSV
@@ -17,32 +16,81 @@ function evaluate(ind::CGPInd, X::AbstractArray, Y::AbstractArray)
     [accuracy / size(X, 1)]
 end
 
+function get_active_connections(ind::CGPInd, low::Int64, high::Int64)
+    nodes = ind.nodes[[n.active for n in ind.nodes]]
+    res = Set()
+    for node in nodes
+        x = node.x
+        y = node.y
+            
+        if(x >= low && x <= high)
+            push!(res, x)
+        end
+        if(y >= low && y <= high)
+            push!(res, y)
+        end
+    end
+    res
+end
+
 df = DataFrame(CSV.File("data/CDC15_bool.tsv",drop=["Time"],type=Bool))
 insertcols!(df, 1, :T0 => false, :T1 => true)
 
-for col in names(df)
+ndf = names(df)
+l_idx = 3
+h_idx = size(ndf)[1]
+
+for col in ndf
     println("$(col)")
 end
 
-function runBN!(e::AbstractEvolution)
+function runBN!(e::AbstractEvolution, low::Int64, high::Int64, fitness::Int64)
     step!(e)
-    while(e.population[end].fitness[1] < 0.9 && e.gen < e.config.n_gen)
+    while(e.population[end].fitness[1] < fitness && e.gen < e.config.n_gen)
         step!(e)
     end
-    println(summary(e.population[end]))
     log_gen(e)
     save_gen(e)
+    set = get_active_connections(e.population[end], low, high)
+    println(set)
 end
 
-target = "ACE2"
+function getBN!(df::DataFrame, fitness::Float64)
+    ndf = names(df)
+    l_idx = 3
+    h_idx = size(ndf)[1]
+    
+    X = copy(Tuple.(eachrow(df)))
+    pop!(X)
 
-X = copy(Tuple.(eachrow(df)))
-Y = copy(df[!,target])
-pop!(X)
-popfirst!(Y)
+    for i = l_idx:h_idx
+        target = ndf[i]
+        println("Calculate $(i): $(target)")
 
-cfg = get_config("cfg/CDC15.yaml")
-fit(i::CGPInd) = evaluate(i, X, Y)
-mutate(i::CGPInd) = goldman_mutate(cfg, i)
-e = CGPEvolution(cfg, fit)
-runBN!(e)
+        "data setup for target gene"
+        Y = copy(df[!,target])
+        popfirst!(Y)
+
+        cfg = get_config("cfg/CDC15.yaml")
+        fit(ind::CGPInd) = evaluate(ind, X, Y)
+        mutate(ind::CGPInd) = goldman_mutate(cfg, ind)
+        e = CGPEvolution(cfg, fit)
+
+        step!(e)
+        while(e.population[end].fitness[1] < fitness && e.gen < e.config.n_gen)
+            step!(e)
+        end
+
+        set = get_active_connections(e.population[end], l_idx, h_idx)
+        res = []
+        for j in set
+            push!(res, ndf[j])
+        end
+
+        println("$(target) is connected with:")
+        println(set)
+
+    end    
+end
+
+getBN!(df, 0.9)

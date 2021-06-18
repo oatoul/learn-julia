@@ -53,13 +53,6 @@ function step!(e::AbstractEvolution)
     end
 end
 
-function runBN!(e::AbstractEvolution)
-    step!(e)
-    while(e.population[end].fitness[1] < 0.9 && e.gen < e.config.n_gen)
-        step!(e)
-    end
-end
-
 "Call step!(e) e.config.n_gen times consecutively"
 function run!(e::AbstractEvolution)
     for i in (e.gen+1):e.config.n_gen
