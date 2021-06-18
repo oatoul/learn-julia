@@ -41,10 +41,6 @@ function step!(e::AbstractEvolution)
     evaluate(e)
     generation(e)
 
-    if (e.population[end].fitness[1] > 0.9)
-        println(summary(e.population[end]))
-    end
-
     if ((e.config.log_gen > 0) && mod(e.gen, e.config.log_gen) == 0)
         log_gen(e)
     end

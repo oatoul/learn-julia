@@ -71,15 +71,17 @@ function getBN!(df::DataFrame, fitness::Float64)
         Y = copy(df[!,target])
         popfirst!(Y)
 
-        cfg = get_config("cfg/CDC15.yaml")
+        
         fit(ind::CGPInd) = evaluate(ind, X, Y)
-        mutate(ind::CGPInd) = goldman_mutate(cfg, ind)
         e = CGPEvolution(cfg, fit)
 
         step!(e)
         while(e.population[end].fitness[1] < fitness && e.gen < e.config.n_gen)
             step!(e)
         end
+
+        println("Fitness: $(e.population[end].fitness[1])")
+        # println(summary(e.population[end]))
 
         set = get_active_connections(e.population[end], l_idx, h_idx)
         res = []
@@ -88,9 +90,11 @@ function getBN!(df::DataFrame, fitness::Float64)
         end
 
         println("$(target) is connected with:")
-        println(set)
+        println(res)
 
     end    
 end
 
+cfg = get_config("cfg/CDC15.yaml")
+mutate(ind::CGPInd) = goldman_mutate(cfg, ind)
 getBN!(df, 0.9)
