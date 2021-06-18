@@ -9,8 +9,10 @@ include("config.jl")
 include("individual.jl")
 include("process.jl")
 include("mutation.jl")
+include("oneplus.jl")
 include("crossover.jl")
 include("evolution.jl")
+include("selection.jl")
 include("step.jl")
 
 end

@@ -1,6 +1,6 @@
 export CGPEvolution, save_gen
 
-import Cambrian.populate, Cambrian.evaluate
+import Cambrian.evaluate
 
 mutable struct CGPEvolution{T} <: Cambrian.AbstractEvolution
     config::NamedTuple
@@ -10,7 +10,7 @@ mutable struct CGPEvolution{T} <: Cambrian.AbstractEvolution
     gen::Int
 end
 
-populate(e::CGPEvolution) = Cambrian.oneplus_populate(e)
+populate(e::CGPEvolution) = oneplus_populate_v2(e)
 evaluate(e::CGPEvolution) = Cambrian.fitness_evaluate(e, e.fitness)
 
 function CGPEvolution(cfg::NamedTuple, fitness::Function;

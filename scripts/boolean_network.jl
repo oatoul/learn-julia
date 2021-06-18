@@ -184,6 +184,6 @@ universe = get_universe_set(names(df_origin))
 
 expect = get_expect_CDC15()
 
-actual = getBN!(df, 0.9)
+actual = getBN!(df, 0.95)
 
 stru_acc = get_structural_accuracy(expect, actual, universe)
