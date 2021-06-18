@@ -1,5 +1,5 @@
 export Node, CGPInd, get_genes, set_genes!, reset!, forward_connections, get_output_trace
-import Base.copy, Base.String, Base.show, Base.summary
+import Base.copy, Base.String, Base.show, Base.summary, Base.isless
 import Cambrian.print
 
 "default function for nodes, will cause error if used as a function node"
@@ -23,6 +23,17 @@ struct CGPInd <: Cambrian.Individual
     nodes::Array{Node}
     buffer::Array{Float64}
     fitness::Array{Float64}
+end
+
+function isless(i1::CGPInd, i2::CGPInd)
+    res = all(i1.fitness .< i2.fitness)
+    if(all(i1.fitness .== i2.fitness))
+        i1n = get_active_number(i1)
+        i2n = get_active_number(i2)
+        res = i1n > i2n
+    end
+
+    res
 end
 
 function recur_active(active::BitArray, n_in::Integer, ind::Int16, xs::Array{Int16},
@@ -139,6 +150,10 @@ end
 
 function get_active_nodes(ind::CGPInd)
     ind.nodes[[n.active for n in ind.nodes]]
+end
+
+function get_active_number(ind::CGPInd)
+    size(get_active_nodes(ind))
 end
 
 function summary(io::IO, ind::CGPInd)
