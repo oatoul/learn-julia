@@ -16,22 +16,6 @@ function evaluate!(ind::CGPInd, X::AbstractArray, Y::AbstractArray)
     [accuracy / size(X, 1)]
 end
 
-function get_active_connections!(ind::CGPInd, low::Int64, high::Int64)
-    nodes = ind.nodes[[n.active for n in ind.nodes]]
-    res = Set()
-    for node in nodes
-        x = node.x
-        y = node.y
-            
-        if(x >= low && x <= high)
-            push!(res, x)
-        end
-        if(y >= low && y <= high)
-            push!(res, y)
-        end
-    end
-    res
-end
 
 # function runBN!(e::AbstractEvolution, low::Int64, high::Int64, fitness::Int64)
 #     step!(e)

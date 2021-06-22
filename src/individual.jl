@@ -1,4 +1,4 @@
-export Node, CGPInd, get_genes, set_genes!, reset!, forward_connections, get_output_trace
+export Node, CGPInd, get_genes, set_genes!, reset!, forward_connections, get_output_trace, get_active_connections!
 import Base.copy, Base.String, Base.show, Base.summary, Base.isless
 import Cambrian.print
 
@@ -23,16 +23,54 @@ struct CGPInd <: Cambrian.Individual
     nodes::Array{Node}
     buffer::Array{Float64}
     fitness::Array{Float64}
+    sparsity::Float64
+    n_active::Int64
 end
 
+"compare graph sparsity when fitness equals"
 function isless(i1::CGPInd, i2::CGPInd)
-    res = all(i1.fitness .< i2.fitness)
-    if(all(i1.fitness .== i2.fitness))
-        i1n = get_active_number(i1)
-        i2n = get_active_number(i2)
-        res = i1n > i2n
-    end
+    fitness_tolerance = 0.05
+    all(i1.fitness .< (i2.fitness .+ fitness_tolerance)) || i1.sparsity > i2.sparsity || i1.n_active > i2.n_active
+end
 
+function get_sparsity!(ind::CGPInd)
+    "col 1 & 2 are dummy inputs"
+    low_idx = 3
+    high_idx = Int64(ind.n_in)
+    length(get_active_connections!(ind, low_idx, high_idx))
+end
+
+function get_active_connections!(nodes_in::Array{Node}, low::Int64, high::Int64)
+    nodes = nodes_in[[n.active for n in nodes_in]]
+    res = Set()
+    for node in nodes
+        x = node.x
+        y = node.y
+            
+        if(x >= low && x <= high)
+            push!(res, x)
+        end
+        if(y >= low && y <= high)
+            push!(res, y)
+        end
+    end
+    res
+end
+
+function get_active_connections!(ind::CGPInd, low::Int64, high::Int64)
+    nodes = ind.nodes[[n.active for n in ind.nodes]]
+    res = Set()
+    for node in nodes
+        x = node.x
+        y = node.y
+            
+        if(x >= low && x <= high)
+            push!(res, x)
+        end
+        if(y >= low && y <= high)
+            push!(res, y)
+        end
+    end
     res
 end
 
@@ -85,7 +123,10 @@ function CGPInd(cfg::NamedTuple, chromosome::Array{Float64}, genes::Array{Int16}
     end
     buffer = zeros(R * C + cfg.n_in)
     fitness = -Inf .* ones(cfg.d_fitness)
-    CGPInd(cfg.n_in, cfg.n_out, chromosome, genes, outputs, nodes, buffer, fitness)
+
+    sparsity = length(get_active_connections!(nodes, cfg.in_idx, cfg.n_in))
+    n_active = size(nodes[[n.active for n in nodes]])[1]
+    CGPInd(cfg.n_in, cfg.n_out, chromosome, genes, outputs, nodes, buffer, fitness, sparsity, n_active)
 end
 
 function CGPInd(cfg::NamedTuple, chromosome::Array{Float64})::CGPInd

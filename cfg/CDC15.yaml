@@ -11,6 +11,7 @@ m_rate: 0.1
 rows: 1
 columns: 15
 recur: 0.2
+in_idx: 3
 n_in: 11
 n_out: 1
 out_m_rate: 0.3
