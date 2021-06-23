@@ -29,8 +29,8 @@ end
 
 "compare graph sparsity when fitness equals"
 function isless(i1::CGPInd, i2::CGPInd)
-    fitness_tolerance = 0.05
-    all(i1.fitness .< (i2.fitness .+ fitness_tolerance)) || i1.sparsity > i2.sparsity || i1.n_active > i2.n_active
+    fitness_tolerance = 0
+    all(i1.fitness .< (i2.fitness .- fitness_tolerance)) || (i2.sparsity > 0 && (i1.sparsity > i2.sparsity)) || (i2.n_active > 0 && (i1.n_active > i2.n_active))
 end
 
 function get_sparsity!(ind::CGPInd)

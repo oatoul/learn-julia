@@ -24,6 +24,7 @@ function OnePlusEvo{T}(cfg::NamedTuple, fitness::Function;
                       logfile=string("logs/", cfg.id, ".csv")) where T
     logger = CambrianLogger(logfile)
     population = initialize(T, cfg)
+    println("Initialize OnePlusEvo")
     OnePlusEvo(cfg, logger, population, fitness, 0)
 end
 

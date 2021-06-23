@@ -54,10 +54,10 @@ function getBN!(df::DataFrame, fitness::Float64)
             step!(e)
         end
 
-        println("Fitness: $(e.population[end].fitness[1])")
+        println("Fitness: $(e.elites[end].fitness[1])")
         # println(summary(e.population[end]))
 
-        set = get_active_connections!(e.population[end], l_idx, h_idx)
+        set = get_active_connections!(e.elites[end], l_idx, h_idx)
 
         "output result for target gene"
         # res = []
@@ -168,6 +168,6 @@ universe = get_universe_set(names(df_origin))
 
 expect = get_expect_CDC15()
 
-actual = getBN!(df, 0.95)
+actual = getBN!(df, 0.99)
 
 stru_acc = get_structural_accuracy(expect, actual, universe)
