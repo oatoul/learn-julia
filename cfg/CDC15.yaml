@@ -1,7 +1,7 @@
 # settings
 seed: 0
 d_fitness: 1
-n_population: 10
+n_population: 20
 n_elite: 50
 n_gen: 1000
 log_gen: 10
@@ -9,7 +9,7 @@ save_gen: 10
 m_rate: 0.1
 # CartesianGeneticProgramming.jl settings
 rows: 1
-columns: 33
+columns: 100
 recur: 0.2
 in_idx: 3
 n_in: 11

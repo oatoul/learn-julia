@@ -19,13 +19,13 @@ function CGPEvolution(cfg::NamedTuple, fitness::Function;
     logger = CambrianLogger(logfile)
     population = Cambrian.initialize(CGPInd, cfg)
     elites = initialize_elites(CGPInd, cfg)
-    println("Initialize CGPEvolution")
+    # println("Initialize CGPEvolution")
     CGPEvolution(cfg, logger, population, fitness, 0, elites)
 end
 
 "create all members of the first elites"
 function initialize_elites(itype::Type, cfg::NamedTuple)
-    println("Initialize n_elite = $(cfg.n_elite)")
+    # println("Initialize n_elite = $(cfg.n_elite)")
     population = Array{itype}(undef, cfg.n_elite)
     for i in 1:cfg.n_elite
         population[i] = itype(cfg)
