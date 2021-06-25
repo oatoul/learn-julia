@@ -8,11 +8,13 @@ update e.elites with the best individuals from the current population or
 existing elites, based on fitness
 """
 function elites_generation(e::AbstractEvolution)
-    pop = sort([e.population; e.elites])
+    pop = sort(unique([e.population; e.elites]), by=i ->(i.fitness, -i.sparsity, -i.n_active))
+    # for el in pop
+    #     println("Fitness $(el.fitness) sparsity $(el.sparsity) active $(el.n_active)")
+    # end
+    # println("...................................................")
     n_elites = length(e.elites)
-    for i in 1:n_elites
-        e.elites[i] = deepcopy(pop[length(e.population)+i])
-    end
+    e.elites = deepcopy(pop[end-n_elites+1:end])
 end
 
 """

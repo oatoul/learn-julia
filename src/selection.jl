@@ -6,7 +6,7 @@ end
 
 "return the best individual from a population"
 function max_selection(pop::Array{<:Individual})
-    sort(pop)[end]
+    sort(unique(pop), by=i ->(i.fitness, -i.sparsity, -i.n_active))[end]
 end
 
 "return the best individuals from a population"

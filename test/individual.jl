@@ -2,6 +2,11 @@ using Test
 using CartesianGeneticProgramming
 import YAML
 
+
+@testset "CGPInd isequal" begin
+
+end
+
 @testset "CGPInd construction" begin
     cfg = get_config("test.yaml")
     ind = CGPInd(cfg)

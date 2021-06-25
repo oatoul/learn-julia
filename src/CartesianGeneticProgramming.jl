@@ -1,5 +1,7 @@
 module CartesianGeneticProgramming
 
+using Cambrian: isless
+using Base: Int16
 import YAML
 using Cambrian
 import JSON

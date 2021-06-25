@@ -57,6 +57,11 @@ function getBN!(df::DataFrame, fitness::Float64)
         println("Fitness: $(e.elites[end].fitness[1])")
         # println(summary(e.population[end]))
 
+        # eee = sort(e.elites)
+        for el in e.elites
+            println("Fitness $(el.fitness) sparsity $(el.sparsity) active $(el.n_active)")
+        end
+
         set = get_active_connections!(e.elites[end], l_idx, h_idx)
 
         "output result for target gene"

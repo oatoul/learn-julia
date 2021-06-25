@@ -1,5 +1,5 @@
 export Node, CGPInd, get_genes, set_genes!, reset!, forward_connections, get_output_trace, get_active_connections!
-import Base.copy, Base.String, Base.show, Base.summary, Base.isless
+import Base: copy, String, show, summary, isless, isequal, hash
 import Cambrian.print
 
 "default function for nodes, will cause error if used as a function node"
@@ -23,14 +23,41 @@ struct CGPInd <: Cambrian.Individual
     nodes::Array{Node}
     buffer::Array{Float64}
     fitness::Array{Float64}
-    sparsity::Float64
-    n_active::Int64
+    sparsity::Int16
+    n_active::Int16
 end
 
-"compare graph sparsity when fitness equals"
-function isless(i1::CGPInd, i2::CGPInd)
-    fitness_tolerance = 1/24
-    all(i1.fitness .< (i2.fitness .- fitness_tolerance)) || (i2.sparsity > 0 && (i1.sparsity > i2.sparsity)) || (i2.n_active > 0 && (i1.n_active > i2.n_active))
+# "compare graph sparsity when fitness equals"
+# function isless(i1::CGPInd, i2::CGPInd)
+#     isless(((i1.fitness[1],i2.fitness[1]),(i2.sparsity,i1.sparsity)),(i2.n_active,i1.n_active))
+#     # (i1.fitness[1] < i2.fitness[1]) || (i1.sparsity > i2.sparsity) || (i1.n_active > i2.n_active)
+#     # (i1.fitness[1] < i2.fitness[1]) || (i1.sparsity > i2.sparsity) || (i1.n_active > i2.n_active)
+#     # res = false
+#     # if i1.fitness[1] < i2.fitness[1]
+#     #     res = true
+#     # elseif i2.sparsity > 0 && i1.sparsity > i2.sparsity
+#     #     res = true
+#     # elseif i2.sparsity == 0 && i1.sparsity > 0
+#     #     res =  false
+#     # elseif i2.n_active > 0 && i1.n_active > i2.n_active
+#     #     res = true
+#     # elseif i2.n_active == 0 && i1.n_active > 0
+#     #     res = false
+#     # end
+#     # res
+# end
+
+# isless(i1::CGPInd, i2::CGPInd) = isless((i1.fitness[1],i2.fitness[1]),(i2.sparsity,i1.sparsity),(i2.n_active,i1.n_active))
+
+function isequal(i1::CGPInd, i2::CGPInd)
+    abs(i1.fitness[1] - i2.fitness[1]) < 0.001 && i1.sparsity == i2.sparsity && i1.n_active == i2.n_active
+end
+
+function hash(x::CGPInd, h::UInt)
+    # key = "$(round(x.fitness[1], digits=3))_$(x.sparsity)_$(x.n_active)"
+    # key = round(x.fitness[1], digits=3) + x.sparsity + x.n_active*100
+    key = (round(x.fitness[1], digits=3), x.sparsity, x.n_active)
+    hash(key, h)
 end
 
 function get_sparsity!(ind::CGPInd)
