@@ -9,10 +9,10 @@ function max_selection(pop::Array{<:Individual})
     sort(unique(pop), by=i ->(i.fitness, -i.sparsity, -i.n_active))[end]
 end
 
-"return the best individuals from a population"
-function max_selection_v2(pop::Array{<:Individual}, n_archive::Int16)
-    sort(pop)[end+1-n_archive:end]
-end
+# "return the best individuals from a population"
+# function max_selection_v2(pop::Array{<:Individual}, n_archive::Int16)
+#     sort(pop)[end+1-n_archive:end]
+# end
 
 "return a random individual from a population"
 function random_selection(pop::Array{<:Individual})

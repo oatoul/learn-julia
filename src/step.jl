@@ -36,12 +36,33 @@ of AbstractEvolution should override the populate, evaluate, or generation
 functions rather than overriding this function.
 """
 function step!(e::AbstractEvolution)
+    # println("Default step with no elites generation")
     e.gen += 1
     if e.gen > 1
         populate(e)
     end
     evaluate(e)
-    generation(e)
+    # generation(e)
+
+    if ((e.config.log_gen > 0) && mod(e.gen, e.config.log_gen) == 0)
+        log_gen(e)
+    end
+    if ((e.config.save_gen > 0) && mod(e.gen, e.config.save_gen) == 0)
+        save_gen(e)
+    end
+end
+
+function step!(e::AbstractEvolution, elites_generation::Bool)
+    e.gen += 1
+    if e.gen > 1
+        populate(e)
+    end
+    evaluate(e)
+    if(elites_generation)
+        println("Elites generation enabled")
+        generation(e)
+    end
+    
 
     if ((e.config.log_gen > 0) && mod(e.gen, e.config.log_gen) == 0)
         log_gen(e)

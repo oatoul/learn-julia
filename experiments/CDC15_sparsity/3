@@ -1,0 +1,47 @@
+Calculate 3: FKH2
+Fitness: 1.0
+MCM1_FKH2
+CLN3_FKH2
+SWI6_FKH2
+MBP1_FKH2
+Calculate 4: MCM1
+Fitness: 0.8695652173913043
+MCM1_MCM1
+SWI5_MCM1
+Calculate 5: ACE2
+Fitness: 0.8260869565217391
+CLN3_ACE2
+SWI5_ACE2
+MBP1_ACE2
+Calculate 6: CLN3
+Fitness: 0.9130434782608695
+CLN3_CLN3
+SWI6_CLN3
+Calculate 7: SWI6
+Fitness: 1.0
+ACE2_SWI6
+Calculate 8: MBP1
+Fitness: 0.9130434782608695
+MCM1_MBP1
+SWI5_MBP1
+Calculate 9: SWI4
+Fitness: 0.9130434782608695
+ACE2_SWI4
+Calculate 10: NDD1
+Fitness: 0.9565217391304348
+SWI6_NDD1
+SWI4_NDD1
+MBP1_NDD1
+FKH2_NDD1
+Calculate 11: SWI5
+Fitness: 0.8260869565217391
+TP : 3
+FP : 16
+FN : 14
+TN : 48
+Structural accuracy : 0.6296296296296297
+
+Julia debuggee finished. Press ENTER to close this terminal.
+
+
+
