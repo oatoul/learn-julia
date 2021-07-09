@@ -1,0 +1,604 @@
+(two_arity = Bool[1, 1, 0], n_in = 12, m_rate = 0.1, functions = Function[CartesianGeneticProgramming.CGPFunctions.f_and, CartesianGeneticProgramming.CGPFunctions.f_or, CartesianGeneticProgramming.CGPFunctions.f_not], recur = 0.2, d_fitness = 1, save_gen = 1000, n_out = 1, in_idx = 3, out_m_rate = 0.3, id = "2021-07-09T18_43_27.690", n_elite = 50, n_population = 100, rows = 1, n_gen = 1000, seed = 0, columns = 20, log_gen = 1000)
+21×12 DataFrame
+ Row │ T0     T1    G1     G2     G3     G4     G5     G6     G7     G8     G9     G10   
+     │ Bool   Bool  Bool   Bool   Bool   Bool   Bool   Bool   Bool   Bool   Bool   Bool  
+─────┼───────────────────────────────────────────────────────────────────────────────────
+   1 │ false  true   true   true   true   true  false  false   true  false  false  false
+   2 │ false  true  false  false   true   true   true   true  false  false  false  false
+   3 │ false  true  false  false   true   true   true   true  false   true  false  false
+   4 │ false  true  false  false  false   true  false   true  false   true   true   true
+   5 │ false  true  false   true  false  false  false   true  false   true   true  false
+   6 │ false  true  false  false  false  false  false   true  false   true   true   true
+   7 │ false  true  false   true   true  false   true   true  false  false  false   true
+   8 │ false  true  false  false   true  false   true   true  false  false  false   true
+   9 │ false  true  false  false  false  false  false  false  false   true   true   true
+  10 │ false  true  false   true  false  false  false   true  false  false  false   true
+  11 │ false  true  false   true   true  false   true   true  false  false  false  false
+  12 │ false  true  false   true   true  false   true  false   true   true  false  false
+  13 │ false  true  false   true   true   true  false   true   true   true   true  false
+  14 │ false  true   true  false   true   true  false   true   true   true  false  false
+  15 │ false  true   true  false   true   true  false   true   true   true  false   true
+  16 │ false  true   true  false   true   true  false  false   true  false  false  false
+  17 │ false  true   true  false   true   true  false   true   true  false   true   true
+  18 │ false  true  false  false   true   true  false   true   true  false  false   true
+  19 │ false  true   true   true   true   true  false  false   true   true  false  false
+  20 │ false  true   true  false  false   true  false  false   true   true  false  false
+  21 │ false  true   true   true   true   true  false  false   true  false  false  false
+Calculate 3: G1
+Fitness: 1.0
+Fitness [0.85] sparsity 2 active 2
+Fitness [0.85] sparsity 2 active 1
+Fitness [0.85] sparsity 1 active 2
+Fitness [0.85] sparsity 1 active 1
+Fitness [0.85] sparsity 0 active 0
+Fitness [0.9] sparsity 6 active 8
+Fitness [0.9] sparsity 5 active 8
+Fitness [0.9] sparsity 5 active 6
+Fitness [0.9] sparsity 5 active 5
+Fitness [0.9] sparsity 4 active 7
+Fitness [0.9] sparsity 4 active 6
+Fitness [0.9] sparsity 4 active 5
+Fitness [0.9] sparsity 4 active 4
+Fitness [0.9] sparsity 4 active 3
+Fitness [0.9] sparsity 3 active 6
+Fitness [0.9] sparsity 3 active 5
+Fitness [0.9] sparsity 3 active 4
+Fitness [0.9] sparsity 3 active 3
+Fitness [0.9] sparsity 3 active 2
+Fitness [0.9] sparsity 2 active 6
+Fitness [0.9] sparsity 2 active 4
+Fitness [0.9] sparsity 2 active 3
+Fitness [0.9] sparsity 2 active 2
+Fitness [0.9] sparsity 2 active 1
+Fitness [0.95] sparsity 5 active 7
+Fitness [0.95] sparsity 5 active 6
+Fitness [0.95] sparsity 4 active 7
+Fitness [0.95] sparsity 4 active 6
+Fitness [0.95] sparsity 4 active 5
+Fitness [0.95] sparsity 4 active 4
+Fitness [0.95] sparsity 4 active 3
+Fitness [0.95] sparsity 3 active 9
+Fitness [0.95] sparsity 3 active 7
+Fitness [0.95] sparsity 3 active 6
+Fitness [0.95] sparsity 3 active 5
+Fitness [0.95] sparsity 3 active 4
+Fitness [0.95] sparsity 3 active 3
+Fitness [0.95] sparsity 3 active 2
+Fitness [0.95] sparsity 2 active 5
+Fitness [0.95] sparsity 2 active 4
+Fitness [0.95] sparsity 2 active 3
+Fitness [0.95] sparsity 2 active 2
+Fitness [0.95] sparsity 1 active 2
+Fitness [1.0] sparsity 6 active 8
+Fitness [1.0] sparsity 6 active 7
+Fitness [1.0] sparsity 5 active 6
+Fitness [1.0] sparsity 5 active 5
+Fitness [1.0] sparsity 4 active 4
+Fitness [1.0] sparsity 4 active 3
+Fitness [1.0] sparsity 3 active 3
+Calculate 4: G2
+Fitness: 0.8
+Fitness [0.7] sparsity 5 active 5
+Fitness [0.7] sparsity 4 active 7
+Fitness [0.7] sparsity 4 active 4
+Fitness [0.7] sparsity 4 active 3
+Fitness [0.7] sparsity 3 active 6
+Fitness [0.7] sparsity 3 active 4
+Fitness [0.7] sparsity 3 active 3
+Fitness [0.7] sparsity 3 active 2
+Fitness [0.7] sparsity 2 active 5
+Fitness [0.7] sparsity 2 active 4
+Fitness [0.7] sparsity 2 active 3
+Fitness [0.7] sparsity 2 active 2
+Fitness [0.7] sparsity 2 active 1
+Fitness [0.7] sparsity 1 active 4
+Fitness [0.7] sparsity 1 active 3
+Fitness [0.7] sparsity 1 active 2
+Fitness [0.7] sparsity 1 active 1
+Fitness [0.7] sparsity 0 active 2
+Fitness [0.75] sparsity 5 active 7
+Fitness [0.75] sparsity 5 active 5
+Fitness [0.75] sparsity 5 active 4
+Fitness [0.75] sparsity 4 active 7
+Fitness [0.75] sparsity 4 active 6
+Fitness [0.75] sparsity 4 active 5
+Fitness [0.75] sparsity 4 active 4
+Fitness [0.75] sparsity 4 active 3
+Fitness [0.75] sparsity 3 active 5
+Fitness [0.75] sparsity 3 active 4
+Fitness [0.75] sparsity 3 active 3
+Fitness [0.75] sparsity 3 active 2
+Fitness [0.75] sparsity 2 active 5
+Fitness [0.75] sparsity 2 active 3
+Fitness [0.75] sparsity 2 active 2
+Fitness [0.8] sparsity 6 active 8
+Fitness [0.8] sparsity 4 active 6
+Fitness [0.8] sparsity 4 active 5
+Fitness [0.8] sparsity 4 active 4
+Fitness [0.8] sparsity 3 active 6
+Fitness [0.8] sparsity 3 active 5
+Fitness [0.8] sparsity 3 active 4
+Fitness [0.8] sparsity 3 active 3
+Fitness [0.8] sparsity 3 active 2
+Fitness [0.8] sparsity 2 active 5
+Fitness [0.8] sparsity 2 active 4
+Fitness [0.8] sparsity 2 active 3
+Fitness [0.8] sparsity 2 active 2
+Fitness [0.8] sparsity 2 active 1
+Fitness [0.8] sparsity 1 active 3
+Fitness [0.8] sparsity 1 active 2
+Fitness [0.8] sparsity 1 active 1
+Calculate 5: G3
+Fitness: 0.95
+Fitness [0.85] sparsity 3 active 2
+Fitness [0.85] sparsity 2 active 8
+Fitness [0.85] sparsity 2 active 7
+Fitness [0.85] sparsity 2 active 6
+Fitness [0.85] sparsity 2 active 5
+Fitness [0.85] sparsity 2 active 4
+Fitness [0.85] sparsity 2 active 3
+Fitness [0.85] sparsity 2 active 2
+Fitness [0.85] sparsity 1 active 7
+Fitness [0.85] sparsity 1 active 6
+Fitness [0.9] sparsity 6 active 9
+Fitness [0.9] sparsity 5 active 9
+Fitness [0.9] sparsity 5 active 8
+Fitness [0.9] sparsity 5 active 7
+Fitness [0.9] sparsity 4 active 9
+Fitness [0.9] sparsity 4 active 8
+Fitness [0.9] sparsity 4 active 7
+Fitness [0.9] sparsity 4 active 6
+Fitness [0.9] sparsity 4 active 5
+Fitness [0.9] sparsity 4 active 3
+Fitness [0.9] sparsity 3 active 9
+Fitness [0.9] sparsity 3 active 8
+Fitness [0.9] sparsity 3 active 7
+Fitness [0.9] sparsity 3 active 6
+Fitness [0.9] sparsity 3 active 5
+Fitness [0.9] sparsity 3 active 4
+Fitness [0.9] sparsity 3 active 3
+Fitness [0.9] sparsity 2 active 9
+Fitness [0.9] sparsity 2 active 8
+Fitness [0.9] sparsity 2 active 7
+Fitness [0.9] sparsity 2 active 6
+Fitness [0.9] sparsity 2 active 5
+Fitness [0.9] sparsity 2 active 4
+Fitness [0.9] sparsity 2 active 3
+Fitness [0.9] sparsity 1 active 8
+Fitness [0.9] sparsity 1 active 7
+Fitness [0.9] sparsity 1 active 6
+Fitness [0.9] sparsity 1 active 5
+Fitness [0.9] sparsity 1 active 4
+Fitness [0.95] sparsity 5 active 7
+Fitness [0.95] sparsity 4 active 7
+Fitness [0.95] sparsity 4 active 6
+Fitness [0.95] sparsity 3 active 10
+Fitness [0.95] sparsity 3 active 9
+Fitness [0.95] sparsity 3 active 8
+Fitness [0.95] sparsity 3 active 7
+Fitness [0.95] sparsity 3 active 6
+Fitness [0.95] sparsity 3 active 5
+Fitness [0.95] sparsity 2 active 7
+Fitness [0.95] sparsity 2 active 6
+Calculate 6: G4
+Fitness: 1.0
+Fitness [0.8] sparsity 2 active 6
+Fitness [0.8] sparsity 2 active 3
+Fitness [0.8] sparsity 2 active 2
+Fitness [0.8] sparsity 2 active 1
+Fitness [0.8] sparsity 1 active 2
+Fitness [0.8] sparsity 0 active 0
+Fitness [0.85] sparsity 5 active 7
+Fitness [0.85] sparsity 5 active 6
+Fitness [0.85] sparsity 5 active 5
+Fitness [0.85] sparsity 4 active 6
+Fitness [0.85] sparsity 4 active 5
+Fitness [0.85] sparsity 4 active 4
+Fitness [0.85] sparsity 4 active 3
+Fitness [0.85] sparsity 3 active 5
+Fitness [0.85] sparsity 3 active 3
+Fitness [0.85] sparsity 3 active 2
+Fitness [0.85] sparsity 2 active 3
+Fitness [0.85] sparsity 2 active 2
+Fitness [0.85] sparsity 2 active 1
+Fitness [0.85] sparsity 1 active 3
+Fitness [0.9] sparsity 6 active 5
+Fitness [0.9] sparsity 5 active 7
+Fitness [0.9] sparsity 5 active 5
+Fitness [0.9] sparsity 5 active 4
+Fitness [0.9] sparsity 4 active 5
+Fitness [0.9] sparsity 4 active 4
+Fitness [0.9] sparsity 4 active 3
+Fitness [0.9] sparsity 3 active 4
+Fitness [0.9] sparsity 3 active 3
+Fitness [0.9] sparsity 3 active 2
+Fitness [0.9] sparsity 2 active 3
+Fitness [0.9] sparsity 2 active 2
+Fitness [0.9] sparsity 2 active 1
+Fitness [0.9] sparsity 1 active 3
+Fitness [0.9] sparsity 1 active 2
+Fitness [0.9] sparsity 1 active 1
+Fitness [0.9] sparsity 0 active 0
+Fitness [0.95] sparsity 5 active 5
+Fitness [0.95] sparsity 5 active 4
+Fitness [0.95] sparsity 4 active 5
+Fitness [0.95] sparsity 3 active 3
+Fitness [0.95] sparsity 3 active 2
+Fitness [0.95] sparsity 2 active 3
+Fitness [0.95] sparsity 2 active 2
+Fitness [0.95] sparsity 2 active 1
+Fitness [0.95] sparsity 1 active 4
+Fitness [0.95] sparsity 1 active 3
+Fitness [1.0] sparsity 3 active 4
+Fitness [1.0] sparsity 2 active 3
+Fitness [1.0] sparsity 1 active 3
+Calculate 7: G5
+Fitness: 1.0
+Fitness [0.9] sparsity 2 active 3
+Fitness [0.9] sparsity 2 active 2
+Fitness [0.9] sparsity 1 active 5
+Fitness [0.9] sparsity 1 active 4
+Fitness [0.9] sparsity 1 active 3
+Fitness [0.9] sparsity 1 active 2
+Fitness [0.95] sparsity 6 active 11
+Fitness [0.95] sparsity 6 active 7
+Fitness [0.95] sparsity 5 active 9
+Fitness [0.95] sparsity 5 active 8
+Fitness [0.95] sparsity 5 active 7
+Fitness [0.95] sparsity 5 active 6
+Fitness [0.95] sparsity 5 active 5
+Fitness [0.95] sparsity 5 active 4
+Fitness [0.95] sparsity 4 active 9
+Fitness [0.95] sparsity 4 active 8
+Fitness [0.95] sparsity 4 active 7
+Fitness [0.95] sparsity 4 active 6
+Fitness [0.95] sparsity 4 active 5
+Fitness [0.95] sparsity 4 active 4
+Fitness [0.95] sparsity 4 active 3
+Fitness [0.95] sparsity 3 active 9
+Fitness [0.95] sparsity 3 active 8
+Fitness [0.95] sparsity 3 active 7
+Fitness [0.95] sparsity 3 active 6
+Fitness [0.95] sparsity 3 active 5
+Fitness [0.95] sparsity 3 active 4
+Fitness [0.95] sparsity 3 active 3
+Fitness [0.95] sparsity 3 active 2
+Fitness [0.95] sparsity 2 active 6
+Fitness [0.95] sparsity 2 active 5
+Fitness [0.95] sparsity 2 active 4
+Fitness [0.95] sparsity 2 active 3
+Fitness [0.95] sparsity 2 active 2
+Fitness [0.95] sparsity 1 active 7
+Fitness [0.95] sparsity 1 active 6
+Fitness [0.95] sparsity 1 active 5
+Fitness [0.95] sparsity 1 active 4
+Fitness [0.95] sparsity 1 active 3
+Fitness [1.0] sparsity 4 active 8
+Fitness [1.0] sparsity 4 active 6
+Fitness [1.0] sparsity 3 active 9
+Fitness [1.0] sparsity 3 active 6
+Fitness [1.0] sparsity 3 active 5
+Fitness [1.0] sparsity 3 active 4
+Fitness [1.0] sparsity 2 active 6
+Fitness [1.0] sparsity 2 active 5
+Fitness [1.0] sparsity 2 active 4
+Fitness [1.0] sparsity 1 active 5
+Fitness [1.0] sparsity 1 active 4
+Calculate 8: G6
+Fitness: 0.85
+Fitness [0.75] sparsity 4 active 5
+Fitness [0.75] sparsity 4 active 4
+Fitness [0.75] sparsity 4 active 3
+Fitness [0.75] sparsity 3 active 8
+Fitness [0.75] sparsity 3 active 7
+Fitness [0.75] sparsity 3 active 6
+Fitness [0.75] sparsity 3 active 5
+Fitness [0.75] sparsity 3 active 4
+Fitness [0.75] sparsity 3 active 3
+Fitness [0.75] sparsity 3 active 2
+Fitness [0.75] sparsity 2 active 6
+Fitness [0.75] sparsity 2 active 5
+Fitness [0.75] sparsity 2 active 4
+Fitness [0.75] sparsity 2 active 3
+Fitness [0.75] sparsity 2 active 2
+Fitness [0.75] sparsity 1 active 6
+Fitness [0.75] sparsity 1 active 5
+Fitness [0.8] sparsity 5 active 7
+Fitness [0.8] sparsity 5 active 6
+Fitness [0.8] sparsity 5 active 5
+Fitness [0.8] sparsity 5 active 4
+Fitness [0.8] sparsity 4 active 8
+Fitness [0.8] sparsity 4 active 7
+Fitness [0.8] sparsity 4 active 6
+Fitness [0.8] sparsity 4 active 5
+Fitness [0.8] sparsity 4 active 4
+Fitness [0.8] sparsity 4 active 3
+Fitness [0.8] sparsity 3 active 8
+Fitness [0.8] sparsity 3 active 7
+Fitness [0.8] sparsity 3 active 6
+Fitness [0.8] sparsity 3 active 5
+Fitness [0.8] sparsity 3 active 4
+Fitness [0.8] sparsity 3 active 3
+Fitness [0.8] sparsity 3 active 2
+Fitness [0.8] sparsity 2 active 7
+Fitness [0.8] sparsity 2 active 6
+Fitness [0.8] sparsity 2 active 5
+Fitness [0.8] sparsity 2 active 4
+Fitness [0.8] sparsity 2 active 3
+Fitness [0.8] sparsity 2 active 2
+Fitness [0.85] sparsity 6 active 7
+Fitness [0.85] sparsity 5 active 6
+Fitness [0.85] sparsity 5 active 4
+Fitness [0.85] sparsity 4 active 7
+Fitness [0.85] sparsity 4 active 6
+Fitness [0.85] sparsity 4 active 5
+Fitness [0.85] sparsity 4 active 4
+Fitness [0.85] sparsity 3 active 6
+Fitness [0.85] sparsity 3 active 5
+Fitness [0.85] sparsity 3 active 4
+Calculate 9: G7
+Fitness: 0.95
+Fitness [0.9] sparsity 1 active 5
+Fitness [0.9] sparsity 1 active 4
+Fitness [0.9] sparsity 1 active 3
+Fitness [0.9] sparsity 1 active 2
+Fitness [0.9] sparsity 1 active 1
+Fitness [0.9] sparsity 0 active 0
+Fitness [0.95] sparsity 6 active 11
+Fitness [0.95] sparsity 6 active 10
+Fitness [0.95] sparsity 6 active 8
+Fitness [0.95] sparsity 6 active 7
+Fitness [0.95] sparsity 6 active 6
+Fitness [0.95] sparsity 6 active 5
+Fitness [0.95] sparsity 5 active 10
+Fitness [0.95] sparsity 5 active 9
+Fitness [0.95] sparsity 5 active 8
+Fitness [0.95] sparsity 5 active 7
+Fitness [0.95] sparsity 5 active 6
+Fitness [0.95] sparsity 5 active 5
+Fitness [0.95] sparsity 5 active 4
+Fitness [0.95] sparsity 4 active 11
+Fitness [0.95] sparsity 4 active 10
+Fitness [0.95] sparsity 4 active 9
+Fitness [0.95] sparsity 4 active 8
+Fitness [0.95] sparsity 4 active 7
+Fitness [0.95] sparsity 4 active 6
+Fitness [0.95] sparsity 4 active 5
+Fitness [0.95] sparsity 4 active 4
+Fitness [0.95] sparsity 4 active 3
+Fitness [0.95] sparsity 3 active 9
+Fitness [0.95] sparsity 3 active 8
+Fitness [0.95] sparsity 3 active 7
+Fitness [0.95] sparsity 3 active 6
+Fitness [0.95] sparsity 3 active 5
+Fitness [0.95] sparsity 3 active 4
+Fitness [0.95] sparsity 3 active 3
+Fitness [0.95] sparsity 3 active 2
+Fitness [0.95] sparsity 2 active 9
+Fitness [0.95] sparsity 2 active 8
+Fitness [0.95] sparsity 2 active 7
+Fitness [0.95] sparsity 2 active 6
+Fitness [0.95] sparsity 2 active 5
+Fitness [0.95] sparsity 2 active 4
+Fitness [0.95] sparsity 2 active 3
+Fitness [0.95] sparsity 2 active 2
+Fitness [0.95] sparsity 1 active 7
+Fitness [0.95] sparsity 1 active 6
+Fitness [0.95] sparsity 1 active 5
+Fitness [0.95] sparsity 1 active 4
+Fitness [0.95] sparsity 1 active 3
+Fitness [0.95] sparsity 1 active 2
+Calculate 10: G8
+Fitness: 0.95
+Fitness [0.8] sparsity 4 active 3
+Fitness [0.8] sparsity 3 active 8
+Fitness [0.8] sparsity 3 active 7
+Fitness [0.8] sparsity 3 active 6
+Fitness [0.8] sparsity 3 active 5
+Fitness [0.8] sparsity 3 active 4
+Fitness [0.8] sparsity 3 active 3
+Fitness [0.8] sparsity 3 active 2
+Fitness [0.8] sparsity 2 active 8
+Fitness [0.8] sparsity 2 active 7
+Fitness [0.8] sparsity 2 active 6
+Fitness [0.8] sparsity 2 active 5
+Fitness [0.8] sparsity 2 active 4
+Fitness [0.8] sparsity 2 active 3
+Fitness [0.8] sparsity 1 active 5
+Fitness [0.8] sparsity 1 active 3
+Fitness [0.85] sparsity 6 active 6
+Fitness [0.85] sparsity 6 active 5
+Fitness [0.85] sparsity 5 active 8
+Fitness [0.85] sparsity 5 active 7
+Fitness [0.85] sparsity 5 active 6
+Fitness [0.85] sparsity 5 active 5
+Fitness [0.85] sparsity 5 active 4
+Fitness [0.85] sparsity 4 active 8
+Fitness [0.85] sparsity 4 active 7
+Fitness [0.85] sparsity 4 active 6
+Fitness [0.85] sparsity 4 active 5
+Fitness [0.85] sparsity 4 active 4
+Fitness [0.85] sparsity 4 active 3
+Fitness [0.85] sparsity 3 active 7
+Fitness [0.85] sparsity 3 active 6
+Fitness [0.85] sparsity 3 active 5
+Fitness [0.85] sparsity 3 active 4
+Fitness [0.85] sparsity 3 active 3
+Fitness [0.9] sparsity 7 active 7
+Fitness [0.9] sparsity 6 active 7
+Fitness [0.9] sparsity 6 active 5
+Fitness [0.9] sparsity 5 active 8
+Fitness [0.9] sparsity 5 active 7
+Fitness [0.9] sparsity 5 active 6
+Fitness [0.9] sparsity 5 active 5
+Fitness [0.9] sparsity 5 active 4
+Fitness [0.9] sparsity 4 active 7
+Fitness [0.9] sparsity 4 active 6
+Fitness [0.9] sparsity 4 active 5
+Fitness [0.9] sparsity 4 active 4
+Fitness [0.9] sparsity 3 active 6
+Fitness [0.9] sparsity 3 active 5
+Fitness [0.95] sparsity 4 active 7
+Fitness [0.95] sparsity 4 active 5
+Calculate 11: G9
+Fitness: 0.9
+Fitness [0.8] sparsity 2 active 4
+Fitness [0.8] sparsity 2 active 3
+Fitness [0.8] sparsity 2 active 2
+Fitness [0.8] sparsity 2 active 1
+Fitness [0.8] sparsity 1 active 7
+Fitness [0.8] sparsity 1 active 6
+Fitness [0.8] sparsity 1 active 5
+Fitness [0.8] sparsity 1 active 4
+Fitness [0.8] sparsity 1 active 3
+Fitness [0.8] sparsity 1 active 2
+Fitness [0.85] sparsity 6 active 7
+Fitness [0.85] sparsity 5 active 6
+Fitness [0.85] sparsity 5 active 5
+Fitness [0.85] sparsity 4 active 8
+Fitness [0.85] sparsity 4 active 7
+Fitness [0.85] sparsity 4 active 6
+Fitness [0.85] sparsity 4 active 5
+Fitness [0.85] sparsity 4 active 4
+Fitness [0.85] sparsity 4 active 3
+Fitness [0.85] sparsity 3 active 9
+Fitness [0.85] sparsity 3 active 7
+Fitness [0.85] sparsity 3 active 6
+Fitness [0.85] sparsity 3 active 5
+Fitness [0.85] sparsity 3 active 4
+Fitness [0.85] sparsity 3 active 3
+Fitness [0.85] sparsity 3 active 2
+Fitness [0.85] sparsity 2 active 7
+Fitness [0.85] sparsity 2 active 6
+Fitness [0.85] sparsity 2 active 5
+Fitness [0.85] sparsity 2 active 4
+Fitness [0.85] sparsity 2 active 3
+Fitness [0.85] sparsity 2 active 2
+Fitness [0.85] sparsity 1 active 7
+Fitness [0.85] sparsity 1 active 6
+Fitness [0.85] sparsity 1 active 5
+Fitness [0.85] sparsity 1 active 4
+Fitness [0.85] sparsity 1 active 3
+Fitness [0.85] sparsity 1 active 2
+Fitness [0.9] sparsity 4 active 5
+Fitness [0.9] sparsity 3 active 7
+Fitness [0.9] sparsity 3 active 6
+Fitness [0.9] sparsity 3 active 5
+Fitness [0.9] sparsity 3 active 4
+Fitness [0.9] sparsity 2 active 7
+Fitness [0.9] sparsity 2 active 6
+Fitness [0.9] sparsity 2 active 5
+Fitness [0.9] sparsity 2 active 4
+Fitness [0.9] sparsity 1 active 7
+Fitness [0.9] sparsity 1 active 6
+Fitness [0.9] sparsity 1 active 5
+Calculate 12: G10
+Fitness: 0.95
+Fitness [0.85] sparsity 4 active 9
+Fitness [0.85] sparsity 4 active 8
+Fitness [0.85] sparsity 4 active 7
+Fitness [0.85] sparsity 4 active 6
+Fitness [0.85] sparsity 4 active 5
+Fitness [0.85] sparsity 4 active 4
+Fitness [0.85] sparsity 3 active 9
+Fitness [0.85] sparsity 3 active 8
+Fitness [0.85] sparsity 3 active 7
+Fitness [0.85] sparsity 3 active 6
+Fitness [0.85] sparsity 3 active 5
+Fitness [0.85] sparsity 3 active 4
+Fitness [0.85] sparsity 2 active 11
+Fitness [0.85] sparsity 2 active 9
+Fitness [0.85] sparsity 2 active 8
+Fitness [0.85] sparsity 2 active 7
+Fitness [0.85] sparsity 2 active 6
+Fitness [0.85] sparsity 2 active 5
+Fitness [0.85] sparsity 2 active 4
+Fitness [0.85] sparsity 1 active 9
+Fitness [0.85] sparsity 1 active 8
+Fitness [0.85] sparsity 1 active 7
+Fitness [0.85] sparsity 1 active 6
+Fitness [0.85] sparsity 1 active 5
+Fitness [0.85] sparsity 1 active 4
+Fitness [0.9] sparsity 6 active 10
+Fitness [0.9] sparsity 5 active 9
+Fitness [0.9] sparsity 5 active 7
+Fitness [0.9] sparsity 4 active 8
+Fitness [0.9] sparsity 4 active 7
+Fitness [0.9] sparsity 4 active 6
+Fitness [0.9] sparsity 4 active 4
+Fitness [0.9] sparsity 3 active 10
+Fitness [0.9] sparsity 3 active 9
+Fitness [0.9] sparsity 3 active 8
+Fitness [0.9] sparsity 3 active 7
+Fitness [0.9] sparsity 3 active 6
+Fitness [0.9] sparsity 3 active 5
+Fitness [0.9] sparsity 3 active 4
+Fitness [0.9] sparsity 2 active 10
+Fitness [0.9] sparsity 2 active 8
+Fitness [0.9] sparsity 2 active 7
+Fitness [0.9] sparsity 2 active 6
+Fitness [0.9] sparsity 2 active 5
+Fitness [0.9] sparsity 1 active 6
+Fitness [0.95] sparsity 4 active 6
+Fitness [0.95] sparsity 4 active 5
+Fitness [0.95] sparsity 3 active 6
+Fitness [0.95] sparsity 3 active 5
+Fitness [0.95] sparsity 3 active 4
+BN_9
+Set(Any["G4_G5", "G7_G7", "G7_G3", "G5_G9", "G8_G10", "G1_G6"])
+TP : 1
+FP : 5
+FN : 15
+TN : 79
+Structural accuracy : 0.8 Precision : 0.16666666666666666 Recall : 0.0625
+BN_8
+Set(Any["G5_G8", "G4_G5", "G7_G7", "G7_G3", "G5_G9", "G8_G10", "G1_G6"])
+TP : 1
+FP : 6
+FN : 15
+TN : 78
+Structural accuracy : 0.79 Precision : 0.14285714285714285 Recall : 0.0625
+BN_7
+Set(Any["G4_G5", "G5_G9", "G5_G8", "G3_G2", "G7_G7", "G7_G3", "G4_G8", "G1_G6", "G7_G4", "G2_G8", "G7_G1", "G8_G6", "G8_G10"])
+TP : 3
+FP : 10
+FN : 13
+TN : 74
+Structural accuracy : 0.77 Precision : 0.23076923076923078 Recall : 0.1875
+BN_6
+Set(Any["G4_G5", "G5_G9", "G5_G8", "G3_G2", "G2_G10", "G7_G7", "G7_G3", "G4_G8", "G1_G6", "G7_G4", "G2_G8", "G7_G1", "G8_G6", "G8_G10"])
+TP : 3
+FP : 11
+FN : 13
+TN : 73
+Structural accuracy : 0.76 Precision : 0.21428571428571427 Recall : 0.1875
+BN_5
+Set(Any["G4_G5", "G5_G9", "G5_G8", "G3_G2", "G8_G1", "G2_G10", "G7_G7", "G7_G3", "G10_G1", "G4_G8", "G1_G6", "G7_G4", "G2_G8", "G7_G1", "G4_G3", "G8_G6", "G8_G10"])
+TP : 4
+FP : 13
+FN : 12
+TN : 71
+Structural accuracy : 0.75 Precision : 0.23529411764705882 Recall : 0.25
+BN_4
+Set(Any["G4_G5", "G9_G6", "G5_G9", "G1_G8", "G8_G2", "G3_G2", "G6_G6", "G5_G8", "G8_G1", "G2_G10", "G7_G7", "G7_G2", "G7_G3", "G10_G1", "G1_G4", "G3_G4", "G4_G8", "G1_G6", "G7_G4", "G2_G8", "G7_G1", "G4_G3", "G8_G6", "G8_G10"])
+TP : 7
+FP : 17
+FN : 9
+TN : 67
+Structural accuracy : 0.74 Precision : 0.2916666666666667 Recall : 0.4375
+BN_3
+Set(Any["G5_G5", "G4_G5", "G2_G4", "G9_G6", "G10_G2", "G5_G9", "G2_G1", "G8_G7", "G1_G8", "G8_G2", "G3_G2", "G6_G6", "G5_G8", "G8_G1", "G2_G10", "G7_G7", "G7_G2", "G7_G3", "G10_G7", "G3_G5", "G9_G1", "G4_G1", "G10_G8", "G10_G1", "G1_G4", "G3_G4", "G4_G8", "G1_G6", "G7_G4", "G3_G7", "G5_G1", "G2_G8", "G4_G2", "G7_G1", "G5_G7", "G1_G5", "G4_G3", "G8_G6", "G8_G10", "G5_G4"])
+TP : 10
+FP : 30
+FN : 6
+TN : 54
+Structural accuracy : 0.64 Precision : 0.25 Recall : 0.625
+BN_2
+Set(Any["G5_G5", "G10_G10", "G10_G2", "G2_G1", "G8_G3", "G1_G8", "G5_G8", "G6_G6", "G10_G7", "G9_G8", "G4_G8", "G2_G9", "G5_G7", "G3_G9", "G9_G6", "G6_G5", "G8_G2", "G3_G8", "G3_G5", "G9_G1", "G10_G1", "G1_G4", "G1_G7", "G7_G1", "G8_G6", "G3_G2", "G4_G6", "G8_G1", "G2_G10", "G7_G2", "G4_G4", "G4_G1", "G7_G5", "G3_G4", "G7_G4", "G3_G7", "G5_G1", "G2_G8", "G4_G2", "G1_G5", "G9_G2", "G8_G10", "G4_G5", "G2_G4", "G5_G9", "G8_G7", "G1_G3", "G7_G7", "G7_G3", "G10_G8", "G5_G3", "G8_G9", "G6_G10", "G1_G6", "G4_G3", "G5_G4"])
+TP : 11
+FP : 45
+FN : 5
+TN : 39
+Structural accuracy : 0.5 Precision : 0.19642857142857142 Recall : 0.6875
+
+Julia debuggee finished. Press ENTER to close this terminal.

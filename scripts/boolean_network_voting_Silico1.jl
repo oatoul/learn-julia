@@ -31,7 +31,8 @@ end
 #     println(set)
 # end
 
-function getBN!(df::DataFrame, fitness::Float64)
+function getBN!(df::DataFrame)
+    BN = Set()
     BN_9 = Set()
     BN_8 = Set()
     BN_7 = Set()
@@ -61,7 +62,7 @@ function getBN!(df::DataFrame, fitness::Float64)
         e = CGPEvolution(cfg, fit)
 
         step!(e)
-        while(e.population[end].fitness[1] < fitness && e.gen < e.config.n_gen)
+        while(e.population[end].fitness[1] < e.config.d_fitness && e.gen < e.config.n_gen)
             step!(e)
         end
 
@@ -73,7 +74,7 @@ function getBN!(df::DataFrame, fitness::Float64)
             println("Fitness $(el.fitness) sparsity $(el.sparsity) active $(el.n_active)")
         end
 
-        # set = get_active_connections!(e.elites[end], l_idx, h_idx)
+        set = get_active_connections!(e.elites[end], l_idx, h_idx)
         set9 = get_connections_by_vote!(0.9, e.elites, l_idx, h_idx)
         set8 = get_connections_by_vote!(0.8, e.elites, l_idx, h_idx)
         set7 = get_connections_by_vote!(0.7, e.elites, l_idx, h_idx)
@@ -83,21 +84,7 @@ function getBN!(df::DataFrame, fitness::Float64)
         set3 = get_connections_by_vote!(0.3, e.elites, l_idx, h_idx)
         set2 = get_connections_by_vote!(0.2, e.elites, l_idx, h_idx)
 
-
-        "output result for target gene"
-        # res = []
-        # for j in set
-        #     push!(res, ndf[j])
-        # end
-        # println("$(target) is connected with:")
-        # println(res)
-
-        "store connections to BN"
-        # for k in set
-        #     conn = ndf[k] * "_" * target
-        #     push!(BN, conn)
-        #     println(conn)
-        # end
+        store_BN(set, BN, ndf, target)
         store_BN(set9, BN_9, ndf, target)
         store_BN(set8, BN_8, ndf, target)
         store_BN(set7, BN_7, ndf, target)
@@ -109,7 +96,7 @@ function getBN!(df::DataFrame, fitness::Float64)
 
     end
 
-    BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2
+    BN, BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2
 end
 
 
@@ -155,6 +142,7 @@ TN (true negative) correct negative predictions
 
 "
 function get_structural_accuracy(expect::Set, actual::Set, universe::Set)
+    println(actual)
     TP = length(intersect(actual, expect))
     FP = length(setdiff(actual, expect))
     FN = length(setdiff(expect, actual))
@@ -235,7 +223,7 @@ universe = get_universe_set(names(df_origin))
 
 expect = get_expect_Silico1()
 
-BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2 = getBN!(df, 0.99)
+BN, BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2 = getBN!(df)
 
 # actual = getBN!(df, 0.99)
 println("BN_9")
@@ -254,3 +242,5 @@ println("BN_3")
 stru_acc3 = get_structural_accuracy(expect, BN_3, universe)
 println("BN_2")
 stru_acc2 = get_structural_accuracy(expect, BN_2, universe)
+println("BN_Elite_Top")
+stru_acc = get_structural_accuracy(expect, BN, universe)
