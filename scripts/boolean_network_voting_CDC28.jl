@@ -163,11 +163,13 @@ function get_structural_accuracy(expect::Set, actual::Set, universe::Set)
     TN = length(intersect(actual_negative, expect_negative))
 
     acc = (TP + TN) / (TP + FP + FN + TN)
+    precision = TP / (TP + FP)
+    recall = TP / (TP + FN)
     println("TP : $(TP)")
     println("FP : $(FP)")
     println("FN : $(FN)")
     println("TN : $(TN)")
-    println("Structural accuracy : $(acc)")
+    println("Structural accuracy : $(acc) Precision : $(precision) Recall : $(recall)")
 
     acc
 end
