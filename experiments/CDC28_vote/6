@@ -1,196 +1,12 @@
 Calculate 3: FKH2
-Fitness: 1.0
-Fitness [0.875] sparsity 5 active 9
-Fitness [0.875] sparsity 5 active 7
-Fitness [0.875] sparsity 5 active 6
-Fitness [0.875] sparsity 5 active 5
-Fitness [0.875] sparsity 4 active 9
+Fitness: 0.9375
 Fitness [0.875] sparsity 4 active 8
 Fitness [0.875] sparsity 4 active 7
 Fitness [0.875] sparsity 4 active 6
 Fitness [0.875] sparsity 4 active 5
 Fitness [0.875] sparsity 4 active 4
 Fitness [0.875] sparsity 4 active 3
-Fitness [0.875] sparsity 3 active 8
-Fitness [0.875] sparsity 3 active 7
-Fitness [0.875] sparsity 3 active 6
-Fitness [0.875] sparsity 3 active 5
-Fitness [0.875] sparsity 3 active 4
-Fitness [0.875] sparsity 3 active 3
-Fitness [0.875] sparsity 3 active 2
-Fitness [0.875] sparsity 2 active 8
-Fitness [0.875] sparsity 2 active 7
-Fitness [0.875] sparsity 2 active 6
-Fitness [0.875] sparsity 2 active 5
-Fitness [0.875] sparsity 2 active 4
-Fitness [0.875] sparsity 2 active 3
-Fitness [0.875] sparsity 2 active 2
-Fitness [0.875] sparsity 1 active 6
-Fitness [0.875] sparsity 1 active 5
-Fitness [0.875] sparsity 1 active 4
-Fitness [0.9375] sparsity 5 active 5
-Fitness [0.9375] sparsity 4 active 7
-Fitness [0.9375] sparsity 4 active 5
-Fitness [0.9375] sparsity 4 active 4
-Fitness [0.9375] sparsity 4 active 3
-Fitness [0.9375] sparsity 3 active 8
-Fitness [0.9375] sparsity 3 active 7
-Fitness [0.9375] sparsity 3 active 6
-Fitness [0.9375] sparsity 3 active 5
-Fitness [0.9375] sparsity 3 active 3
-Fitness [0.9375] sparsity 3 active 2
-Fitness [0.9375] sparsity 2 active 8
-Fitness [0.9375] sparsity 2 active 7
-Fitness [0.9375] sparsity 2 active 6
-Fitness [0.9375] sparsity 2 active 5
-Fitness [0.9375] sparsity 1 active 7
-Fitness [0.9375] sparsity 1 active 6
-Fitness [0.9375] sparsity 1 active 5
-Fitness [1.0] sparsity 3 active 6
-Fitness [1.0] sparsity 3 active 5
-Fitness [1.0] sparsity 2 active 6
-Fitness [1.0] sparsity 2 active 5
-min vote is 45.0
-min vote is 40.0
-min vote is 35.0
-min vote is 30.0
-min vote is 25.0
-min vote is 20.0
-min vote is 15.0
-min vote is 10.0
-Calculate 4: MCM1
-Fitness: 1.0
-Fitness [0.8125] sparsity 1 active 4
-Fitness [0.8125] sparsity 1 active 3
-Fitness [0.875] sparsity 5 active 10
-Fitness [0.875] sparsity 5 active 9
-Fitness [0.875] sparsity 5 active 8
-Fitness [0.875] sparsity 5 active 6
-Fitness [0.875] sparsity 4 active 10
-Fitness [0.875] sparsity 4 active 9
-Fitness [0.875] sparsity 4 active 8
-Fitness [0.875] sparsity 4 active 7
-Fitness [0.875] sparsity 4 active 6
-Fitness [0.875] sparsity 4 active 5
-Fitness [0.875] sparsity 4 active 4
-Fitness [0.875] sparsity 3 active 10
-Fitness [0.875] sparsity 3 active 9
-Fitness [0.875] sparsity 3 active 8
-Fitness [0.875] sparsity 3 active 7
-Fitness [0.875] sparsity 3 active 6
-Fitness [0.875] sparsity 3 active 5
-Fitness [0.875] sparsity 3 active 4
-Fitness [0.875] sparsity 2 active 9
-Fitness [0.875] sparsity 2 active 8
-Fitness [0.875] sparsity 2 active 7
-Fitness [0.875] sparsity 2 active 6
-Fitness [0.875] sparsity 2 active 5
-Fitness [0.875] sparsity 2 active 4
-Fitness [0.875] sparsity 1 active 7
-Fitness [0.875] sparsity 1 active 6
-Fitness [0.875] sparsity 1 active 5
-Fitness [0.9375] sparsity 5 active 7
-Fitness [0.9375] sparsity 4 active 10
-Fitness [0.9375] sparsity 4 active 9
-Fitness [0.9375] sparsity 4 active 8
-Fitness [0.9375] sparsity 4 active 7
-Fitness [0.9375] sparsity 4 active 6
-Fitness [0.9375] sparsity 3 active 12
-Fitness [0.9375] sparsity 3 active 9
-Fitness [0.9375] sparsity 3 active 8
-Fitness [0.9375] sparsity 3 active 7
-Fitness [0.9375] sparsity 3 active 6
-Fitness [0.9375] sparsity 2 active 9
-Fitness [0.9375] sparsity 2 active 8
-Fitness [0.9375] sparsity 2 active 7
-Fitness [0.9375] sparsity 2 active 6
-Fitness [0.9375] sparsity 1 active 8
-Fitness [0.9375] sparsity 1 active 7
-Fitness [0.9375] sparsity 1 active 6
-Fitness [1.0] sparsity 4 active 6
-Fitness [1.0] sparsity 3 active 6
-Fitness [1.0] sparsity 2 active 6
-min vote is 45.0
-min vote is 40.0
-min vote is 35.0
-min vote is 30.0
-min vote is 25.0
-min vote is 20.0
-min vote is 15.0
-min vote is 10.0
-Calculate 5: ACE2
-Fitness: 1.0
-Fitness [0.875] sparsity 3 active 7
-Fitness [0.875] sparsity 3 active 6
-Fitness [0.875] sparsity 3 active 5
-Fitness [0.875] sparsity 3 active 4
-Fitness [0.875] sparsity 3 active 3
-Fitness [0.875] sparsity 3 active 2
-Fitness [0.875] sparsity 2 active 6
-Fitness [0.875] sparsity 2 active 5
-Fitness [0.875] sparsity 2 active 4
-Fitness [0.875] sparsity 2 active 3
-Fitness [0.875] sparsity 2 active 2
-Fitness [0.875] sparsity 2 active 1
-Fitness [0.875] sparsity 1 active 4
-Fitness [0.875] sparsity 1 active 1
-Fitness [0.9375] sparsity 6 active 10
-Fitness [0.9375] sparsity 6 active 9
-Fitness [0.9375] sparsity 6 active 8
-Fitness [0.9375] sparsity 6 active 7
-Fitness [0.9375] sparsity 5 active 10
-Fitness [0.9375] sparsity 5 active 7
-Fitness [0.9375] sparsity 5 active 6
-Fitness [0.9375] sparsity 5 active 5
-Fitness [0.9375] sparsity 4 active 9
-Fitness [0.9375] sparsity 4 active 8
-Fitness [0.9375] sparsity 4 active 6
-Fitness [0.9375] sparsity 4 active 5
-Fitness [0.9375] sparsity 4 active 4
-Fitness [0.9375] sparsity 3 active 7
-Fitness [0.9375] sparsity 3 active 6
-Fitness [0.9375] sparsity 3 active 5
-Fitness [0.9375] sparsity 3 active 4
-Fitness [0.9375] sparsity 3 active 3
-Fitness [0.9375] sparsity 2 active 6
-Fitness [0.9375] sparsity 2 active 5
-Fitness [0.9375] sparsity 2 active 4
-Fitness [0.9375] sparsity 2 active 3
-Fitness [0.9375] sparsity 1 active 5
-Fitness [0.9375] sparsity 1 active 4
-Fitness [0.9375] sparsity 1 active 3
-Fitness [1.0] sparsity 5 active 5
-Fitness [1.0] sparsity 4 active 7
-Fitness [1.0] sparsity 4 active 6
-Fitness [1.0] sparsity 4 active 5
-Fitness [1.0] sparsity 3 active 7
-Fitness [1.0] sparsity 3 active 6
-Fitness [1.0] sparsity 3 active 5
-Fitness [1.0] sparsity 3 active 4
-Fitness [1.0] sparsity 2 active 6
-Fitness [1.0] sparsity 2 active 5
-Fitness [1.0] sparsity 2 active 4
-min vote is 45.0
-min vote is 40.0
-min vote is 35.0
-min vote is 30.0
-min vote is 25.0
-min vote is 20.0
-min vote is 15.0
-min vote is 10.0
-Calculate 6: CLN3
-Fitness: 0.9375
-Fitness [0.875] sparsity 5 active 7
-Fitness [0.875] sparsity 5 active 6
-Fitness [0.875] sparsity 5 active 4
-Fitness [0.875] sparsity 4 active 11
-Fitness [0.875] sparsity 4 active 10
-Fitness [0.875] sparsity 4 active 9
-Fitness [0.875] sparsity 4 active 8
-Fitness [0.875] sparsity 4 active 7
-Fitness [0.875] sparsity 4 active 6
-Fitness [0.875] sparsity 4 active 5
-Fitness [0.875] sparsity 4 active 4
+Fitness [0.875] sparsity 3 active 12
 Fitness [0.875] sparsity 3 active 11
 Fitness [0.875] sparsity 3 active 10
 Fitness [0.875] sparsity 3 active 9
@@ -199,17 +15,19 @@ Fitness [0.875] sparsity 3 active 7
 Fitness [0.875] sparsity 3 active 6
 Fitness [0.875] sparsity 3 active 5
 Fitness [0.875] sparsity 3 active 4
+Fitness [0.875] sparsity 3 active 3
+Fitness [0.875] sparsity 3 active 2
 Fitness [0.875] sparsity 2 active 10
-Fitness [0.875] sparsity 2 active 9
 Fitness [0.875] sparsity 2 active 8
 Fitness [0.875] sparsity 2 active 7
 Fitness [0.875] sparsity 2 active 6
 Fitness [0.875] sparsity 2 active 5
 Fitness [0.875] sparsity 2 active 4
-Fitness [0.9375] sparsity 6 active 9
+Fitness [0.875] sparsity 2 active 3
+Fitness [0.875] sparsity 2 active 2
+Fitness [0.875] sparsity 1 active 5
 Fitness [0.9375] sparsity 5 active 10
 Fitness [0.9375] sparsity 5 active 9
-Fitness [0.9375] sparsity 5 active 8
 Fitness [0.9375] sparsity 5 active 7
 Fitness [0.9375] sparsity 5 active 6
 Fitness [0.9375] sparsity 4 active 10
@@ -218,6 +36,8 @@ Fitness [0.9375] sparsity 4 active 8
 Fitness [0.9375] sparsity 4 active 7
 Fitness [0.9375] sparsity 4 active 6
 Fitness [0.9375] sparsity 4 active 5
+Fitness [0.9375] sparsity 3 active 12
+Fitness [0.9375] sparsity 3 active 11
 Fitness [0.9375] sparsity 3 active 10
 Fitness [0.9375] sparsity 3 active 9
 Fitness [0.9375] sparsity 3 active 8
@@ -238,12 +58,195 @@ min vote is 25.0
 min vote is 20.0
 min vote is 15.0
 min vote is 10.0
-Calculate 7: SWI6
+Calculate 4: MCM1
 Fitness: 1.0
+Fitness [0.875] sparsity 6 active 9
+Fitness [0.875] sparsity 6 active 8
+Fitness [0.875] sparsity 5 active 9
+Fitness [0.875] sparsity 5 active 7
+Fitness [0.875] sparsity 5 active 6
+Fitness [0.875] sparsity 5 active 5
+Fitness [0.875] sparsity 5 active 4
+Fitness [0.875] sparsity 4 active 9
+Fitness [0.875] sparsity 4 active 8
+Fitness [0.875] sparsity 4 active 7
+Fitness [0.875] sparsity 4 active 6
+Fitness [0.875] sparsity 4 active 5
+Fitness [0.875] sparsity 4 active 4
+Fitness [0.875] sparsity 4 active 3
+Fitness [0.875] sparsity 3 active 8
+Fitness [0.875] sparsity 3 active 7
+Fitness [0.875] sparsity 3 active 6
+Fitness [0.875] sparsity 3 active 5
+Fitness [0.875] sparsity 3 active 4
+Fitness [0.875] sparsity 3 active 3
+Fitness [0.875] sparsity 2 active 7
+Fitness [0.875] sparsity 2 active 6
+Fitness [0.875] sparsity 2 active 5
+Fitness [0.875] sparsity 2 active 4
+Fitness [0.875] sparsity 2 active 3
+Fitness [0.875] sparsity 1 active 4
+Fitness [0.9375] sparsity 6 active 10
+Fitness [0.9375] sparsity 6 active 7
+Fitness [0.9375] sparsity 5 active 10
+Fitness [0.9375] sparsity 5 active 7
+Fitness [0.9375] sparsity 5 active 4
+Fitness [0.9375] sparsity 4 active 12
+Fitness [0.9375] sparsity 4 active 10
+Fitness [0.9375] sparsity 4 active 9
+Fitness [0.9375] sparsity 4 active 7
+Fitness [0.9375] sparsity 4 active 6
+Fitness [0.9375] sparsity 4 active 5
+Fitness [0.9375] sparsity 4 active 4
+Fitness [0.9375] sparsity 3 active 9
+Fitness [0.9375] sparsity 3 active 8
+Fitness [0.9375] sparsity 3 active 7
+Fitness [0.9375] sparsity 3 active 6
+Fitness [0.9375] sparsity 3 active 5
+Fitness [0.9375] sparsity 3 active 4
+Fitness [1.0] sparsity 5 active 9
+Fitness [1.0] sparsity 5 active 7
+Fitness [1.0] sparsity 4 active 10
+Fitness [1.0] sparsity 4 active 9
+Fitness [1.0] sparsity 4 active 7
+Fitness [1.0] sparsity 4 active 6
+min vote is 45.0
+min vote is 40.0
+min vote is 35.0
+min vote is 30.0
+min vote is 25.0
+min vote is 20.0
+min vote is 15.0
+min vote is 10.0
+Calculate 5: ACE2
+Fitness: 1.0
+Fitness [0.875] sparsity 5 active 8
+Fitness [0.875] sparsity 5 active 5
+Fitness [0.875] sparsity 4 active 10
+Fitness [0.875] sparsity 4 active 8
+Fitness [0.875] sparsity 4 active 7
+Fitness [0.875] sparsity 4 active 6
+Fitness [0.875] sparsity 4 active 5
+Fitness [0.875] sparsity 4 active 4
+Fitness [0.875] sparsity 4 active 3
+Fitness [0.875] sparsity 3 active 7
+Fitness [0.875] sparsity 3 active 6
+Fitness [0.875] sparsity 3 active 5
+Fitness [0.875] sparsity 3 active 4
+Fitness [0.875] sparsity 3 active 3
+Fitness [0.875] sparsity 3 active 2
+Fitness [0.875] sparsity 2 active 5
+Fitness [0.875] sparsity 2 active 4
+Fitness [0.875] sparsity 2 active 3
+Fitness [0.875] sparsity 2 active 2
+Fitness [0.875] sparsity 2 active 1
+Fitness [0.875] sparsity 1 active 3
+Fitness [0.875] sparsity 1 active 2
+Fitness [0.875] sparsity 1 active 1
+Fitness [0.9375] sparsity 5 active 7
+Fitness [0.9375] sparsity 4 active 8
+Fitness [0.9375] sparsity 4 active 7
+Fitness [0.9375] sparsity 4 active 6
 Fitness [0.9375] sparsity 4 active 5
 Fitness [0.9375] sparsity 4 active 4
 Fitness [0.9375] sparsity 4 active 3
-Fitness [0.9375] sparsity 3 active 10
+Fitness [0.9375] sparsity 3 active 6
+Fitness [0.9375] sparsity 3 active 5
+Fitness [0.9375] sparsity 3 active 4
+Fitness [0.9375] sparsity 3 active 3
+Fitness [0.9375] sparsity 3 active 2
+Fitness [0.9375] sparsity 2 active 6
+Fitness [0.9375] sparsity 2 active 5
+Fitness [0.9375] sparsity 2 active 4
+Fitness [0.9375] sparsity 2 active 3
+Fitness [0.9375] sparsity 2 active 2
+Fitness [0.9375] sparsity 2 active 1
+Fitness [1.0] sparsity 5 active 5
+Fitness [1.0] sparsity 4 active 5
+Fitness [1.0] sparsity 4 active 4
+Fitness [1.0] sparsity 4 active 3
+Fitness [1.0] sparsity 3 active 8
+Fitness [1.0] sparsity 3 active 7
+Fitness [1.0] sparsity 3 active 6
+Fitness [1.0] sparsity 3 active 5
+Fitness [1.0] sparsity 3 active 4
+min vote is 45.0
+min vote is 40.0
+min vote is 35.0
+min vote is 30.0
+min vote is 25.0
+min vote is 20.0
+min vote is 15.0
+min vote is 10.0
+Calculate 6: CLN3
+Fitness: 0.9375
+Fitness [0.75] sparsity 1 active 5
+Fitness [0.75] sparsity 1 active 4
+Fitness [0.75] sparsity 1 active 3
+Fitness [0.75] sparsity 1 active 2
+Fitness [0.8125] sparsity 5 active 9
+Fitness [0.8125] sparsity 4 active 11
+Fitness [0.8125] sparsity 4 active 8
+Fitness [0.8125] sparsity 4 active 7
+Fitness [0.8125] sparsity 4 active 6
+Fitness [0.8125] sparsity 4 active 4
+Fitness [0.8125] sparsity 3 active 9
+Fitness [0.8125] sparsity 3 active 8
+Fitness [0.8125] sparsity 3 active 7
+Fitness [0.8125] sparsity 3 active 6
+Fitness [0.8125] sparsity 3 active 5
+Fitness [0.8125] sparsity 3 active 4
+Fitness [0.8125] sparsity 3 active 3
+Fitness [0.8125] sparsity 2 active 8
+Fitness [0.8125] sparsity 2 active 7
+Fitness [0.8125] sparsity 2 active 6
+Fitness [0.8125] sparsity 2 active 5
+Fitness [0.8125] sparsity 2 active 4
+Fitness [0.8125] sparsity 2 active 3
+Fitness [0.8125] sparsity 1 active 7
+Fitness [0.8125] sparsity 1 active 6
+Fitness [0.8125] sparsity 1 active 5
+Fitness [0.8125] sparsity 1 active 4
+Fitness [0.8125] sparsity 1 active 3
+Fitness [0.8125] sparsity 1 active 2
+Fitness [0.875] sparsity 4 active 6
+Fitness [0.875] sparsity 3 active 7
+Fitness [0.875] sparsity 3 active 6
+Fitness [0.875] sparsity 3 active 5
+Fitness [0.875] sparsity 3 active 4
+Fitness [0.875] sparsity 2 active 8
+Fitness [0.875] sparsity 2 active 7
+Fitness [0.875] sparsity 2 active 6
+Fitness [0.875] sparsity 2 active 5
+Fitness [0.875] sparsity 2 active 4
+Fitness [0.875] sparsity 1 active 7
+Fitness [0.875] sparsity 1 active 6
+Fitness [0.875] sparsity 1 active 5
+Fitness [0.875] sparsity 1 active 4
+Fitness [0.9375] sparsity 4 active 6
+Fitness [0.9375] sparsity 3 active 7
+Fitness [0.9375] sparsity 3 active 6
+Fitness [0.9375] sparsity 2 active 9
+Fitness [0.9375] sparsity 2 active 6
+Fitness [0.9375] sparsity 1 active 7
+Fitness [0.9375] sparsity 1 active 6
+min vote is 45.0
+min vote is 40.0
+min vote is 35.0
+min vote is 30.0
+min vote is 25.0
+min vote is 20.0
+min vote is 15.0
+min vote is 10.0
+Calculate 7: SWI6
+Fitness: 1.0
+Fitness [0.9375] sparsity 5 active 5
+Fitness [0.9375] sparsity 4 active 8
+Fitness [0.9375] sparsity 4 active 7
+Fitness [0.9375] sparsity 4 active 6
+Fitness [0.9375] sparsity 4 active 5
+Fitness [0.9375] sparsity 4 active 4
+Fitness [0.9375] sparsity 4 active 3
 Fitness [0.9375] sparsity 3 active 9
 Fitness [0.9375] sparsity 3 active 8
 Fitness [0.9375] sparsity 3 active 7
@@ -252,8 +255,6 @@ Fitness [0.9375] sparsity 3 active 5
 Fitness [0.9375] sparsity 3 active 4
 Fitness [0.9375] sparsity 3 active 3
 Fitness [0.9375] sparsity 3 active 2
-Fitness [0.9375] sparsity 2 active 11
-Fitness [0.9375] sparsity 2 active 9
 Fitness [0.9375] sparsity 2 active 8
 Fitness [0.9375] sparsity 2 active 7
 Fitness [0.9375] sparsity 2 active 6
@@ -262,7 +263,7 @@ Fitness [0.9375] sparsity 2 active 4
 Fitness [0.9375] sparsity 2 active 3
 Fitness [0.9375] sparsity 2 active 2
 Fitness [0.9375] sparsity 2 active 1
-Fitness [0.9375] sparsity 1 active 9
+Fitness [0.9375] sparsity 1 active 8
 Fitness [0.9375] sparsity 1 active 7
 Fitness [0.9375] sparsity 1 active 6
 Fitness [0.9375] sparsity 1 active 5
@@ -270,26 +271,25 @@ Fitness [0.9375] sparsity 1 active 4
 Fitness [0.9375] sparsity 1 active 3
 Fitness [0.9375] sparsity 1 active 2
 Fitness [0.9375] sparsity 1 active 1
+Fitness [0.9375] sparsity 0 active 9
+Fitness [0.9375] sparsity 0 active 8
+Fitness [0.9375] sparsity 0 active 7
 Fitness [0.9375] sparsity 0 active 6
 Fitness [0.9375] sparsity 0 active 5
 Fitness [0.9375] sparsity 0 active 4
 Fitness [0.9375] sparsity 0 active 3
 Fitness [0.9375] sparsity 0 active 2
-Fitness [1.0] sparsity 6 active 6
-Fitness [1.0] sparsity 5 active 7
-Fitness [1.0] sparsity 5 active 6
-Fitness [1.0] sparsity 5 active 5
-Fitness [1.0] sparsity 4 active 7
-Fitness [1.0] sparsity 4 active 6
-Fitness [1.0] sparsity 4 active 5
-Fitness [1.0] sparsity 4 active 4
+Fitness [1.0] sparsity 3 active 9
 Fitness [1.0] sparsity 3 active 6
-Fitness [1.0] sparsity 3 active 5
-Fitness [1.0] sparsity 3 active 4
-Fitness [1.0] sparsity 3 active 3
+Fitness [1.0] sparsity 2 active 9
+Fitness [1.0] sparsity 2 active 8
+Fitness [1.0] sparsity 2 active 7
+Fitness [1.0] sparsity 2 active 6
 Fitness [1.0] sparsity 2 active 5
-Fitness [1.0] sparsity 2 active 4
-Fitness [1.0] sparsity 2 active 3
+Fitness [1.0] sparsity 1 active 8
+Fitness [1.0] sparsity 1 active 7
+Fitness [1.0] sparsity 1 active 6
+Fitness [1.0] sparsity 1 active 5
 min vote is 45.0
 min vote is 40.0
 min vote is 35.0
@@ -299,57 +299,57 @@ min vote is 20.0
 min vote is 15.0
 min vote is 10.0
 Calculate 8: MBP1
-Fitness: 0.9375
-Fitness [0.8125] sparsity 1 active 8
-Fitness [0.8125] sparsity 1 active 7
-Fitness [0.8125] sparsity 1 active 6
-Fitness [0.8125] sparsity 1 active 5
-Fitness [0.8125] sparsity 1 active 4
-Fitness [0.8125] sparsity 1 active 3
-Fitness [0.8125] sparsity 1 active 2
+Fitness: 1.0
+Fitness [0.8125] sparsity 3 active 6
+Fitness [0.8125] sparsity 3 active 5
+Fitness [0.8125] sparsity 3 active 4
+Fitness [0.8125] sparsity 3 active 3
+Fitness [0.8125] sparsity 3 active 2
+Fitness [0.8125] sparsity 2 active 10
+Fitness [0.8125] sparsity 2 active 5
+Fitness [0.8125] sparsity 2 active 2
+Fitness [0.8125] sparsity 2 active 1
 Fitness [0.8125] sparsity 1 active 1
 Fitness [0.8125] sparsity 0 active 0
+Fitness [0.875] sparsity 6 active 11
+Fitness [0.875] sparsity 6 active 10
+Fitness [0.875] sparsity 6 active 9
+Fitness [0.875] sparsity 5 active 11
+Fitness [0.875] sparsity 5 active 10
 Fitness [0.875] sparsity 5 active 9
 Fitness [0.875] sparsity 5 active 8
 Fitness [0.875] sparsity 5 active 7
 Fitness [0.875] sparsity 5 active 6
-Fitness [0.875] sparsity 5 active 5
+Fitness [0.875] sparsity 4 active 12
 Fitness [0.875] sparsity 4 active 10
 Fitness [0.875] sparsity 4 active 9
 Fitness [0.875] sparsity 4 active 8
 Fitness [0.875] sparsity 4 active 7
 Fitness [0.875] sparsity 4 active 6
-Fitness [0.875] sparsity 4 active 5
-Fitness [0.875] sparsity 4 active 4
+Fitness [0.875] sparsity 3 active 12
 Fitness [0.875] sparsity 3 active 11
-Fitness [0.875] sparsity 3 active 10
 Fitness [0.875] sparsity 3 active 9
+Fitness [0.875] sparsity 3 active 8
 Fitness [0.875] sparsity 3 active 7
 Fitness [0.875] sparsity 3 active 6
-Fitness [0.875] sparsity 3 active 5
-Fitness [0.875] sparsity 3 active 4
-Fitness [0.875] sparsity 3 active 3
-Fitness [0.875] sparsity 3 active 2
-Fitness [0.875] sparsity 2 active 9
-Fitness [0.875] sparsity 2 active 8
-Fitness [0.875] sparsity 2 active 7
-Fitness [0.875] sparsity 2 active 6
-Fitness [0.875] sparsity 2 active 5
-Fitness [0.875] sparsity 2 active 4
 Fitness [0.875] sparsity 2 active 2
+Fitness [0.9375] sparsity 6 active 11
+Fitness [0.9375] sparsity 6 active 10
 Fitness [0.9375] sparsity 6 active 9
 Fitness [0.9375] sparsity 5 active 10
-Fitness [0.9375] sparsity 5 active 6
-Fitness [0.9375] sparsity 5 active 5
+Fitness [0.9375] sparsity 5 active 9
+Fitness [0.9375] sparsity 5 active 8
+Fitness [0.9375] sparsity 5 active 7
 Fitness [0.9375] sparsity 4 active 10
 Fitness [0.9375] sparsity 4 active 9
+Fitness [0.9375] sparsity 4 active 8
 Fitness [0.9375] sparsity 4 active 7
 Fitness [0.9375] sparsity 4 active 6
-Fitness [0.9375] sparsity 4 active 5
-Fitness [0.9375] sparsity 3 active 8
 Fitness [0.9375] sparsity 3 active 7
-Fitness [0.9375] sparsity 3 active 6
-Fitness [0.9375] sparsity 3 active 5
+Fitness [1.0] sparsity 5 active 9
+Fitness [1.0] sparsity 5 active 8
+Fitness [1.0] sparsity 4 active 9
+Fitness [1.0] sparsity 4 active 8
 min vote is 45.0
 min vote is 40.0
 min vote is 35.0
@@ -359,9 +359,68 @@ min vote is 20.0
 min vote is 15.0
 min vote is 10.0
 Calculate 9: SWI4
+Fitness: 1.0
+Fitness [0.8125] sparsity 2 active 7
+Fitness [0.8125] sparsity 2 active 6
+Fitness [0.8125] sparsity 2 active 5
+Fitness [0.8125] sparsity 2 active 4
+Fitness [0.8125] sparsity 2 active 3
+Fitness [0.8125] sparsity 2 active 2
+Fitness [0.8125] sparsity 2 active 1
+Fitness [0.8125] sparsity 1 active 6
+Fitness [0.8125] sparsity 1 active 5
+Fitness [0.8125] sparsity 1 active 4
+Fitness [0.8125] sparsity 1 active 3
+Fitness [0.8125] sparsity 1 active 2
+Fitness [0.8125] sparsity 1 active 1
+Fitness [0.875] sparsity 6 active 5
+Fitness [0.875] sparsity 4 active 7
+Fitness [0.875] sparsity 4 active 6
+Fitness [0.875] sparsity 4 active 5
+Fitness [0.875] sparsity 4 active 4
+Fitness [0.875] sparsity 3 active 7
+Fitness [0.875] sparsity 3 active 6
+Fitness [0.875] sparsity 3 active 5
+Fitness [0.875] sparsity 3 active 4
+Fitness [0.875] sparsity 3 active 3
+Fitness [0.875] sparsity 3 active 2
+Fitness [0.875] sparsity 2 active 8
+Fitness [0.875] sparsity 2 active 7
+Fitness [0.875] sparsity 2 active 6
+Fitness [0.875] sparsity 2 active 5
+Fitness [0.875] sparsity 2 active 4
+Fitness [0.875] sparsity 2 active 3
+Fitness [0.875] sparsity 2 active 2
+Fitness [0.875] sparsity 1 active 6
+Fitness [0.875] sparsity 1 active 5
+Fitness [0.875] sparsity 1 active 4
+Fitness [0.875] sparsity 1 active 3
+Fitness [0.9375] sparsity 6 active 8
+Fitness [0.9375] sparsity 4 active 6
+Fitness [0.9375] sparsity 4 active 4
+Fitness [0.9375] sparsity 3 active 8
+Fitness [0.9375] sparsity 3 active 6
+Fitness [0.9375] sparsity 3 active 5
+Fitness [0.9375] sparsity 3 active 4
+Fitness [0.9375] sparsity 2 active 7
+Fitness [0.9375] sparsity 2 active 6
+Fitness [0.9375] sparsity 2 active 5
+Fitness [0.9375] sparsity 2 active 4
+Fitness [1.0] sparsity 4 active 5
+Fitness [1.0] sparsity 3 active 5
+Fitness [1.0] sparsity 2 active 6
+Fitness [1.0] sparsity 2 active 5
+min vote is 45.0
+min vote is 40.0
+min vote is 35.0
+min vote is 30.0
+min vote is 25.0
+min vote is 20.0
+min vote is 15.0
+min vote is 10.0
+Calculate 10: NDD1
 Fitness: 0.9375
 Fitness [0.875] sparsity 5 active 4
-Fitness [0.875] sparsity 4 active 10
 Fitness [0.875] sparsity 4 active 9
 Fitness [0.875] sparsity 4 active 8
 Fitness [0.875] sparsity 4 active 7
@@ -377,7 +436,7 @@ Fitness [0.875] sparsity 3 active 6
 Fitness [0.875] sparsity 3 active 5
 Fitness [0.875] sparsity 3 active 4
 Fitness [0.875] sparsity 3 active 3
-Fitness [0.875] sparsity 3 active 2
+Fitness [0.875] sparsity 2 active 9
 Fitness [0.875] sparsity 2 active 8
 Fitness [0.875] sparsity 2 active 7
 Fitness [0.875] sparsity 2 active 6
@@ -385,18 +444,20 @@ Fitness [0.875] sparsity 2 active 5
 Fitness [0.875] sparsity 2 active 4
 Fitness [0.875] sparsity 2 active 3
 Fitness [0.875] sparsity 2 active 2
+Fitness [0.875] sparsity 1 active 7
+Fitness [0.875] sparsity 1 active 6
+Fitness [0.875] sparsity 1 active 5
 Fitness [0.875] sparsity 1 active 4
-Fitness [0.875] sparsity 1 active 3
 Fitness [0.9375] sparsity 6 active 8
-Fitness [0.9375] sparsity 6 active 7
+Fitness [0.9375] sparsity 5 active 8
 Fitness [0.9375] sparsity 5 active 6
-Fitness [0.9375] sparsity 4 active 12
+Fitness [0.9375] sparsity 4 active 9
 Fitness [0.9375] sparsity 4 active 8
 Fitness [0.9375] sparsity 4 active 7
 Fitness [0.9375] sparsity 4 active 6
 Fitness [0.9375] sparsity 4 active 5
 Fitness [0.9375] sparsity 4 active 4
-Fitness [0.9375] sparsity 4 active 3
+Fitness [0.9375] sparsity 3 active 11
 Fitness [0.9375] sparsity 3 active 10
 Fitness [0.9375] sparsity 3 active 9
 Fitness [0.9375] sparsity 3 active 8
@@ -404,72 +465,11 @@ Fitness [0.9375] sparsity 3 active 7
 Fitness [0.9375] sparsity 3 active 6
 Fitness [0.9375] sparsity 3 active 5
 Fitness [0.9375] sparsity 3 active 4
-Fitness [0.9375] sparsity 3 active 3
+Fitness [0.9375] sparsity 2 active 9
+Fitness [0.9375] sparsity 2 active 8
 Fitness [0.9375] sparsity 2 active 7
 Fitness [0.9375] sparsity 2 active 6
 Fitness [0.9375] sparsity 2 active 5
-Fitness [0.9375] sparsity 2 active 4
-Fitness [0.9375] sparsity 2 active 3
-min vote is 45.0
-min vote is 40.0
-min vote is 35.0
-min vote is 30.0
-min vote is 25.0
-min vote is 20.0
-min vote is 15.0
-min vote is 10.0
-Calculate 10: NDD1
-Fitness: 1.0
-Fitness [0.8125] sparsity 3 active 5
-Fitness [0.8125] sparsity 3 active 4
-Fitness [0.8125] sparsity 3 active 3
-Fitness [0.8125] sparsity 3 active 2
-Fitness [0.8125] sparsity 2 active 8
-Fitness [0.8125] sparsity 2 active 7
-Fitness [0.8125] sparsity 2 active 6
-Fitness [0.8125] sparsity 2 active 5
-Fitness [0.8125] sparsity 2 active 4
-Fitness [0.8125] sparsity 2 active 3
-Fitness [0.8125] sparsity 2 active 2
-Fitness [0.8125] sparsity 2 active 1
-Fitness [0.8125] sparsity 1 active 6
-Fitness [0.8125] sparsity 1 active 5
-Fitness [0.8125] sparsity 1 active 4
-Fitness [0.8125] sparsity 1 active 3
-Fitness [0.8125] sparsity 1 active 2
-Fitness [0.8125] sparsity 1 active 1
-Fitness [0.8125] sparsity 0 active 0
-Fitness [0.875] sparsity 6 active 5
-Fitness [0.875] sparsity 5 active 8
-Fitness [0.875] sparsity 5 active 6
-Fitness [0.875] sparsity 5 active 5
-Fitness [0.875] sparsity 5 active 4
-Fitness [0.875] sparsity 4 active 8
-Fitness [0.875] sparsity 4 active 7
-Fitness [0.875] sparsity 4 active 6
-Fitness [0.875] sparsity 4 active 5
-Fitness [0.875] sparsity 4 active 4
-Fitness [0.875] sparsity 4 active 3
-Fitness [0.875] sparsity 3 active 9
-Fitness [0.875] sparsity 3 active 7
-Fitness [0.875] sparsity 3 active 6
-Fitness [0.875] sparsity 3 active 5
-Fitness [0.875] sparsity 3 active 4
-Fitness [0.875] sparsity 3 active 3
-Fitness [0.875] sparsity 3 active 2
-Fitness [0.875] sparsity 2 active 7
-Fitness [0.875] sparsity 2 active 6
-Fitness [0.875] sparsity 2 active 5
-Fitness [0.875] sparsity 2 active 4
-Fitness [0.875] sparsity 2 active 3
-Fitness [0.9375] sparsity 3 active 7
-Fitness [0.9375] sparsity 2 active 7
-Fitness [0.9375] sparsity 2 active 6
-Fitness [0.9375] sparsity 2 active 5
-Fitness [0.9375] sparsity 1 active 6
-Fitness [0.9375] sparsity 1 active 5
-Fitness [0.9375] sparsity 1 active 4
-Fitness [1.0] sparsity 1 active 5
 min vote is 45.0
 min vote is 40.0
 min vote is 35.0
@@ -480,32 +480,32 @@ min vote is 15.0
 min vote is 10.0
 Calculate 11: SWI5
 Fitness: 0.9375
+Fitness [0.875] sparsity 4 active 5
+Fitness [0.875] sparsity 4 active 4
+Fitness [0.875] sparsity 4 active 3
+Fitness [0.875] sparsity 3 active 8
 Fitness [0.875] sparsity 3 active 7
 Fitness [0.875] sparsity 3 active 6
 Fitness [0.875] sparsity 3 active 5
 Fitness [0.875] sparsity 3 active 4
 Fitness [0.875] sparsity 3 active 3
 Fitness [0.875] sparsity 3 active 2
-Fitness [0.875] sparsity 2 active 6
 Fitness [0.875] sparsity 2 active 5
 Fitness [0.875] sparsity 2 active 4
 Fitness [0.875] sparsity 2 active 3
 Fitness [0.875] sparsity 2 active 2
 Fitness [0.875] sparsity 2 active 1
-Fitness [0.875] sparsity 1 active 6
-Fitness [0.875] sparsity 1 active 4
 Fitness [0.875] sparsity 1 active 3
 Fitness [0.875] sparsity 1 active 2
 Fitness [0.875] sparsity 1 active 1
-Fitness [0.9375] sparsity 6 active 8
+Fitness [0.9375] sparsity 7 active 9
+Fitness [0.9375] sparsity 6 active 9
 Fitness [0.9375] sparsity 6 active 7
-Fitness [0.9375] sparsity 6 active 6
+Fitness [0.9375] sparsity 5 active 9
 Fitness [0.9375] sparsity 5 active 8
 Fitness [0.9375] sparsity 5 active 7
 Fitness [0.9375] sparsity 5 active 6
 Fitness [0.9375] sparsity 5 active 5
-Fitness [0.9375] sparsity 5 active 4
-Fitness [0.9375] sparsity 4 active 9
 Fitness [0.9375] sparsity 4 active 8
 Fitness [0.9375] sparsity 4 active 7
 Fitness [0.9375] sparsity 4 active 6
@@ -519,13 +519,13 @@ Fitness [0.9375] sparsity 3 active 5
 Fitness [0.9375] sparsity 3 active 4
 Fitness [0.9375] sparsity 3 active 3
 Fitness [0.9375] sparsity 3 active 2
+Fitness [0.9375] sparsity 2 active 7
 Fitness [0.9375] sparsity 2 active 6
 Fitness [0.9375] sparsity 2 active 5
 Fitness [0.9375] sparsity 2 active 4
 Fitness [0.9375] sparsity 2 active 3
 Fitness [0.9375] sparsity 2 active 2
 Fitness [0.9375] sparsity 2 active 1
-Fitness [0.9375] sparsity 1 active 4
 Fitness [0.9375] sparsity 1 active 3
 Fitness [0.9375] sparsity 1 active 2
 Fitness [0.9375] sparsity 1 active 1
@@ -539,52 +539,52 @@ min vote is 20.0
 min vote is 15.0
 min vote is 10.0
 BN_9
-TP : 1
-FP : 4
-FN : 16
-TN : 60
-Structural accuracy : 0.7530864197530864
+TP : 2
+FP : 7
+FN : 15
+TN : 57
+Structural accuracy : 0.7283950617283951 Precision : 0.2222222222222222 Recall : 0.11764705882352941
 BN_8
-TP : 2
-FP : 6
-FN : 15
-TN : 58
-Structural accuracy : 0.7407407407407407
+TP : 3
+FP : 9
+FN : 14
+TN : 55
+Structural accuracy : 0.7160493827160493 Precision : 0.25 Recall : 0.17647058823529413
 BN_7
-TP : 2
-FP : 10
-FN : 15
-TN : 54
-Structural accuracy : 0.691358024691358
-BN_6
-TP : 2
-FP : 14
-FN : 15
-TN : 50
-Structural accuracy : 0.6419753086419753
-BN_5
-TP : 3
-FP : 17
-FN : 14
-TN : 47
-Structural accuracy : 0.6172839506172839
-BN_4
-TP : 3
-FP : 21
-FN : 14
-TN : 43
-Structural accuracy : 0.5679012345679012
-BN_3
 TP : 5
-FP : 29
+FP : 12
 FN : 12
-TN : 35
-Structural accuracy : 0.49382716049382713
+TN : 52
+Structural accuracy : 0.7037037037037037 Precision : 0.29411764705882354 Recall : 0.29411764705882354
+BN_6
+TP : 5
+FP : 13
+FN : 12
+TN : 51
+Structural accuracy : 0.691358024691358 Precision : 0.2777777777777778 Recall : 0.29411764705882354
+BN_5
+TP : 6
+FP : 15
+FN : 11
+TN : 49
+Structural accuracy : 0.6790123456790124 Precision : 0.2857142857142857 Recall : 0.35294117647058826
+BN_4
+TP : 6
+FP : 17
+FN : 11
+TN : 47
+Structural accuracy : 0.654320987654321 Precision : 0.2608695652173913 Recall : 0.35294117647058826
+BN_3
+TP : 7
+FP : 20
+FN : 10
+TN : 44
+Structural accuracy : 0.6296296296296297 Precision : 0.25925925925925924 Recall : 0.4117647058823529
 BN_2
-TP : 8
-FP : 39
-FN : 9
-TN : 25
-Structural accuracy : 0.4074074074074074
+TP : 10
+FP : 33
+FN : 7
+TN : 31
+Structural accuracy : 0.5061728395061729 Precision : 0.23255813953488372 Recall : 0.5882352941176471
 
 Julia debuggee finished. Press ENTER to close this terminal.
