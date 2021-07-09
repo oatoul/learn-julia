@@ -1,0 +1,21 @@
+# settings
+seed: 0
+d_fitness: 1
+n_population: 100
+n_elite: 50
+n_gen: 1000
+log_gen: 10
+save_gen: 10
+m_rate: 0.1
+# CartesianGeneticProgramming.jl settings
+rows: 1
+columns: 24
+recur: 0.2
+in_idx: 3
+n_in: 12
+n_out: 1
+out_m_rate: 0.3
+functions:
+  - f_and
+  - f_or
+  - f_not
