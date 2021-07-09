@@ -16,5 +16,6 @@ include("crossover.jl")
 include("evolution.jl")
 include("selection.jl")
 include("step.jl")
+include("evaluator.jl")
 
 end

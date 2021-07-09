@@ -32,6 +32,7 @@ end
 # end
 
 function getBN!(df::DataFrame)
+    BNm = falses(10,10)
     BN = Set()
     BN_9 = Set()
     BN_8 = Set()
@@ -84,6 +85,7 @@ function getBN!(df::DataFrame)
         set3 = get_connections_by_vote!(0.3, e.elites, l_idx, h_idx)
         set2 = get_connections_by_vote!(0.2, e.elites, l_idx, h_idx)
 
+        store_BN_matrix(set, BNm, i)
         store_BN(set, BN, ndf, target)
         store_BN(set9, BN_9, ndf, target)
         store_BN(set8, BN_8, ndf, target)
@@ -96,7 +98,7 @@ function getBN!(df::DataFrame)
 
     end
 
-    BN, BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2
+    BNm, BN, BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2
 end
 
 
@@ -108,6 +110,12 @@ function store_BN(set::Set, BN::Set, ndf::Array, target::String)
     end
 end
 
+
+function store_BN_matrix(set::Set, BN::AbstractMatrix{Bool}, target::Int)
+    for k in set
+        BN[k-2,target-2] = true
+    end
+end
 
 
 function get_connections_by_vote!(vote_ratio::Float64, elites::Array{CGPInd}, low::Int64, high::Int64)
@@ -162,6 +170,27 @@ function get_structural_accuracy(expect::Set, actual::Set, universe::Set)
     acc
 end
 
+
+function get_accuracy(m::ConfusionMatrix)
+    TP = m.TP
+    FP = m.FP
+    FN = m.FN
+    TN = m.TN
+
+    acc = (TP + TN) / (TP + FP + FN + TN)
+    precision = TP / (TP + FP)
+    recall = TP / (TP + FN)
+    println("Accuracy from ConfusionMatrix")
+    println("TP : $(TP)")
+    println("FP : $(FP)")
+    println("FN : $(FN)")
+    println("TN : $(TN)")
+    println("Structural accuracy : $(acc) Precision : $(precision) Recall : $(recall)")
+
+    acc
+end
+
+
 function get_universe_set(inputs::Any)
     res = Set()
     for i in inputs
@@ -202,6 +231,35 @@ function get_expect_Silico1()
     res
 end
 
+function get_expect_Silico1_matrix()
+    m = falses(10, 10)
+    m[1,2] = true
+    m[1,3] = true
+    m[1,4] = true
+    m[1,5] = true
+
+    m[3,4] = true
+    m[3,7] = true
+
+    m[4,2] = true
+    m[4,3] = true
+
+    m[6,2] = true
+
+    m[7,3] = true
+    m[7,4] = true
+
+    m[8,2] = true
+    m[8,6] = true
+
+    m[9,10] = true
+
+    m[10,3] = true
+    m[10,4] = true
+
+    m
+end
+
 
 cfg = get_config("cfg/Silico1.yaml")
 println(cfg)
@@ -223,7 +281,11 @@ universe = get_universe_set(names(df_origin))
 
 expect = get_expect_Silico1()
 
-BN, BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2 = getBN!(df)
+expectM = get_expect_Silico1_matrix()
+
+BNm, BN, BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2 = getBN!(df)
+
+mRes = compute_confusion_matrix(expectM, BNm)
 
 # actual = getBN!(df, 0.99)
 println("BN_9")
@@ -244,3 +306,5 @@ println("BN_2")
 stru_acc2 = get_structural_accuracy(expect, BN_2, universe)
 println("BN_Elite_Top")
 stru_acc = get_structural_accuracy(expect, BN, universe)
+
+get_accuracy(mRes)
