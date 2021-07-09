@@ -49,16 +49,16 @@ end
 
 # isless(i1::CGPInd, i2::CGPInd) = isless((i1.fitness[1],i2.fitness[1]),(i2.sparsity,i1.sparsity),(i2.n_active,i1.n_active))
 
-# function isequal(i1::CGPInd, i2::CGPInd)
-#     abs(i1.fitness[1] - i2.fitness[1]) < 0.001 && i1.sparsity == i2.sparsity && i1.n_active == i2.n_active
-# end
+function isequal(i1::CGPInd, i2::CGPInd)
+    abs(i1.fitness[1] - i2.fitness[1]) < 0.001 && i1.sparsity == i2.sparsity && i1.n_active == i2.n_active
+end
 
-# function hash(x::CGPInd, h::UInt)
-#     # key = "$(round(x.fitness[1], digits=3))_$(x.sparsity)_$(x.n_active)"
-#     # key = round(x.fitness[1], digits=3) + x.sparsity + x.n_active*100
-#     key = (round(x.fitness[1], digits=3), x.sparsity, x.n_active)
-#     hash(key, h)
-# end
+function hash(x::CGPInd, h::UInt)
+    # key = "$(round(x.fitness[1], digits=3))_$(x.sparsity)_$(x.n_active)"
+    # key = round(x.fitness[1], digits=3) + x.sparsity + x.n_active*100
+    key = (round(x.fitness[1], digits=3), x.sparsity, x.n_active)
+    hash(key, h)
+end
 
 function get_sparsity!(ind::CGPInd)
     "col 1 & 2 are dummy inputs"

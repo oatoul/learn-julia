@@ -42,7 +42,7 @@ function step!(e::AbstractEvolution)
         populate(e)
     end
     evaluate(e)
-    # generation(e)
+    generation(e)
 
     if ((e.config.log_gen > 0) && mod(e.gen, e.config.log_gen) == 0)
         log_gen(e)
@@ -52,25 +52,25 @@ function step!(e::AbstractEvolution)
     end
 end
 
-function step!(e::AbstractEvolution, elites_generation::Bool)
-    e.gen += 1
-    if e.gen > 1
-        populate(e)
-    end
-    evaluate(e)
-    if(elites_generation)
-        println("Elites generation enabled")
-        generation(e)
-    end
+# function step!(e::AbstractEvolution, elites_generation::Bool)
+#     e.gen += 1
+#     if e.gen > 1
+#         populate(e)
+#     end
+#     evaluate(e)
+#     if(elites_generation)
+#         println("Elites generation enabled")
+#         generation(e)
+#     end
     
 
-    if ((e.config.log_gen > 0) && mod(e.gen, e.config.log_gen) == 0)
-        log_gen(e)
-    end
-    if ((e.config.save_gen > 0) && mod(e.gen, e.config.save_gen) == 0)
-        save_gen(e)
-    end
-end
+#     if ((e.config.log_gen > 0) && mod(e.gen, e.config.log_gen) == 0)
+#         log_gen(e)
+#     end
+#     if ((e.config.save_gen > 0) && mod(e.gen, e.config.save_gen) == 0)
+#         save_gen(e)
+#     end
+# end
 
 "Call step!(e) e.config.n_gen times consecutively"
 function run!(e::AbstractEvolution)
