@@ -1,4 +1,4 @@
-export step!
+export step_archive!
 
 import Cambrian.step!
 import Cambrian.AbstractEvolution
@@ -15,6 +15,54 @@ function elites_generation(e::AbstractEvolution)
     # println("...................................................")
     n_elites = length(e.elites)
     e.elites = deepcopy(pop[end-n_elites+1:end])
+end
+
+
+function archive_generation(e::AbstractEvolution)
+    new_elites = deepcopy(e.elites)
+    select = 3
+    selected = sort(unique(e.population), by=i ->(i.fitness, -i.sparsity, -i.n_active))[end-select+1:end]
+
+    # println("------------------------")
+    # println("Insert:")
+    for s in selected
+        # println("Fitness $(s.fitness) sparsity $(s.sparsity) active $(s.n_active)")
+        new_elites = archive_insert(s, new_elites)
+    end
+    # println("------------------------")
+    # println("New elites:")
+    # for s in new_elites
+    #     println("Fitness $(s.fitness) sparsity $(s.sparsity) active $(s.n_active)")
+    # end
+    # println("------------------------")
+    e.elites = deepcopy(new_elites)
+end
+
+
+function archive_insert(ind::CGPInd, pop::Array{<:CGPInd})
+    res = CGPInd[]
+    survive = false
+    for p in pop
+        fit = 0
+        if p.sparsity < ind.sparsity
+            fit += 1
+        end
+        if p.fitness > ind.fitness
+            fit += 1
+        end
+        if fit > 0
+            push!(res, p)
+        end
+        if fit < 2
+            survive = true
+        end
+    end
+
+    if survive
+        push!(res, ind)
+    end
+
+    res
 end
 
 """
@@ -35,7 +83,7 @@ Also calls log_gen and save_gen based on the provided config values. Subclasses
 of AbstractEvolution should override the populate, evaluate, or generation
 functions rather than overriding this function.
 """
-function step!(e::AbstractEvolution)
+function step_elites!(e::AbstractEvolution)
     # println("Default step with no elites generation")
     e.gen += 1
     if e.gen > 1
@@ -50,6 +98,23 @@ function step!(e::AbstractEvolution)
     if ((e.config.save_gen > 0) && mod(e.gen, e.config.save_gen) == 0)
         save_gen(e)
     end
+end
+
+function step_archive!(e::AbstractEvolution)
+    # println("Default step with no elites generation")
+    e.gen += 1
+    if e.gen > 1
+        populate(e)
+    end
+    evaluate(e)
+    archive_generation(e)
+
+    # if ((e.config.log_gen > 0) && mod(e.gen, e.config.log_gen) == 0)
+    #     log_gen(e)
+    # end
+    # if ((e.config.save_gen > 0) && mod(e.gen, e.config.save_gen) == 0)
+    #     save_gen(e)
+    # end
 end
 
 # function step!(e::AbstractEvolution, elites_generation::Bool)

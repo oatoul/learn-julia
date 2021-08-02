@@ -1,4 +1,4 @@
-export CGPEvolution, save_gen
+export CGPEvolution, CGPEvolution_archive, save_gen
 
 import Cambrian.evaluate
 
@@ -16,6 +16,15 @@ evaluate(e::CGPEvolution) = Cambrian.fitness_evaluate(e, e.fitness)
 
 function CGPEvolution(cfg::NamedTuple, fitness::Function;
                       logfile=string("logs/", replace(cfg.id,":" => "_"), ".csv"))
+    logger = CambrianLogger(logfile)
+    population = Cambrian.initialize(CGPInd, cfg)
+    elites = initialize_elites(CGPInd, cfg)
+    # println("Initialize CGPEvolution")
+    CGPEvolution(cfg, logger, population, fitness, 0, elites)
+end
+
+function CGPEvolution_archive(cfg::NamedTuple, fitness::Function;
+    logfile=string("logs/", replace(cfg.id,":" => "_"), ".csv"))
     logger = CambrianLogger(logfile)
     population = Cambrian.initialize(CGPInd, cfg)
     elites = initialize_elites(CGPInd, cfg)
