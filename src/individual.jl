@@ -1,4 +1,4 @@
-export Node, CGPInd, get_genes, set_genes!, reset!, forward_connections, get_output_trace, get_active_connections!
+export Node, CGPInd, get_genes, set_genes!, reset!, forward_connections, get_output_trace, get_active_connections!, get_active_connections_no_shift!
 import Base: copy, String, show, summary, isless, isequal, hash
 import Cambrian.print
 
@@ -96,6 +96,24 @@ function get_active_connections!(ind::CGPInd, low::Int64, high::Int64)
         end
         if(y >= low && y <= high)
             push!(res, y)
+        end
+    end
+    res
+end
+
+function get_active_connections_no_shift!(ind::CGPInd, low::Int64, high::Int64)
+    shift = low - 1
+    nodes = ind.nodes[[n.active for n in ind.nodes]]
+    res = Set()
+    for node in nodes
+        x = node.x
+        y = node.y
+            
+        if(x >= low && x <= high)
+            push!(res, x-shift)
+        end
+        if(y >= low && y <= high)
+            push!(res, y-shift)
         end
     end
     res

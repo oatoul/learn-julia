@@ -32,14 +32,7 @@ end
 # end
 
 function getBN!(df::DataFrame, fitness::Float64)
-    BN_9 = Set()
-    BN_8 = Set()
-    BN_7 = Set()
-    BN_6 = Set()
-    BN_5 = Set()
-    BN_4 = Set()
-    BN_3 = Set()
-    BN_2 = Set()
+    BN = Set()
 
     ndf = names(df)
     l_idx = 3
@@ -74,16 +67,11 @@ function getBN!(df::DataFrame, fitness::Float64)
             println("Fitness $(el.fitness) sparsity $(el.sparsity) active $(el.n_active)")
         end
 
-        # set = get_active_connections!(e.elites[end], l_idx, h_idx)
-        set9 = get_connections_by_vote!(0.9, e.elites, l_idx, h_idx)
-        set8 = get_connections_by_vote!(0.8, e.elites, l_idx, h_idx)
-        set7 = get_connections_by_vote!(0.7, e.elites, l_idx, h_idx)
-        set6 = get_connections_by_vote!(0.6, e.elites, l_idx, h_idx)
-        set5 = get_connections_by_vote!(0.5, e.elites, l_idx, h_idx)
-        set4 = get_connections_by_vote!(0.4, e.elites, l_idx, h_idx)
-        set3 = get_connections_by_vote!(0.3, e.elites, l_idx, h_idx)
-        set2 = get_connections_by_vote!(0.2, e.elites, l_idx, h_idx)
-
+        if size(e.elites)[1] > 1
+            set = get_connections_from_archive!(e.elites, l_idx, h_idx, i)
+        else
+            set = get_active_connections!(e.elites[end], l_idx, h_idx)
+        end
 
         "output result for target gene"
         # res = []
@@ -99,18 +87,11 @@ function getBN!(df::DataFrame, fitness::Float64)
         #     push!(BN, conn)
         #     println(conn)
         # end
-        store_BN(set9, BN_9, ndf, target)
-        store_BN(set8, BN_8, ndf, target)
-        store_BN(set7, BN_7, ndf, target)
-        store_BN(set6, BN_6, ndf, target)
-        store_BN(set5, BN_5, ndf, target)
-        store_BN(set4, BN_4, ndf, target)
-        store_BN(set3, BN_3, ndf, target)
-        store_BN(set2, BN_2, ndf, target)
+        store_BN(set, BN, ndf, target)
 
     end
 
-    BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2
+    BN
 end
 
 
@@ -143,6 +124,32 @@ function get_connections_by_vote!(vote_ratio::Float64, elites::Array{CGPInd}, lo
     end
     # println(res_set)
     res_set
+end
+
+function get_connections_from_archive!(elites::Array{CGPInd}, low::Int64, high::Int64, target_idx::Int64)
+    res_all = []
+    shift = low - 1
+    for e in elites
+        err = evaluate_mlp(e, low, high, target_idx-shift)
+        res_all = vcat(res_all, (err, e))
+        # println(e)
+        println("Err: $(err)")
+    end
+
+    # println(res_all)
+
+    best = sort(res_all, by=((x,y),)->(-x,))[end]
+    err = best[1]
+    best = best[2]
+    println("Best: Fitness $(best.fitness) sparsity $(best.sparsity) active $(best.n_active) err $(err)")
+
+    get_active_connections!(best, low, high)
+end
+
+function evaluate_mlp(ind::CGPInd, low::Int64, high::Int64, target_idx::Int64)
+    in_idx = collect(Int64, get_active_connections_no_shift!(ind, low, high))
+    err = train_mlp_flux(in_idx, target_idx)
+    err
 end
 
 
@@ -236,22 +243,8 @@ universe = get_universe_set(names(df_origin))
 
 expect = get_expect_CDC15()
 
-BN_9, BN_8, BN_7, BN_6, BN_5, BN_4, BN_3, BN_2 = getBN!(df, 0.99)
+BN = getBN!(df, 0.99)
 
 # actual = getBN!(df, 0.99)
-println("BN_9")
-stru_acc9 = get_structural_accuracy(expect, BN_9, universe)
-println("BN_8")
-stru_acc8 = get_structural_accuracy(expect, BN_8, universe)
-println("BN_7")
-stru_acc7 = get_structural_accuracy(expect, BN_7, universe)
-println("BN_6")
-stru_acc6 = get_structural_accuracy(expect, BN_6, universe)
-println("BN_5")
-stru_acc5 = get_structural_accuracy(expect, BN_5, universe)
-println("BN_4")
-stru_acc4 = get_structural_accuracy(expect, BN_4, universe)
-println("BN_3")
-stru_acc3 = get_structural_accuracy(expect, BN_3, universe)
-println("BN_2")
-stru_acc2 = get_structural_accuracy(expect, BN_2, universe)
+println("Structural acc")
+stru_acc = get_structural_accuracy(expect, BN, universe)

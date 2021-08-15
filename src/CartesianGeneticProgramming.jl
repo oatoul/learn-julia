@@ -17,5 +17,6 @@ include("evolution.jl")
 include("selection.jl")
 include("step.jl")
 include("evaluator.jl")
+include("mlp_flux.jl")
 
 end

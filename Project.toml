@@ -4,11 +4,17 @@ authors = ["Dennis Wilson <d9w@pm.me>"]
 version = "0.1.0"
 
 [deps]
+ArgParse = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 Cambrian = "7f27c84d-2d74-42e5-be5f-94f6748267f3"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+Knet = "1902f260-5fb4-5aff-8c31-6271790ab950"
+MLDatasets = "eb30cadb-4394-5ae3-aed4-317e484a6458"
+Parameters = "d96e819e-fc66-5662-9728-84c9c7592b0a"
 RDatasets = "ce6b1742-4840-55fa-b093-852dadbb1d8b"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
