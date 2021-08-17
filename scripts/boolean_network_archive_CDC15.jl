@@ -69,9 +69,9 @@ function getBN!(df::DataFrame, fitness::Float64)
         # println(summary(e.population[end]))
 
         # eee = sort(e.elites)
-        for el in e.elites
-            println("Fitness $(el.fitness) sparsity $(el.sparsity) active $(el.n_active)")
-        end
+        # for el in e.elites
+        #     println("Fitness $(el.fitness) sparsity $(el.sparsity) active $(el.n_active)")
+        # end
 
         # normal selection
         set_std = get_active_connections!(e.population[end], l_idx, h_idx)
@@ -137,24 +137,22 @@ function get_connections_from_archive!(elites::Array{CGPInd}, low::Int64, high::
     for e in elites
         loss = evaluate_mlp(e, low, high, target_idx-shift)
         res_all = vcat(res_all, (loss, e))
-        # println(e)
-        println("Loss: $(loss)")
+        println("Fitness $(e.fitness) sparsity $(e.sparsity) active $(e.n_active) loss: $(loss)")
     end
 
     # println(res_all)
 
     best = sort(res_all, by=((x,y),)->(-x,))[end]
-    err = best[1]
+    loss = best[1]
     best = best[2]
-    println("Best: Fitness $(best.fitness) sparsity $(best.sparsity) active $(best.n_active) err $(err)")
+    println("Best: Fitness $(best.fitness) sparsity $(best.sparsity) active $(best.n_active) loss $(loss)")
 
     get_active_connections!(best, low, high)
 end
 
 function evaluate_mlp(ind::CGPInd, low::Int64, high::Int64, target_idx::Int64)
     in_idx = collect(Int64, get_active_connections_no_shift!(ind, low, high))
-    err = train_mlp_flux(in_idx, target_idx)
-    err
+    train_mlp_flux(df_float, in_idx, target_idx)
 end
 
 
@@ -231,11 +229,14 @@ end
 cfg = get_config("cfg/CDC15.yaml")
 mutate(ind::CGPInd) = goldman_mutate(cfg, ind)
 
-df_origin = DataFrame(CSV.File("data/CDC15_bool.tsv",drop=["Time"],type=Bool))
-df = copy(df_origin)
-insertcols!(df, 1, :T0 => false, :T1 => true)
+df_origin_bool = DataFrame(CSV.File("data/CDC15_bool.tsv",drop=["Time"],type=Bool))
+df_bool = copy(df_origin_bool)
+insertcols!(df_bool, 1, :T0 => false, :T1 => true)
 
-println(df)
+println(df_bool)
+
+df_origin_float = DataFrame(CSV.File("data/CDC15.tsv",drop=["Time"],type=Float32))
+df_float = Matrix(df_origin_float)'
 
 # ndf = names(df)
 # l_idx = 3
@@ -244,18 +245,39 @@ println(df)
 #     println("$(col)")
 # end
 
-universe = get_universe_set(names(df_origin))
+universe = get_universe_set(names(df_origin_bool))
 
 expect = get_expect_CDC15()
 
-BN_std, BN_fit, BN_mlp = getBN!(df, 0.99)
+# df_mean = get_mean("data/CDC15.tsv","Time")
 
-# actual = getBN!(df, 0.99)
-println("Structural acc for STD")
-stru_acc = get_structural_accuracy(expect, BN_std, universe)
+# println("Mean is $(df_mean)")
 
-println("Structural acc for FIT")
-stru_acc = get_structural_accuracy(expect, BN_fit, universe)
+for i = 1:10
+    println("########## Starting iteration $(i) #################")
 
-println("Structural acc for MLP")
-stru_acc = get_structural_accuracy(expect, BN_mlp, universe)
+    BN_std, BN_fit, BN_mlp = getBN!(df_bool, 0.99)
+
+    println("Structural acc for STD")
+    stru_acc = get_structural_accuracy(expect, BN_std, universe)
+
+    println("Structural acc for FIT")
+    stru_acc = get_structural_accuracy(expect, BN_fit, universe)
+
+    println("Structural acc for MLP")
+    stru_acc = get_structural_accuracy(expect, BN_mlp, universe)
+
+    println("########### iteration $(i) completed ###############")
+end
+
+# BN_std, BN_fit, BN_mlp = getBN!(df, 0.99)
+
+# # actual = getBN!(df, 0.99)
+# println("Structural acc for STD")
+# stru_acc = get_structural_accuracy(expect, BN_std, universe)
+
+# println("Structural acc for FIT")
+# stru_acc = get_structural_accuracy(expect, BN_fit, universe)
+
+# println("Structural acc for MLP")
+# stru_acc = get_structural_accuracy(expect, BN_mlp, universe)
