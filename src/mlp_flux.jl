@@ -2,6 +2,7 @@ export train_mlp_flux
 using Flux
 using Flux: gradient
 using Flux.Optimise: update!
+using Flux.Losses: mse
 using DelimitedFiles, Statistics
 using Parameters
 using CSV
@@ -50,18 +51,18 @@ function get_processed_data(args, x_idx, y_idx)
 end
 
 # Struct to define model
-mutable struct model
-    W::AbstractArray
-    b::AbstractVector
-end
+# mutable struct model
+#     W::AbstractArray
+#     b::AbstractVector
+# end
 
 # Function to predict output from given parameters
-predict(x, m) = m.W*x .+ m.b
+# predict(x, m) = m.W*x .+ m.b
 
 # Define the mean squared error function to be used in the loss 
 # function. An implementation is also available in the Flux package
 # (https://fluxml.ai/Flux.jl/stable/models/losses/#Flux.Losses.mse).
-meansquarederror(ŷ, y) = sum((ŷ .- y).^2)/size(y, 2)
+# meansquarederror(ŷ, y) = sum((ŷ .- y).^2)/size(y, 2)
 
 function train_mlp_flux(x_idx::Array{Int64}, y_idx::Int64; kws...)
 
@@ -73,29 +74,44 @@ function train_mlp_flux(x_idx::Array{Int64}, y_idx::Int64; kws...)
     # Load the data
     (x_train,y_train),(x_test,y_test) = get_processed_data(args, x_idx, y_idx)
     
+    input_size = size(x_idx)[1]
     # The model
-    m = model((randn(2,size(x_idx)[1])),[0.])
+    mlp = Chain(
+        Dense(input_size, input_size, relu),
+        Dense(input_size, 1)
+    )
+
+    # m = model((randn(2,size(x_idx)[1])),[0.])
     
-    loss(x, y) = meansquarederror(predict(x, m), y) 
+    # loss(x, y) = mse(predict(x, m), y) 
+    loss_fn(x, y) = mse(mlp(x), y)
 
-    ## Training
-    η = args.lr
-    θ = params(m.W, m.b)
+    opt = Descent(args.lr)
 
+    # Training
+    # η = args.lr
+    # θ = params(m.W, m.b)
+    loss  = zeros(500)
     for i = 1:500
-        g = gradient(() -> loss(x_train, y_train), θ)
-        for x in θ
-            update!(x, g[x]*η)
-        end
+        # g = gradient(() -> loss(x_train, y_train), θ)
+        # for x in θ
+        #     update!(x, g[x]*η)
+        # end
+        Flux.train!(loss_fn, params(mlp), [(x_train, y_train)], opt)
+        loss[i] = loss_fn(x_train, y_train)
         if i%100==0
-            @show loss(x_train, y_train)
+            # @show loss(x_train, y_train)
+            @show loss[i]
         end
     end
     
     # Predict the RMSE on the test set
-    err = meansquarederror(predict(x_test, m),y_test)
+    # err = mse(predict(x_test, m),y_test)
+    err = mse(mlp(x_test), y_test)
+    println("Err: $(err)")
 
-    err
+    # loss(x_train, y_train)
+    loss[500]
 end
 
 # cd(@__DIR__)

@@ -31,8 +31,14 @@ end
 #     println(set)
 # end
 
+function max_selection(pop::Array{<:Individual})
+    sort(unique(pop), by=i ->(i.fitness, -i.sparsity, -i.n_active))[end]
+end
+
 function getBN!(df::DataFrame, fitness::Float64)
-    BN = Set()
+    BN_mlp = Set()
+    BN_std = Set()
+    BN_fit = Set()
 
     ndf = names(df)
     l_idx = 3
@@ -67,31 +73,30 @@ function getBN!(df::DataFrame, fitness::Float64)
             println("Fitness $(el.fitness) sparsity $(el.sparsity) active $(el.n_active)")
         end
 
+        # normal selection
+        set_std = get_active_connections!(e.population[end], l_idx, h_idx)
+
+        # archive fit selection
         if size(e.elites)[1] > 1
-            set = get_connections_from_archive!(e.elites, l_idx, h_idx, i)
+            set_fit = get_active_connections!(max_selection(e.elites), l_idx, h_idx)
         else
-            set = get_active_connections!(e.elites[end], l_idx, h_idx)
+            set_fit = get_active_connections!(e.elites[end], l_idx, h_idx)
         end
 
-        "output result for target gene"
-        # res = []
-        # for j in set
-        #     push!(res, ndf[j])
-        # end
-        # println("$(target) is connected with:")
-        # println(res)
+        # archive mlp selection
+        if size(e.elites)[1] > 1
+            set_mlp = get_connections_from_archive!(e.elites, l_idx, h_idx, i)
+        else
+            set_mlp = get_active_connections!(e.elites[end], l_idx, h_idx)
+        end
 
-        "store connections to BN"
-        # for k in set
-        #     conn = ndf[k] * "_" * target
-        #     push!(BN, conn)
-        #     println(conn)
-        # end
-        store_BN(set, BN, ndf, target)
+        store_BN(set_mlp, BN_mlp, ndf, target)
+        store_BN(set_std, BN_std, ndf, target)
+        store_BN(set_fit, BN_fit, ndf, target)
 
     end
 
-    BN
+    BN_std, BN_fit, BN_mlp
 end
 
 
@@ -130,10 +135,10 @@ function get_connections_from_archive!(elites::Array{CGPInd}, low::Int64, high::
     res_all = []
     shift = low - 1
     for e in elites
-        err = evaluate_mlp(e, low, high, target_idx-shift)
-        res_all = vcat(res_all, (err, e))
+        loss = evaluate_mlp(e, low, high, target_idx-shift)
+        res_all = vcat(res_all, (loss, e))
         # println(e)
-        println("Err: $(err)")
+        println("Loss: $(loss)")
     end
 
     # println(res_all)
@@ -243,8 +248,14 @@ universe = get_universe_set(names(df_origin))
 
 expect = get_expect_CDC15()
 
-BN = getBN!(df, 0.99)
+BN_std, BN_fit, BN_mlp = getBN!(df, 0.99)
 
 # actual = getBN!(df, 0.99)
-println("Structural acc")
-stru_acc = get_structural_accuracy(expect, BN, universe)
+println("Structural acc for STD")
+stru_acc = get_structural_accuracy(expect, BN_std, universe)
+
+println("Structural acc for FIT")
+stru_acc = get_structural_accuracy(expect, BN_fit, universe)
+
+println("Structural acc for MLP")
+stru_acc = get_structural_accuracy(expect, BN_mlp, universe)
