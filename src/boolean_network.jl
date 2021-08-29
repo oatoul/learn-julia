@@ -1,46 +1,43 @@
-export BooleanNetwork, evaluate
+export Result, BooleanNetwork, add_dynamic_consistency!
 
-mutable struct BooleanNetwork
-    dynamic_acc::Float64
-    dynamic_consistency::Array{Float64}
-    struct_acc::Float64
-    precision::Float64
-    recall::Float64
-    TP::Int64
-    FP::Int64
-    FN::Int64
-    TN::Int64
-    actual_conn::Set
-    exptect_conn::Set
-    universe_conn::Set
-    BooleanNetwork() = new()
+using Base
+
+Base.@kwdef mutable struct Result
+    dynamic_acc::Float64 = 0.0
+    struct_acc::Float64 = 0.0
+    precision::Float64 = 0.0
+    recall::Float64 = 0.0
+    TP::Int64 = -1
+    FP::Int64 = -1
+    FN::Int64 = -1
+    TN::Int64 = -1
 end
 
-function evaluate(bn::BooleanNetwork)
-    expect = bn.exptect_conn
-    actual = bn.actual_conn
-    universe = bn.universe_conn
-
-    TP = length(intersect(actual, expect))
-    FP = length(setdiff(actual, expect))
-    FN = length(setdiff(expect, actual))
-    expect_negative = setdiff(universe, expect)
-    actual_negative = setdiff(universe, actual)
-    TN = length(intersect(actual_negative, expect_negative))
-
-    acc = (TP + TN) / (TP + FP + FN + TN)
-
-    bn.TP = TP
-    bn.FP = FP
-    bn.FN = FN
-    bn.TN = TN
-    bn.struct_acc = acc
-
-    println("TP : $(bn.TP)")
-    println("FP : $(bn.FP)")
-    println("FN : $(bn.FN)")
-    println("TN : $(bn.TN)")
-    println("Structural accuracy : $(bn.struct_acc)")
-
-    bn
+Base.@kwdef mutable struct BooleanNetwork
+    actual_conn::Set = Set()
+    exptect_conn::Set = Set()
+    universe_conn::Set = Set()
+    dynamic_consistency::Array{Float64} = Float64[]
+    result::Result = Result()
 end
+
+function add_dynamic_consistency!(bn::BooleanNetwork, c::Float64)
+    push!(bn.dynamic_consistency, c)    
+end
+
+# function evaluate(bn::BooleanNetwork)
+#     expect = bn.exptect_conn
+#     actual = bn.actual_conn
+#     universe = bn.universe_conn
+
+#     TP = length(intersect(actual, expect))
+#     FP = length(setdiff(actual, expect))
+#     FN = length(setdiff(expect, actual))
+#     expect_negative = setdiff(universe, expect)
+#     actual_negative = setdiff(universe, actual)
+#     TN = length(intersect(actual_negative, expect_negative))
+
+#     acc = (TP + TN) / (TP + FP + FN + TN)
+
+#     bn
+# end

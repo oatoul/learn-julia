@@ -35,10 +35,10 @@ function max_selection(pop::Array{<:Individual})
     sort(unique(pop), by=i ->(i.fitness, -i.sparsity, -i.n_active))[end]
 end
 
-function getBN!(df::DataFrame, fitness::Float64)
-    BN_mlp = Set()
-    BN_std = Set()
-    BN_fit = Set()
+function getBN!(df::DataFrame, fitness::Float64, exptect_conn::Set, universe_conn::Set)
+    BN_mlp = BooleanNetwork(exptect_conn=exptect_conn, universe_conn=universe_conn)
+    BN_std = BooleanNetwork(exptect_conn=exptect_conn, universe_conn=universe_conn)
+    BN_fit = BooleanNetwork(exptect_conn=exptect_conn, universe_conn=universe_conn)
 
     ndf = names(df)
     l_idx = 3
@@ -66,48 +66,60 @@ function getBN!(df::DataFrame, fitness::Float64)
         end
 
         println("Fitness: $(e.elites[end].fitness[1])")
-        # println(summary(e.population[end]))
-
-        # eee = sort(e.elites)
-        # for el in e.elites
-        #     println("Fitness $(el.fitness) sparsity $(el.sparsity) active $(el.n_active)")
-        # end
 
         # normal selection
-        set_std = get_active_connections!(e.population[end], l_idx, h_idx)
-
+        ind_std = e.population[end]
+        
         # archive fit selection
         if size(e.elites)[1] > 1
-            set_fit = get_active_connections!(max_selection(e.elites), l_idx, h_idx)
+            ind_fit = max_selection(e.elites)
         else
-            set_fit = get_active_connections!(e.elites[end], l_idx, h_idx)
+            ind_fit = e.elites[end]
         end
-
+        
         # archive mlp selection
         if size(e.elites)[1] > 1
-            set_mlp = get_connections_from_archive!(e.elites, l_idx, h_idx, i)
+            ind_mlp = get_best_from_archive!(e.elites, l_idx, h_idx, i)
         else
-            set_mlp = get_active_connections!(e.elites[end], l_idx, h_idx)
+            ind_mlp = e.elites[end]
         end
+        
+        set_std = get_active_connections!(ind_std, l_idx, h_idx)
+        set_fit = get_active_connections!(ind_fit, l_idx, h_idx)
+        set_mlp = get_active_connections!(ind_mlp, l_idx, h_idx)
 
-        store_BN(set_mlp, BN_mlp, ndf, target)
+        add_dynamic_consistency!(BN_std, ind_std.fitness[1])
+        add_dynamic_consistency!(BN_fit, ind_fit.fitness[1])
+        add_dynamic_consistency!(BN_mlp, ind_mlp.fitness[1])
+
         store_BN(set_std, BN_std, ndf, target)
         store_BN(set_fit, BN_fit, ndf, target)
-
+        store_BN(set_mlp, BN_mlp, ndf, target)
     end
+
+    println(BN_std.dynamic_consistency)
+    println(BN_fit.dynamic_consistency)
+    println(BN_mlp.dynamic_consistency)
 
     BN_std, BN_fit, BN_mlp
 end
 
 
-function store_BN(set::Set, BN::Set, ndf::Array, target::String)
+# function store_BN(set::Set, BN::Set, ndf::Array, target::String)
+#     for k in set
+#         conn = ndf[k] * "_" * target
+#         push!(BN, conn)
+#     end
+# end
+
+
+function store_BN(set::Set, BN::BooleanNetwork, ndf::Array, target::String)
     for k in set
         conn = ndf[k] * "_" * target
-        push!(BN, conn)
-        # println(conn)
+        push!(BN.actual_conn, conn)
     end
+    BN
 end
-
 
 
 function get_connections_by_vote!(vote_ratio::Float64, elites::Array{CGPInd}, low::Int64, high::Int64)
@@ -131,7 +143,7 @@ function get_connections_by_vote!(vote_ratio::Float64, elites::Array{CGPInd}, lo
     res_set
 end
 
-function get_connections_from_archive!(elites::Array{CGPInd}, low::Int64, high::Int64, target_idx::Int64)
+function get_best_from_archive!(elites::Array{CGPInd}, low::Int64, high::Int64, target_idx::Int64)
     res_all = []
     shift = low - 1
     for e in elites
@@ -147,7 +159,7 @@ function get_connections_from_archive!(elites::Array{CGPInd}, low::Int64, high::
     best = best[2]
     println("Best: Fitness $(best.fitness) sparsity $(best.sparsity) active $(best.n_active) loss $(loss)")
 
-    get_active_connections!(best, low, high)
+    best
 end
 
 function evaluate_mlp(ind::CGPInd, low::Int64, high::Int64, target_idx::Int64)
@@ -256,16 +268,16 @@ expect = get_expect_CDC15()
 for i = 1:10
     println("########## Starting iteration $(i) #################")
 
-    BN_std, BN_fit, BN_mlp = getBN!(df_bool, 0.99)
+    BN_std, BN_fit, BN_mlp = getBN!(df_bool, 0.99, expect, universe)
 
     println("Structural acc for STD")
-    stru_acc = get_structural_accuracy(expect, BN_std, universe)
+    stru_acc = get_structural_accuracy(expect, BN_std.actual_conn, universe)
 
     println("Structural acc for FIT")
-    stru_acc = get_structural_accuracy(expect, BN_fit, universe)
+    stru_acc = get_structural_accuracy(expect, BN_fit.actual_conn, universe)
 
     println("Structural acc for MLP")
-    stru_acc = get_structural_accuracy(expect, BN_mlp, universe)
+    stru_acc = get_structural_accuracy(expect, BN_mlp.actual_conn, universe)
 
     println("########### iteration $(i) completed ###############")
 end
