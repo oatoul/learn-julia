@@ -271,13 +271,16 @@ for i = 1:10
     BN_std, BN_fit, BN_mlp = getBN!(df_bool, 0.99, expect, universe)
 
     println("Structural acc for STD")
-    stru_acc = get_structural_accuracy(expect, BN_std.actual_conn, universe)
+    evaluate_bn!(BN_std)
+    # stru_acc = get_structural_accuracy(expect, BN_std.actual_conn, universe)
 
     println("Structural acc for FIT")
-    stru_acc = get_structural_accuracy(expect, BN_fit.actual_conn, universe)
+    evaluate_bn!(BN_fit)
+    # stru_acc = get_structural_accuracy(expect, BN_fit.actual_conn, universe)
 
     println("Structural acc for MLP")
-    stru_acc = get_structural_accuracy(expect, BN_mlp.actual_conn, universe)
+    evaluate_bn!(BN_mlp)
+    # stru_acc = get_structural_accuracy(expect, BN_mlp.actual_conn, universe)
 
     println("########### iteration $(i) completed ###############")
 end
