@@ -18,5 +18,6 @@ include("selection.jl")
 include("step.jl")
 include("evaluator.jl")
 include("mlp_flux.jl")
+include("boolean_network.jl")
 
 end
