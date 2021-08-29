@@ -63,6 +63,7 @@ function evaluate_bn!(bn::BooleanNetwork)
     struct_acc = (TP + TN) / (TP + FP + FN + TN)
     precision = TP / (TP + FP)
     recall = TP / (TP + FN)
+    dynamic_acc = Statistics.mean(bn.dynamic_consistency)
 
     bn.result.TP = TP
     bn.result.FN = FN
@@ -71,7 +72,7 @@ function evaluate_bn!(bn::BooleanNetwork)
     bn.result.struct_acc = struct_acc
     bn.result.precision = precision
     bn.result.recall = recall
-    bn.result.dynamic_acc = Statistics.mean(bn.dynamic_consistency)
+    bn.result.dynamic_acc = dynamic_acc
 
     println("TP : $(TP)")
     println("FP : $(FP)")
