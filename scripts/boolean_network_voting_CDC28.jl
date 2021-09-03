@@ -224,13 +224,6 @@ df_origin = DataFrame(CSV.File("data/CDC28_bool.tsv",drop=["Time"],type=Bool))
 df = copy(df_origin)
 insertcols!(df, 1, :T0 => false, :T1 => true)
 
-# ndf = names(df)
-# l_idx = 3
-# h_idx = size(ndf)[1]
-# for col in ndf
-#     println("$(col)")
-# end
-
 universe = get_universe_set(names(df_origin))
 
 expect = get_expect_CDC15()
