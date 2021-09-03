@@ -9,7 +9,7 @@ save_gen: 10
 m_rate: 0.1
 # CartesianGeneticProgramming.jl settings
 rows: 1
-columns: 22
+columns: 15
 recur: 0.2
 in_idx: 3
 n_in: 11
