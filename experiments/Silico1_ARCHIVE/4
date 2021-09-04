@@ -1,0 +1,662 @@
+WARNING: Method definition get_config(Base.Dict{K, V} where V where K) in module Cambrian at C:\Users\luota\.julia\packages\Cambrian\pcP88\src\config.jl:16 overwritten in module CartesianGeneticProgramming at c:\dev\learn-julia\src\config.jl:6.
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: Method definition process(CartesianGeneticProgramming.CGPInd) in module CartesianGeneticProgramming at c:\dev\learn-julia\src\process.jl:18 overwritten at c:\dev\learn-julia\src\process.jl:33.
+  ** incremental compilation may be fatally broken for this module **
+
+WARNING: import of Cambrian.evaluate into CartesianGeneticProgramming conflicts with an existing identifier; ignored.
+┌ Warning: Package CartesianGeneticProgramming does not have DelimitedFiles in its dependencies:
+│ - If you have CartesianGeneticProgramming checked out for development and have
+│   added DelimitedFiles as a dependency but haven't updated your primary
+│   environment's manifest file, try `Pkg.resolve()`.
+│ - Otherwise you may need to report an issue with CartesianGeneticProgramming
+└ Loading DelimitedFiles into CartesianGeneticProgramming from project dependency, future warnings for CartesianGeneticProgramming are suppressed.
+(two_arity = Bool[1, 1, 0], n_in = 12, m_rate = 0.1, functions = Function[CartesianGeneticProgramming.CGPFunctions.f_and, CartesianGeneticProgramming.CGPFunctions.f_or, CartesianGeneticProgramming.CGPFunctions.f_not], recur = 0.2, d_fitness = 1, save_gen = 1000, n_out = 1, 
+in_idx = 3, out_m_rate = 0.3, id = "2021-09-04T15_04_25.223", n_elite = 50, n_population = 100, rows = 1, n_gen = 1000, seed = 0, columns = 22, log_gen = 1000)
+21×12 DataFrame
+ Row │ T0     T1    G1     G2     G3     G4     G5     G6     G7     G8     G9     G10   
+     │ Bool   Bool  Bool   Bool   Bool   Bool   Bool   Bool   Bool   Bool   Bool   Bool  
+─────┼───────────────────────────────────────────────────────────────────────────────────
+   1 │ false  true   true   true   true   true  false  false   true  false  false  false
+   2 │ false  true  false  false   true   true   true   true  false  false  false  false
+   3 │ false  true  false  false   true   true   true   true  false   true  false  false
+   4 │ false  true  false  false  false   true  false   true  false   true   true   true
+   5 │ false  true  false   true  false  false  false   true  false   true   true  false
+   6 │ false  true  false  false  false  false  false   true  false   true   true   true
+   7 │ false  true  false   true   true  false   true   true  false  false  false   true
+   8 │ false  true  false  false   true  false   true   true  false  false  false   true
+   9 │ false  true  false  false  false  false  false  false  false   true   true   true
+  10 │ false  true  false   true  false  false  false   true  false  false  false   true
+  11 │ false  true  false   true   true  false   true   true  false  false  false  false
+  12 │ false  true  false   true   true  false   true  false   true   true  false  false
+  13 │ false  true  false   true   true   true  false   true   true   true   true  false
+  14 │ false  true   true  false   true   true  false   true   true   true  false  false
+  15 │ false  true   true  false   true   true  false   true   true   true  false   true
+  16 │ false  true   true  false   true   true  false  false   true  false  false  false
+  17 │ false  true   true  false   true   true  false   true   true  false   true   true
+  18 │ false  true  false  false   true   true  false   true   true  false  false   true
+  19 │ false  true   true   true   true   true  false  false   true   true  false  false
+  20 │ false  true   true  false  false   true  false  false   true   true  false  false
+  21 │ false  true   true   true   true   true  false  false   true  false  false  false
+########## Starting iteration 1 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 4 active 6 loss 1.0360447504353942e-6
+Calculate 4: G2
+Fitness: 0.8
+Best: Fitness [0.8] sparsity 1 active 1 loss 0.000467381119960919
+Calculate 5: G3
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 3 loss 0.0026732520200312138
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 4 loss 0.0006749773747287691
+Calculate 7: G5
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 1 active 4 loss 0.0022842204198241234
+Calculate 8: G6
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 3 active 3 loss 0.0011787762632593513
+Calculate 9: G7
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 1 active 2 loss 0.04352204129099846
+Calculate 10: G8
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 3 active 3 loss 0.0018237384501844645
+Calculate 11: G9
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 1 active 2 loss 0.0033265375532209873
+Calculate 12: G10
+Fitness: 0.85
+Best: Fitness [0.9] sparsity 3 active 6 loss 0.0019329094793647528
+[1.0, 0.4, 0.7, 1.0, 1.0, 0.75, 0.7, 0.45, 0.55, 0.35]
+[1.0, 0.8, 0.9, 1.0, 1.0, 0.85, 0.95, 0.9, 0.85, 0.95]
+[1.0, 0.8, 0.9, 1.0, 1.0, 0.85, 0.95, 0.9, 0.85, 0.9]
+Structural acc for STD
+TP : 4
+FP : 12
+FN : 12
+TN : 72
+Structural accuracy : 0.76
+Dynamic accuracy : 0.69
+Precision : 0.25
+Recall : 0.25
+Structural acc for FIT
+TP : 2
+FP : 17
+FN : 14
+TN : 67
+Structural accuracy : 0.69
+Dynamic accuracy : 0.9199999999999999
+Precision : 0.10526315789473684
+Recall : 0.125
+Structural acc for MLP
+TP : 2
+FP : 19
+FN : 14
+TN : 65
+Structural accuracy : 0.67
+Dynamic accuracy : 0.915
+Precision : 0.09523809523809523
+Recall : 0.125
+########### iteration 1 completed ###############
+########## Starting iteration 2 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 3 active 3 loss 0.0021761497482657433
+Calculate 4: G2
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 3 active 3 loss 0.00014879938680678606
+Calculate 5: G3
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 2 loss 0.002332874806597829
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 2 loss 0.0032176650129258633
+Calculate 7: G5
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 1 active 5 loss 0.001987647730857134
+Calculate 8: G6
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 7 loss 0.002479224232956767
+Calculate 9: G7
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 1 active 2 loss 0.018686071038246155
+Calculate 10: G8
+Fitness: 0.85
+Best: Fitness [0.7] sparsity 1 active 2 loss 0.003825028659775853
+Calculate 11: G9
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 2 active 4 loss 0.001574499299749732
+Calculate 12: G10
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 1 active 5 loss 0.004035749938338995
+[1.0, 0.55, 0.8, 1.0, 1.0, 0.7, 0.5, 0.6, 0.4, 0.5]
+[1.0, 0.9, 0.9, 1.0, 1.0, 0.9, 0.95, 0.85, 0.95, 0.85]
+[1.0, 0.9, 0.9, 1.0, 1.0, 0.9, 0.95, 0.7, 0.95, 0.85]
+Structural acc for STD
+TP : 3
+FP : 14
+FN : 13
+TN : 70
+Structural accuracy : 0.73
+Dynamic accuracy : 0.705
+Precision : 0.17647058823529413
+Recall : 0.1875
+Structural acc for FIT
+TP : 4
+FP : 15
+FN : 12
+TN : 69
+Structural accuracy : 0.73
+Dynamic accuracy : 0.9299999999999999
+Precision : 0.21052631578947367
+Recall : 0.25
+Structural acc for MLP
+TP : 4
+FP : 14
+FN : 12
+TN : 70
+Structural accuracy : 0.74
+Dynamic accuracy : 0.915
+Precision : 0.2222222222222222
+Recall : 0.25
+########### iteration 2 completed ###############
+########## Starting iteration 3 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 4 loss 0.0028149522840976715
+Calculate 4: G2
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 3 active 3 loss 0.0003125748480670154
+Calculate 5: G3
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 3 loss 0.001950324745848775
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 3 active 2 loss 0.0009307103464379907
+Calculate 7: G5
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 2 loss 0.0016058379551395774
+Calculate 8: G6
+Fitness: 0.8
+Best: Fitness [0.8] sparsity 2 active 2 loss 0.0029642328154295683
+Calculate 9: G7
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 1 active 2 loss 0.0190375167876482
+Calculate 10: G8
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 2 active 3 loss 0.0033080701250582933
+Calculate 11: G9
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 7 loss 0.001005360740236938
+Calculate 12: G10
+Fitness: 0.9
+Best: Fitness [0.85] sparsity 3 active 6 loss 0.0008216931601054966
+[1.0, 0.4, 0.4, 1.0, 0.6, 0.55, 0.5, 0.5, 0.4, 0.6]
+[1.0, 0.85, 0.9, 1.0, 0.9, 0.8, 0.95, 0.85, 0.9, 0.9]
+[1.0, 0.85, 0.9, 1.0, 0.9, 0.8, 0.95, 0.85, 0.9, 0.85]
+Structural acc for STD
+TP : 4
+FP : 19
+FN : 12
+TN : 65
+Structural accuracy : 0.69
+Dynamic accuracy : 0.595
+Precision : 0.17391304347826086
+Recall : 0.25
+Structural acc for FIT
+TP : 4
+FP : 19
+FN : 12
+TN : 65
+Structural accuracy : 0.69
+Dynamic accuracy : 0.905
+Precision : 0.17391304347826086
+Recall : 0.25
+Structural acc for MLP
+TP : 4
+FP : 18
+FN : 12
+TN : 66
+Structural accuracy : 0.7
+Dynamic accuracy : 0.9
+Precision : 0.18181818181818182
+Recall : 0.25
+########### iteration 3 completed ###############
+########## Starting iteration 4 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 4 loss 0.004305906593799591
+Calculate 4: G2
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 3 active 3 loss 0.00016820251767057925
+Calculate 5: G3
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 2 loss 0.00385371595621109
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 1 active 5 loss 0.01677447371184826
+Calculate 7: G5
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 5 loss 0.0020591968204826117
+Calculate 8: G6
+Fitness: 0.9
+Best: Fitness [0.8] sparsity 2 active 4 loss 0.0012515700655058026
+Calculate 9: G7
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 1 active 2 loss 0.04352204129099846
+Calculate 10: G8
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 3 active 4 loss 0.0007717035477980971
+Calculate 11: G9
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 1 active 2 loss 0.0022319962736219168
+Calculate 12: G10
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 2 active 7 loss 0.0022623396944254637
+[1.0, 0.65, 0.75, 1.0, 1.0, 0.35, 0.5, 0.15, 0.35, 0.6]
+[1.0, 0.85, 0.9, 1.0, 1.0, 0.9, 0.95, 0.95, 0.85, 0.95]
+[1.0, 0.85, 0.9, 1.0, 1.0, 0.8, 0.95, 0.95, 0.85, 0.95]
+Structural acc for STD
+TP : 6
+FP : 19
+FN : 10
+TN : 65
+Structural accuracy : 0.71
+Dynamic accuracy : 0.635
+Precision : 0.24
+Recall : 0.375
+Structural acc for FIT
+TP : 3
+FP : 17
+FN : 13
+TN : 67
+Structural accuracy : 0.7
+Dynamic accuracy : 0.9349999999999999
+Precision : 0.15
+Recall : 0.1875
+Structural acc for MLP
+TP : 2
+FP : 17
+FN : 14
+TN : 67
+Structural accuracy : 0.69
+Dynamic accuracy : 0.925
+Precision : 0.10526315789473684
+Recall : 0.125
+########### iteration 4 completed ###############
+########## Starting iteration 5 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 3 active 3 loss 0.001506520202383399
+Calculate 4: G2
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 2 active 4 loss 0.00039246739470399916
+Calculate 5: G3
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 4 loss 0.0029481968376785517
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 3 active 2 loss 0.0022057213354855776
+Calculate 7: G5
+Fitness: 1.0
+Best: Fitness [0.95] sparsity 1 active 6 loss 0.0022841342724859715
+Calculate 8: G6
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 3 active 8 loss 0.0014820123324170709
+Calculate 9: G7
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 1 active 2 loss 0.04352203756570816
+Calculate 10: G8
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 3 active 7 loss 0.0004175126668997109
+Calculate 11: G9
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 1 active 5 loss 0.002263962524011731
+Calculate 12: G10
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 2 active 6 loss 0.0042300475761294365
+[1.0, 0.65, 0.3, 1.0, 1.0, 0.75, 0.95, 0.7, 0.7, 0.85]
+[1.0, 0.85, 0.9, 1.0, 1.0, 0.95, 0.95, 0.9, 0.9, 0.85]
+[1.0, 0.85, 0.9, 1.0, 0.95, 0.95, 0.95, 0.9, 0.9, 0.85]
+Structural acc for STD
+TP : 3
+FP : 26
+FN : 13
+TN : 58
+Structural accuracy : 0.61
+Dynamic accuracy : 0.79
+Precision : 0.10344827586206896
+Recall : 0.1875
+Structural acc for FIT
+TP : 2
+FP : 20
+FN : 14
+TN : 64
+Structural accuracy : 0.66
+Dynamic accuracy : 0.93
+Precision : 0.09090909090909091
+Recall : 0.125
+Structural acc for MLP
+TP : 2
+FP : 19
+FN : 14
+TN : 65
+Structural accuracy : 0.67
+Dynamic accuracy : 0.925
+Precision : 0.09523809523809523
+Recall : 0.125
+########### iteration 5 completed ###############
+########## Starting iteration 6 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 3 active 2 loss 0.002441351767629385
+Calculate 4: G2
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 1 active 4 loss 0.000467381119960919
+Calculate 5: G3
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 2 loss 0.0025388735812157393
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 5 loss 0.0019424594938755035
+Calculate 7: G5
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 2 active 5 loss 0.0012534180423244834
+Calculate 8: G6
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 1 active 5 loss 0.0029690691735595465
+Calculate 9: G7
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 3 active 5 loss 0.0014814184978604317
+Calculate 10: G8
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 3 active 5 loss 0.0010434298310428858
+Calculate 11: G9
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 1 active 2 loss 0.0036823763512074947
+Calculate 12: G10
+Fitness: 0.85
+Best: Fitness [0.9] sparsity 3 active 5 loss 0.001244460348971188
+[1.0, 0.5, 0.75, 1.0, 0.3, 0.5, 1.0, 0.3, 0.7, 0.55]
+[1.0, 0.85, 0.9, 1.0, 0.95, 0.9, 1.0, 0.9, 0.85, 0.9]
+[1.0, 0.85, 0.9, 1.0, 0.95, 0.9, 1.0, 0.9, 0.85, 0.9]
+Structural acc for STD
+TP : 3
+FP : 18
+FN : 13
+TN : 66
+Structural accuracy : 0.69
+Dynamic accuracy : 0.6599999999999999
+Precision : 0.14285714285714285
+Recall : 0.1875
+Structural acc for FIT
+TP : 2
+FP : 18
+FN : 14
+TN : 66
+Structural accuracy : 0.68
+Dynamic accuracy : 0.9250000000000002
+Precision : 0.1
+Recall : 0.125
+Structural acc for MLP
+TP : 3
+FP : 18
+FN : 13
+TN : 66
+Structural accuracy : 0.69
+Dynamic accuracy : 0.9250000000000002
+Precision : 0.14285714285714285
+Recall : 0.1875
+########### iteration 6 completed ###############
+########## Starting iteration 7 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 3 active 2 loss 0.0020371954888105392
+Calculate 4: G2
+Fitness: 0.8
+Best: Fitness [0.8] sparsity 1 active 1 loss 0.000467381119960919
+Calculate 5: G3
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 2 loss 0.0025710752233862877
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 2 loss 0.0013371200766414404
+Calculate 7: G5
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 4 loss 0.00139518768992275
+Calculate 8: G6
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 1 active 4 loss 0.002453317167237401
+Calculate 9: G7
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 3 loss 0.03636150807142258
+Calculate 10: G8
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 3 active 5 loss 0.0001036227768054232
+Calculate 11: G9
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 1 active 3 loss 0.0033675245940685272
+Calculate 12: G10
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 4 active 7 loss 6.095104617998004e-5
+[1.0, 0.65, 0.6, 1.0, 1.0, 0.3, 1.0, 0.8, 0.6, 1.0]
+[1.0, 0.8, 0.9, 1.0, 1.0, 0.9, 1.0, 0.95, 0.85, 1.0]
+[1.0, 0.8, 0.9, 1.0, 1.0, 0.9, 1.0, 0.95, 0.85, 1.0]
+Structural acc for STD
+TP : 3
+FP : 16
+FN : 13
+TN : 68
+Structural accuracy : 0.71
+Dynamic accuracy : 0.7949999999999999
+Precision : 0.15789473684210525
+Recall : 0.1875
+Structural acc for FIT
+TP : 4
+FP : 17
+FN : 12
+TN : 67
+Structural accuracy : 0.71
+Dynamic accuracy : 0.9400000000000001
+Precision : 0.19047619047619047
+Recall : 0.25
+Structural acc for MLP
+TP : 4
+FP : 17
+FN : 12
+TN : 67
+Structural accuracy : 0.71
+Dynamic accuracy : 0.9400000000000001
+Precision : 0.19047619047619047
+Recall : 0.25
+########### iteration 7 completed ###############
+########## Starting iteration 8 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 3 active 3 loss 0.002008393406867981
+Calculate 4: G2
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 2 active 4 loss 0.0002876389480661601
+Calculate 5: G3
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 4 active 8 loss 0.00022563905804418027
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [0.95] sparsity 2 active 5 loss 0.001985300797969103
+Calculate 7: G5
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 3 loss 0.0014223308535292745
+Calculate 8: G6
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 2 active 3 loss 0.0018615636508911848
+Calculate 9: G7
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 1 active 2 loss 0.04352203756570816
+Calculate 10: G8
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 3 active 4 loss 0.001582255237735808
+Calculate 11: G9
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 1 active 2 loss 0.0036823763512074947
+Calculate 12: G10
+Fitness: 0.85
+Best: Fitness [0.9] sparsity 2 active 6 loss 0.002150731161236763
+[1.0, 0.45, 1.0, 1.0, 1.0, 0.6, 0.65, 0.85, 0.65, 0.35]
+[1.0, 0.85, 1.0, 1.0, 1.0, 0.85, 0.95, 0.9, 0.85, 0.9]
+[1.0, 0.85, 1.0, 0.95, 1.0, 0.85, 0.95, 0.9, 0.85, 0.9]
+Structural acc for STD
+TP : 4
+FP : 24
+FN : 12
+TN : 60
+Structural accuracy : 0.64
+Dynamic accuracy : 0.755
+Precision : 0.14285714285714285
+Recall : 0.25
+Structural acc for FIT
+TP : 4
+FP : 18
+FN : 12
+TN : 66
+Structural accuracy : 0.7
+Dynamic accuracy : 0.93
+Precision : 0.18181818181818182
+Recall : 0.25
+Structural acc for MLP
+TP : 4
+FP : 18
+FN : 12
+TN : 66
+Structural accuracy : 0.7
+Dynamic accuracy : 0.925
+Precision : 0.18181818181818182
+Recall : 0.25
+########### iteration 8 completed ###############
+########## Starting iteration 9 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 4 loss 0.002266278490424156
+Calculate 4: G2
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 2 active 4 loss 0.0002575998369138688
+Calculate 5: G3
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 2 loss 0.004487276542931795
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 2 loss 0.0023203573655337095
+Calculate 7: G5
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 2 active 4 loss 0.002053220756351948
+Calculate 8: G6
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 3 active 4 loss 0.0010498050833120942
+Calculate 9: G7
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 6 loss 0.013740594498813152
+Calculate 10: G8
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 3 active 4 loss 0.0007239261758513749
+Calculate 11: G9
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 1 active 2 loss 0.0029520594980567694
+Calculate 12: G10
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 3 active 7 loss 0.0010027906391769648
+[1.0, 0.6, 0.3, 1.0, 0.7, 0.45, 1.0, 0.7, 0.3, 0.55]
+[1.0, 0.85, 0.9, 1.0, 0.95, 0.85, 1.0, 0.85, 0.85, 0.95]
+[1.0, 0.85, 0.9, 1.0, 0.95, 0.85, 1.0, 0.85, 0.85, 0.95]
+Structural acc for STD
+TP : 4
+FP : 13
+FN : 12
+TN : 71
+Structural accuracy : 0.75
+Dynamic accuracy : 0.66
+Precision : 0.23529411764705882
+Recall : 0.25
+Structural acc for FIT
+TP : 4
+FP : 18
+FN : 12
+TN : 66
+Structural accuracy : 0.7
+Dynamic accuracy : 0.9199999999999999
+Precision : 0.18181818181818182
+Recall : 0.25
+Structural acc for MLP
+TP : 4
+FP : 18
+FN : 12
+TN : 66
+Structural accuracy : 0.7
+Dynamic accuracy : 0.9199999999999999
+Precision : 0.18181818181818182
+Recall : 0.25
+########### iteration 9 completed ###############
+########## Starting iteration 10 #################
+Calculate 3: G1
+Fitness: 1.0
+Best: Fitness [0.95] sparsity 2 active 3 loss 0.0024053154047578573
+Calculate 4: G2
+Fitness: 0.9
+Best: Fitness [0.9] sparsity 2 active 4 loss 0.00045406987192109227
+Calculate 5: G3
+Fitness: 0.9
+Best: Fitness [0.75] sparsity 1 active 2 loss 0.002644304884597659
+Calculate 6: G4
+Fitness: 1.0
+Best: Fitness [1.0] sparsity 2 active 3 loss 0.0029224054887890816
+Calculate 7: G5
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 1 active 3 loss 0.0017377333715558052
+Calculate 8: G6
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 3 active 6 loss 0.00111144979018718
+Calculate 9: G7
+Fitness: 0.95
+Best: Fitness [0.95] sparsity 1 active 2 loss 0.0190375167876482
+Calculate 10: G8
+Fitness: 0.8
+Best: Fitness [0.8] sparsity 1 active 3 loss 0.002218990819528699
+Calculate 11: G9
+Fitness: 0.85
+Best: Fitness [0.85] sparsity 1 active 3 loss 0.0036823763512074947
+Calculate 12: G10
+Fitness: 0.75
+Best: Fitness [0.75] sparsity 2 active 4 loss 0.0018439560662955046
+[1.0, 0.8, 0.65, 1.0, 0.65, 0.6, 0.35, 0.6, 0.6, 0.45]
+[1.0, 0.9, 0.9, 1.0, 0.95, 0.95, 0.95, 0.8, 0.85, 0.75]
+[0.95, 0.9, 0.75, 1.0, 0.95, 0.95, 0.95, 0.8, 0.85, 0.75]
+Structural acc for STD
+TP : 3
+FP : 14
+FN : 13
+TN : 70
+Structural accuracy : 0.73
+Dynamic accuracy : 0.6699999999999999
+Precision : 0.17647058823529413
+Recall : 0.1875
+Structural acc for FIT
+TP : 4
+FP : 14
+FN : 12
+TN : 70
+Structural accuracy : 0.74
+Dynamic accuracy : 0.905
+Precision : 0.2222222222222222
+Recall : 0.25
+Structural acc for MLP
+TP : 4
+FP : 12
+FN : 12
+TN : 72
+Structural accuracy : 0.76
+Dynamic accuracy : 0.885
+Precision : 0.25
+Recall : 0.25
+########### iteration 10 completed ###############
+
+Julia debuggee finished. P
