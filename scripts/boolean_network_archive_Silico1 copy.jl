@@ -212,8 +212,7 @@ function get_expect_Silico1()
 end
 
 
-cfg = get_config("cfg/Silico1.yaml")
-println(cfg)
+cfg = get_config("cfg/CDC28.yaml")
 mutate(ind::CGPInd) = goldman_mutate(cfg, ind)
 
 df_origin_bool = DataFrame(CSV.File("data/Silico1_bool.tsv",drop=["Time"],type=Bool))
