@@ -90,8 +90,8 @@ function train_mlp_flux(data, x_idx::Array{Int64}, y_idx::Int64; kws...)
     input_size = size(x_idx)[1]
     # The model
     mlp = Chain(
-        Dense(input_size, 32, relu),
-        Dense(32, 1)
+        Dense(input_size, input_size*2, relu),
+        Dense(input_size*2, 1)
     )
 
     # m = model((randn(2,size(x_idx)[1])),[0.])

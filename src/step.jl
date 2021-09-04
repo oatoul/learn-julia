@@ -1,4 +1,4 @@
-export step_archive!
+export step_archive!, step_elites!
 
 import Cambrian.step!
 import Cambrian.AbstractEvolution
@@ -92,12 +92,12 @@ function step_elites!(e::AbstractEvolution)
     evaluate(e)
     generation(e)
 
-    if ((e.config.log_gen > 0) && mod(e.gen, e.config.log_gen) == 0)
-        log_gen(e)
-    end
-    if ((e.config.save_gen > 0) && mod(e.gen, e.config.save_gen) == 0)
-        save_gen(e)
-    end
+    # if ((e.config.log_gen > 0) && mod(e.gen, e.config.log_gen) == 0)
+    #     log_gen(e)
+    # end
+    # if ((e.config.save_gen > 0) && mod(e.gen, e.config.save_gen) == 0)
+    #     save_gen(e)
+    # end
 end
 
 function step_archive!(e::AbstractEvolution)
