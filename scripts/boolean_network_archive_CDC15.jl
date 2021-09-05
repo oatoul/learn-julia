@@ -241,6 +241,8 @@ end
 cfg = get_config("cfg/CDC15.yaml")
 mutate(ind::CGPInd) = goldman_mutate(cfg, ind)
 
+print(cfg)
+
 df_origin_bool = DataFrame(CSV.File("data/CDC15_bool.tsv",drop=["Time"],type=Bool))
 df_bool = copy(df_origin_bool)
 insertcols!(df_bool, 1, :T0 => false, :T1 => true)
