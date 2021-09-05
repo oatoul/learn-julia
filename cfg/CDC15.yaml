@@ -1,7 +1,7 @@
 # settings
 seed: 0
 d_fitness: 1
-n_population: 10
+n_population: 20
 n_elite: 10
 n_gen: 1000
 log_gen: 1000
