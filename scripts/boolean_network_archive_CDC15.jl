@@ -60,7 +60,7 @@ function getBN!(df::DataFrame, fitness::Float64, exptect_conn::Set, universe_con
         e = CGPEvolution_archive(cfg, fit)
 
         step_archive!(e)
-        while(e.population[end].fitness[1] < fitness && e.gen < e.config.n_gen)
+        while(e.gen < e.config.n_gen)
             # println("Step Fitness $(e.population[end].fitness[1]) sparsity $(e.population[end].sparsity)")
             step_archive!(e)
         end
@@ -271,10 +271,10 @@ std = BooleanNetwork[]
 fit = BooleanNetwork[]
 mlp = BooleanNetwork[]
 
-for i = 1:5
+for i = 1:30
     println("########## Starting iteration $(i) #################")
 
-    BN_std, BN_fit, BN_mlp = getBN!(df_bool, 0.99, expect, universe)
+    BN_std, BN_fit, BN_mlp = getBN!(df_bool, 2.0, expect, universe)
 
     println("Structural acc for STD")
     evaluate_bn!(BN_std)
