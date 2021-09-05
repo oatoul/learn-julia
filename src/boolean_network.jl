@@ -1,4 +1,4 @@
-export Result, BooleanNetwork, add_dynamic_consistency!, evaluate_bn!
+export Result, BooleanNetwork, add_dynamic_consistency!, evaluate_bn!, stat_bns!
 using Base
 import Statistics
 import Base: String
@@ -35,6 +35,52 @@ Base.@kwdef mutable struct BooleanNetwork
     universe_conn::Set = Set()
     dynamic_consistency::Array{Float64} = Float64[]
     result::Result = Result()
+end
+
+function stat_bns!(bns::Array{BooleanNetwork})
+    st = Float64[]
+    dy = Float64[]
+    pr = Float64[]
+    re = Float64[]
+    TP = Int64[]
+    FP = Int64[]
+    FN = Int64[]
+    TN = Int64[]
+
+    for bn in bns
+        push!(st, bn.result.struct_acc)
+        push!(dy, bn.result.dynamic_acc)
+        push!(pr, bn.result.precision)
+        push!(re, bn.result.recall)
+        push!(TP, bn.result.TP)
+        push!(FP, bn.result.FP)
+        push!(FN, bn.result.FN)
+        push!(TN, bn.result.TN)
+    end
+    
+    println("###############Statistics######################")
+    println("Structural accuracy")
+    print_stat!(st)
+    println("Dynamic accuracy")
+    print_stat!(dy)
+    println("Precision")
+    print_stat!(pr)
+    println("Recall")
+    print_stat!(re)
+    println("TP")
+    print_stat!(TP)
+    println("FP")
+    print_stat!(FP)
+    println("FN")
+    print_stat!(FN)
+    println("TN")
+    print_stat!(TN)
+    println("###############################################")
+
+end
+
+function print_stat!(arr)
+    println("Max: $(maximum(arr)) Min: $(minimum(arr)) Mean: $(Statistics.mean(arr)) Var: $(Statistics.var(arr))")
 end
 
 function add_dynamic_consistency!(bn::BooleanNetwork, c::Float64)

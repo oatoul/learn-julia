@@ -149,7 +149,7 @@ function get_best_from_archive!(elites::Array{CGPInd}, low::Int64, high::Int64, 
     for e in elites
         loss = evaluate_mlp(e, low, high, target_idx-shift)
         res_all = vcat(res_all, (loss, e))
-        println("Fitness $(e.fitness) sparsity $(e.sparsity) active $(e.n_active) loss: $(loss)")
+        # println("Fitness $(e.fitness) sparsity $(e.sparsity) active $(e.n_active) loss: $(loss)")
     end
 
     # println(res_all)
@@ -267,7 +267,11 @@ expect = get_expect_CDC15()
 
 # println("Mean is $(df_mean)")
 
-for i = 1:10
+std = BooleanNetwork[]
+fit = BooleanNetwork[]
+mlp = BooleanNetwork[]
+
+for i = 1:5
     println("########## Starting iteration $(i) #################")
 
     BN_std, BN_fit, BN_mlp = getBN!(df_bool, 0.99, expect, universe)
@@ -284,8 +288,19 @@ for i = 1:10
     evaluate_bn!(BN_mlp)
     # stru_acc = get_structural_accuracy(expect, BN_mlp.actual_conn, universe)
 
+    push!(std, BN_std)
+    push!(fit, BN_fit)
+    push!(mlp, BN_mlp)
+
     println("########### iteration $(i) completed ###############")
 end
+
+println("Statistics for STD")
+stat_bns!(std)
+println("Statistics for FIT")
+stat_bns!(fit)
+println("Statistics for MLP")
+stat_bns!(mlp)
 
 # BN_std, BN_fit, BN_mlp = getBN!(df, 0.99)
 
