@@ -234,7 +234,7 @@ df_float = Matrix(df_origin_float)'
 
 universe = get_universe_set(names(df_origin_bool))
 
-expect = get_expect_Silico2()
+expect = get_expect_Scerevisiae()
 
 for i = 1:10
     println("########## Starting iteration $(i) #################")
