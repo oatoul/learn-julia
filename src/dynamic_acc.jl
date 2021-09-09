@@ -105,7 +105,49 @@ function get_expect_CDC15()
     res
 end
 
+function get_NNBNI_CDC15()
+    res = Set()
+    push!(res, "FKH2_SWI5")
+    push!(res, "FKH2_ACE2")
+
+    push!(res, "ACE2_CLN3")
+    push!(res, "ACE2_MCM1")
+    push!(res, "ACE2_SWI4")
+    push!(res, "ACE2_SWI5")
+    push!(res, "ACE2_SWI6")
+
+    push!(res, "SWI6_NDD1")
+    push!(res, "SWI6_SWI4")
+
+    push!(res, "NDD1_ACE2")
+    push!(res, "NDD1_SWI5")
+    push!(res, "NDD1_CLN3")
+    push!(res, "NDD1_MBP1")
+
+    push!(res, "SWI5_CLN3")
+
+    push!(res, "MCM1_ACE2")
+    push!(res, "MCM1_SWI5")
+    push!(res, "MCM1_NDD1")
+    push!(res, "MCM1_CLN3")
+    push!(res, "MCM1_SWI4")
+
+    push!(res, "CLN3_SWI4")
+    push!(res, "CLN3_MBP1")
+    push!(res, "CLN3_MCM1")
+
+    push!(res, "MBP1_FKH2")
+    push!(res, "MBP1_SWI6")
+    push!(res, "MBP1_NDD1")
+    push!(res, "MBP1_SWI4")
+
+    push!(res, "SWI4_ACE2")
+    push!(res, "SWI4_NDD1")
+
+    res
+end
+
 df_origin_bool = DataFrame(CSV.File("data/CDC15_bool.tsv",drop=["Time"],type=Int))
 println(df_origin_bool)
 
-dc = dynamic_consistency(df_origin_bool, get_expect_CDC15())
+dc = dynamic_consistency(df_origin_bool, get_NNBNI_CDC15())
