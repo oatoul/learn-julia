@@ -148,7 +148,7 @@ function get_NNBNI_CDC15()
     res
 end
 
-df_origin_bool = DataFrame(CSV.File("data/CDC15_bool.tsv",drop=["Time"],type=Int))
-println(df_origin_bool)
+# df_origin_bool = DataFrame(CSV.File("data/CDC15_bool.tsv",drop=["Time"],type=Int))
+# println(df_origin_bool)
 
-dc = dynamic_consistency(df_origin_bool, get_NNBNI_CDC15())
+# dc = dynamic_consistency(df_origin_bool, get_NNBNI_CDC15())

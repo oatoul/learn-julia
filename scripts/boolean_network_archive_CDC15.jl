@@ -244,6 +244,7 @@ mutate(ind::CGPInd) = goldman_mutate(cfg, ind)
 print(cfg)
 
 df_origin_bool = DataFrame(CSV.File("data/CDC15_bool.tsv",drop=["Time"],type=Bool))
+df_origin_int = DataFrame(CSV.File("data/CDC15_bool.tsv",drop=["Time"],type=Int))
 df_bool = copy(df_origin_bool)
 insertcols!(df_bool, 1, :T0 => false, :T1 => true)
 
@@ -279,14 +280,20 @@ for i = 1:30
     println("Structural acc for STD")
     evaluate_bn!(BN_std)
     # stru_acc = get_structural_accuracy(expect, BN_std.actual_conn, universe)
+    dc1 = dynamic_consistency(df_origin_int, BN_std.actual_conn)
+    println("Validated dynamic acc $(dc1)")
 
     println("Structural acc for FIT")
     evaluate_bn!(BN_fit)
     # stru_acc = get_structural_accuracy(expect, BN_fit.actual_conn, universe)
-
+    dc2 = dynamic_consistency(df_origin_int, BN_fit.actual_conn)
+    println("Validated dynamic acc $(dc2)")
+    
     println("Structural acc for MLP")
     evaluate_bn!(BN_mlp)
     # stru_acc = get_structural_accuracy(expect, BN_mlp.actual_conn, universe)
+    dc3 = dynamic_consistency(df_origin_int, BN_mlp.actual_conn)
+    println("Validated dynamic acc $(dc3)")
 
     push!(std, BN_std)
     push!(fit, BN_fit)
