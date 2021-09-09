@@ -161,3 +161,5 @@ end
 # println(df_origin_bool)
 
 # dc = dynamic_consistency(df_origin_bool, get_NNBNI_CDC15())
+
+# println(dc)
