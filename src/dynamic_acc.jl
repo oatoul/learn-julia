@@ -1,3 +1,4 @@
+export dynamic_consistency
 using DataStructures
 using CSV
 using DataFrames

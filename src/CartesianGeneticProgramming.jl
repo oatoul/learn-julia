@@ -19,5 +19,6 @@ include("step.jl")
 include("evaluator.jl")
 include("mlp_flux.jl")
 include("boolean_network.jl")
+include("dynamic_acc.jl")
 
 end
