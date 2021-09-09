@@ -27,6 +27,19 @@ function gene_wise_consistency(X::Array{String}, Y::Array{Int})
     1 - f_cnt/len
 end
 
+
+function dynamic_consistency(df::DataFrame, conns::Array{String})
+    conn_map = Dict{String, Set{String}}
+    for con in conns
+        r_t = split(con, "_")
+        re = r_t[1]
+        ta = r_t[2]
+        vals = get!(Set{String}, conn_map, ta)
+        push!(vals, re)
+    end
+
+end
+
 # x = ["100", "001", "111", "100", "011"]
 # y = [0, 1, 0, 1, 0]
 
