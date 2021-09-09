@@ -61,6 +61,15 @@ function dynamic_consistency(df::DataFrame, conns::Set)
         println("$(ta) $(g_c)")
         push!(gene_consis, g_c)
     end
+
+    # adjustment for non target
+    adj = size(df)[2] - length(gene_consis)
+    if adj > 0
+        for i in 1:adj
+            push!(gene_consis, 1.0)
+        end
+    end
+
     Statistics.mean(gene_consis)
 end
 
