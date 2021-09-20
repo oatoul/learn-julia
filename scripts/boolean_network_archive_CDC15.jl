@@ -49,7 +49,7 @@ function getBN!(df::DataFrame, fitness::Float64, exptect_conn::Set, universe_con
 
     for i = l_idx:h_idx
         target = ndf[i]
-        println("Calculate $(i): $(target)")
+        # println("Calculate $(i): $(target)")
 
         "data setup for target gene"
         Y = copy(df[!,target])
@@ -65,7 +65,7 @@ function getBN!(df::DataFrame, fitness::Float64, exptect_conn::Set, universe_con
             step_archive!(e)
         end
 
-        println("Fitness: $(e.elites[end].fitness[1])")
+        # println("Fitness: $(e.elites[end].fitness[1])")
 
         # normal selection
         ind_std = e.population[end]
@@ -97,9 +97,9 @@ function getBN!(df::DataFrame, fitness::Float64, exptect_conn::Set, universe_con
         store_BN(set_mlp, BN_mlp, ndf, target)
     end
 
-    println(BN_std.dynamic_consistency)
-    println(BN_fit.dynamic_consistency)
-    println(BN_mlp.dynamic_consistency)
+    # println(BN_std.dynamic_consistency)
+    # println(BN_fit.dynamic_consistency)
+    # println(BN_mlp.dynamic_consistency)
 
     BN_std, BN_fit, BN_mlp
 end
@@ -157,7 +157,7 @@ function get_best_from_archive!(elites::Array{CGPInd}, low::Int64, high::Int64, 
     best = sort(res_all, by=((x,y),)->(-x,))[end]
     loss = best[1]
     best = best[2]
-    println("Best: Fitness $(best.fitness) sparsity $(best.sparsity) active $(best.n_active) loss $(loss)")
+    # println("Best: Fitness $(best.fitness) sparsity $(best.sparsity) active $(best.n_active) loss $(loss)")
 
     best
 end

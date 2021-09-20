@@ -217,6 +217,8 @@ println(cfg)
 mutate(ind::CGPInd) = goldman_mutate(cfg, ind)
 
 df_origin_bool = DataFrame(CSV.File("data/Silico1_bool.tsv",drop=["Time"],type=Bool))
+df_origin_int = DataFrame(CSV.File("data/Silico1_bool.tsv",drop=["Time"],type=Int))
+
 df_bool = copy(df_origin_bool)
 insertcols!(df_bool, 1, :T0 => false, :T1 => true)
 
@@ -229,19 +231,60 @@ universe = get_universe_set(names(df_origin_bool))
 
 expect = get_expect_Silico1()
 
-for i = 1:10
+# for i = 1:10
+#     println("########## Starting iteration $(i) #################")
+
+#     BN_std, BN_fit, BN_mlp = getBN!(df_bool, 0.99, expect, universe)
+
+#     println("Structural acc for STD")
+#     evaluate_bn!(BN_std)
+
+#     println("Structural acc for FIT")
+#     evaluate_bn!(BN_fit)
+
+#     println("Structural acc for MLP")
+#     evaluate_bn!(BN_mlp)
+
+#     println("########### iteration $(i) completed ###############")
+# end
+
+std = BooleanNetwork[]
+fit = BooleanNetwork[]
+mlp = BooleanNetwork[]
+
+for i = 1:30
     println("########## Starting iteration $(i) #################")
 
-    BN_std, BN_fit, BN_mlp = getBN!(df_bool, 0.99, expect, universe)
+    BN_std, BN_fit, BN_mlp = getBN!(df_bool, 2.0, expect, universe)
 
     println("Structural acc for STD")
     evaluate_bn!(BN_std)
+    # stru_acc = get_structural_accuracy(expect, BN_std.actual_conn, universe)
+    dc1 = dynamic_consistency(df_origin_int, BN_std.actual_conn)
+    println("Validated dynamic acc $(dc1)")
 
     println("Structural acc for FIT")
     evaluate_bn!(BN_fit)
-
+    # stru_acc = get_structural_accuracy(expect, BN_fit.actual_conn, universe)
+    dc2 = dynamic_consistency(df_origin_int, BN_fit.actual_conn)
+    println("Validated dynamic acc $(dc2)")
+    
     println("Structural acc for MLP")
     evaluate_bn!(BN_mlp)
+    # stru_acc = get_structural_accuracy(expect, BN_mlp.actual_conn, universe)
+    dc3 = dynamic_consistency(df_origin_int, BN_mlp.actual_conn)
+    println("Validated dynamic acc $(dc3)")
+
+    push!(std, BN_std)
+    push!(fit, BN_fit)
+    push!(mlp, BN_mlp)
 
     println("########### iteration $(i) completed ###############")
 end
+
+println("Statistics for STD")
+stat_bns!(std)
+println("Statistics for FIT")
+stat_bns!(fit)
+println("Statistics for MLP")
+stat_bns!(mlp)
