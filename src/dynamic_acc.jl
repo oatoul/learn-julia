@@ -91,7 +91,7 @@ function dynamic_consistency(df::DataFrame, conns::Set, tlag::Int)
             # println("$(ta) $(g_c)")
             g_c_max = max(g_c_max, g_c)
         end
-        println("Max $(ta) $(g_c_max)")
+        # println("Max $(ta) $(g_c_max)")
         push!(gene_consis, g_c_max)
     end
 

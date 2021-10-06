@@ -1,0 +1,946 @@
+Structural acc for MLP
+TP : 3
+FP : 13
+FN : 14
+TN : 51
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.923416358198967
+Precision : 0.1875
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "SWI5"]), "SWI4" => Set(["ACE2"]), "MBP1" => Set(["MCM1", "ACE2"]), "NDD1" => Set(["SWI6", "ACE2", "SWI5"]), "MCM1" => Set(["MBP1"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "CLN3", "NDD1", "SWI5"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.8003011481272352
+########### iteration 5 completed ###############
+########## Starting iteration 6 #################
+Structural acc for STD
+TP : 4
+FP : 14
+FN : 13
+TN : 50
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.5078842252755297
+Precision : 0.2222222222222222
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "NDD1", "SWI5"]), "SWI4" => Set(["NDD1", "CLN3", "ACE2"]), "MCM1" => Set(["SWI4", "CLN3", "FKH2"]), "NDD1" => Set(["SWI4", "CLN3"]), "CLN3" => Set(["SWI5"]), "FKH2" => Set(["MBP1", "MCM1"]), "SWI6" => Set(["SWI4", "MBP1", "ACE2", "SWI5"]))
+Validated dynamic acc 0.8188136914844988
+Structural acc for FIT
+TP : 3
+FP : 15
+FN : 14
+TN : 49
+Structural accuracy : 0.6419753086419753
+Dynamic accuracy : 0.9103456929543885
+Precision : 0.16666666666666666
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "SWI5"]), "SWI4" => Set(["NDD1", "ACE2"]), "NDD1" => Set(["SWI4", "CLN3"]), "MCM1" => Set(["ACE2"]), "MBP1" => Set(["MCM1"]), "CLN3" => Set(["SWI4", "CLN3", "MCM1", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["NDD1", "ACE2"]), "SWI6" => Set(["MBP1", "SWI5"]))
+Validated dynamic acc 0.8407574711922537
+Structural acc for MLP
+TP : 3
+FP : 16
+FN : 14
+TN : 48
+Structural accuracy : 0.6296296296296297
+Dynamic accuracy : 0.9103456929543885
+Precision : 0.15789473684210525
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "SWI5"]), "SWI4" => Set(["NDD1", "ACE2"]), "NDD1" => Set(["SWI4", "NDD1", "CLN3"]), "MCM1" => Set(["ACE2"]), "MBP1" => Set(["MCM1"]), "CLN3" => Set(["SWI4", "CLN3", "MCM1", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["NDD1", "ACE2"]), "SWI6" => Set(["MBP1", "SWI5"]))
+Validated dynamic acc 0.8407574711922537
+########### iteration 6 completed ###############
+########## Starting iteration 7 #################
+Structural acc for STD
+TP : 0
+FP : 10
+FN : 17
+TN : 54
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.5771482945395989
+Precision : 0.0
+Recall : 0.0
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "MCM1" => Set(["SWI4", "SWI6"]), "CLN3" => Set(["SWI4", "NDD1", "MBP1"]), "MBP1" => Set(["MCM1"]), "ACE2" => Set(["CLN3", "ACE2"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.7821852060982496
+Structural acc for FIT
+TP : 5
+FP : 15
+FN : 12
+TN : 49
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.9193487671748541
+Precision : 0.25
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "MBP1", "ACE2", "SWI5"]), "SWI4" => Set(["MBP1", "ACE2"]), "MCM1" => Set(["NDD1", "SWI6"]), "NDD1" => Set(["SWI4", "CLN3", "SWI6"]), "MBP1" => Set(["MCM1"]), "CLN3" => Set(["SWI4", "NDD1"]), "ACE2" => Set(["CLN3", "NDD1", "SWI5"]), "FKH2" => Set(["MBP1", "ACE2"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.833688855427986
+Structural acc for MLP
+TP : 5
+FP : 16
+FN : 12
+TN : 48
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.9135767614028484
+Precision : 0.23809523809523808
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "MBP1", "ACE2", "SWI5"]), "SWI4" => Set(["MBP1", "ACE2"]), "MCM1" => Set(["NDD1", "SWI6"]), "NDD1" => Set(["SWI4", "CLN3", "SWI6"]), "CLN3" => Set(["SWI4", "NDD1"]), "ACE2" => Set(["CLN3", "NDD1", "SWI5"]), "FKH2" => Set(["MBP1", "ACE2"]), "SWI6" => Set(["SWI4", "MBP1", "ACE2"]))
+Validated dynamic acc 0.8405679465462075
+########### iteration 7 completed ###############
+########## Starting iteration 8 #################
+Structural acc for STD
+TP : 5
+FP : 18
+FN : 12
+TN : 46
+Structural accuracy : 0.6296296296296297
+Dynamic accuracy : 0.6951188907710646
+Precision : 0.21739130434782608
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "NDD1", "ACE2", "SWI5"]), "SWI4" => Set(["ACE2"]), "MCM1" => Set(["SWI6", "SWI4", "MBP1", "ACE2", "SWI5"]), "NDD1" => Set(["MCM1", "MBP1", "SWI6"]), "MBP1" => Set(["MCM1"]), "CLN3" => Set(["MBP1", "FKH2", "SWI5"]), "ACE2" => Set(["SWI4", "CLN3"]), "FKH2" => Set(["SWI6"]), "SWI6" => Set(["SWI4", "NDD1", "SWI5"]))
+Validated dynamic acc 0.8316498316498316
+Structural acc for FIT
+TP : 4
+FP : 14
+FN : 13
+TN : 50
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.9291883639709726
+Precision : 0.2222222222222222
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2", "SWI5"]), "SWI4" => Set(["ACE2"]), "MCM1" => Set(["SWI4", "MBP1", "SWI6"]), "NDD1" => Set(["MCM1", "MBP1", "SWI6"]), "MBP1" => Set(["MCM1"]), "CLN3" => Set(["SWI4", "MBP1", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "SWI6" => Set(["NDD1", "ACE2"]))
+Validated dynamic acc 0.813570487483531
+Structural acc for MLP
+TP : 4
+FP : 16
+FN : 13
+TN : 48
+Structural accuracy : 0.6419753086419753
+Dynamic accuracy : 0.9291883639709726
+Precision : 0.2
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2", "SWI5"]), "SWI4" => Set(["ACE2"]), "MCM1" => Set(["SWI4", "MBP1", "SWI6"]), "MBP1" => Set(["MCM1", "ACE2", "SWI5"]), "NDD1" => Set(["MCM1", "MBP1", "SWI6"]), "CLN3" => Set(["SWI4", "MBP1", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "SWI6" => Set(["NDD1", "ACE2"]))
+Validated dynamic acc 0.8249341238471674
+########### iteration 8 completed ###############
+########## Starting iteration 9 #################
+Structural acc for STD
+TP : 2
+FP : 13
+FN : 15
+TN : 51
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.6660915573959052
+Precision : 0.13333333333333333
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["SWI4", "SWI5"]), "NDD1" => Set(["NDD1", "CLN3", "MCM1", "MBP1"]), "MBP1" => Set(["SWI4", "SWI6"]), "MCM1" => Set(["FKH2"]), "ACE2" => Set(["CLN3", "NDD1", "ACE2", "SWI5"]), "SWI5" => Set(["SWI4", "CLN3"]))
+Validated dynamic acc 0.7748917748917749
+Structural acc for FIT
+TP : 3
+FP : 12
+FN : 14
+TN : 52
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.9094255181211702
+Precision : 0.2
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["SWI4", "SWI5"]), "NDD1" => Set(["CLN3", "MBP1", "SWI5"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["SWI4", "MBP1", "SWI5"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["CLN3", "ACE2", "SWI5"]))
+Validated dynamic acc 0.772458390470813
+Structural acc for MLP
+TP : 4
+FP : 12
+FN : 13
+TN : 52
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.9050337745989919
+Precision : 0.25
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI4" => Set(["SWI4", "SWI5"]), "MBP1" => Set(["SWI4", "FKH2", "SWI5"]), "NDD1" => Set(["SWI4", "MBP1"]), "CLN3" => Set(["SWI4", "MBP1", "SWI5"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["CLN3", "ACE2", "SWI5"]))
+Validated dynamic acc 0.7594713774837999
+########### iteration 9 completed ###############
+########## Starting iteration 10 #################
+Structural acc for STD
+TP : 4
+FP : 14
+FN : 13
+TN : 50
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.6700232135014743
+Precision : 0.2222222222222222
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2", "SWI5"]), "MBP1" => Set(["SWI4", "ACE2", "FKH2", "SWI5"]), "NDD1" => Set(["CLN3"]), "CLN3" => Set(["MCM1", "SWI5"]), "ACE2" => Set(["CLN3", "MCM1", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1", "FKH2"]), "SWI6" => Set(["MBP1", "FKH2"]))
+Validated dynamic acc 0.8387109784625313
+Structural acc for FIT
+TP : 4
+FP : 15
+FN : 13
+TN : 49
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.9098646924733882
+Precision : 0.21052631578947367
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2"]), "SWI4" => Set(["SWI5"]), "NDD1" => Set(["SWI6", "MCM1", "SWI5"]), "MBP1" => Set(["SWI4", "MCM1"]), "CLN3" => Set(["SWI4", "MBP1", "SWI5"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "MCM1", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8213919735658867
+Structural acc for MLP
+TP : 4
+FP : 15
+FN : 13
+TN : 49
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.9098646924733882
+Precision : 0.21052631578947367
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2"]), "SWI4" => Set(["SWI5"]), "NDD1" => Set(["SWI6", "MCM1", "SWI5"]), "MBP1" => Set(["SWI4", "MCM1"]), "CLN3" => Set(["SWI4", "MBP1", "SWI5"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "MCM1", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8213919735658867
+########### iteration 10 completed ###############
+########## Starting iteration 11 #################
+Structural acc for STD
+TP : 6
+FP : 15
+FN : 11
+TN : 49
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.6533555011815881
+Precision : 0.2857142857142857
+Recall : 0.35294117647058826
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2", "SWI5"]), "SWI4" => Set(["MBP1", "ACE2"]), "MCM1" => Set(["SWI6", "ACE2", "SWI5"]), "NDD1" => Set(["MBP1", "SWI6"]), "CLN3" => Set(["SWI5"]), "ACE2" => Set(["SWI4", "CLN3", "MBP1", "FKH2"]), "FKH2" => Set(["NDD1", "ACE2"]), "SWI6" => Set(["MBP1", "NDD1", "CLN3", "SWI6"]))
+Validated dynamic acc 0.8210521362695276
+Structural acc for FIT
+TP : 6
+FP : 11
+FN : 11
+TN : 53
+Structural accuracy : 0.7283950617283951
+Dynamic accuracy : 0.9193069410460715
+Precision : 0.35294117647058826
+Recall : 0.35294117647058826
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2", "SWI5"]), "SWI4" => Set(["SWI4", "SWI6"]), "MCM1" => Set(["ACE2", "SWI5"]), "MBP1" => Set(["SWI4"]), "NDD1" => Set(["MBP1", "SWI6"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["NDD1", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["SWI4", "MBP1"]))
+Validated dynamic acc 0.8121379425727252
+Structural acc for MLP
+TP : 4
+FP : 12
+FN : 13
+TN : 52
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.8993454210845516
+Precision : 0.25
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2", "SWI5"]), "SWI4" => Set(["SWI4", "SWI6"]), "NDD1" => Set(["NDD1"]), "MCM1" => Set(["ACE2", "SWI5"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["NDD1", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["SWI4", "MBP1"]))
+Validated dynamic acc 0.8070874375222201
+########### iteration 11 completed ###############
+########## Starting iteration 12 #################
+Structural acc for STD
+TP : 1
+FP : 10
+FN : 16
+TN : 54
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.6870778175126003
+Precision : 0.09090909090909091
+Recall : 0.058823529411764705
+Dict{String, Set{String}}("SWI5" => Set(["NDD1", "MBP1"]), "SWI4" => Set(["SWI4", "NDD1", "SWI5"]), "MBP1" => Set(["SWI4", "SWI6"]), "MCM1" => Set(["MCM1", "ACE2"]), "SWI6" => Set(["MBP1", "SWI5"]))
+Validated dynamic acc 0.7873706004140787
+Structural acc for FIT
+TP : 4
+FP : 11
+FN : 13
+TN : 53
+Structural accuracy : 0.7037037037037037
+Dynamic accuracy : 0.8907606081519126
+Precision : 0.26666666666666666
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "SWI5"]), "SWI4" => Set(["MCM1"]), "MCM1" => Set(["CLN3", "ACE2"]), "MBP1" => Set(["SWI4"]), "NDD1" => Set(["ACE2"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "CLN3", "MCM1", "SWI5"]), "SWI6" => Set(["MBP1", "SWI5"]))
+Validated dynamic acc 0.7949016563146998
+Structural acc for MLP
+TP : 4
+FP : 11
+FN : 13
+TN : 53
+Structural accuracy : 0.7037037037037037
+Dynamic accuracy : 0.8907606081519126
+Precision : 0.26666666666666666
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "SWI5"]), "SWI4" => Set(["MCM1"]), "MCM1" => Set(["CLN3", "ACE2"]), "MBP1" => Set(["SWI4"]), "NDD1" => Set(["ACE2"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "CLN3", "MCM1", "SWI5"]), "SWI6" => Set(["MBP1", "SWI5"]))
+Validated dynamic acc 0.7949016563146998
+########### iteration 12 completed ###############
+########## Starting iteration 13 #################
+Structural acc for STD
+TP : 2
+FP : 15
+FN : 15
+TN : 49
+Structural accuracy : 0.6296296296296297
+Dynamic accuracy : 0.6671267540832759
+Precision : 0.11764705882352941
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI6" => Set(["NDD1", "CLN3"]), "SWI4" => Set(["NDD1", "SWI5"]), "MCM1" => Set(["NDD1"]), "MBP1" => Set(["SWI4", "NDD1", "MBP1"]), "NDD1" => Set(["SWI4", "ACE2"]), "ACE2" => Set(["SWI6", "CLN3", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI5" => Set(["ACE2", "FKH2", "SWI6"]))
+Validated dynamic acc 0.7864436288349331
+Structural acc for FIT
+TP : 1
+FP : 14
+FN : 16
+TN : 50
+Structural accuracy : 0.6296296296296297
+Dynamic accuracy : 0.9098437794089969
+Precision : 0.06666666666666667
+Recall : 0.058823529411764705
+Dict{String, Set{String}}("SWI4" => Set(["SWI5"]), "MCM1" => Set(["CLN3", "MBP1", "SWI6"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["CLN3", "MBP1"]), "NDD1" => Set(["SWI4", "ACE2"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["MBP1", "CLN3", "SWI5"]))
+Validated dynamic acc 0.799018915866742
+Structural acc for MLP
+TP : 1
+FP : 13
+FN : 16
+TN : 51
+Structural accuracy : 0.6419753086419753
+Dynamic accuracy : 0.9050128615346007
+Precision : 0.07142857142857142
+Recall : 0.058823529411764705
+Dict{String, Set{String}}("SWI4" => Set(["SWI5"]), "MCM1" => Set(["NDD1", "MBP1"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["CLN3", "MBP1"]), "NDD1" => Set(["SWI4", "ACE2"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["MBP1", "CLN3", "SWI5"]))
+Validated dynamic acc 0.799018915866742
+########### iteration 13 completed ###############
+########## Starting iteration 14 #################
+Structural acc for STD
+TP : 4
+FP : 19
+FN : 13
+TN : 45
+Structural accuracy : 0.6049382716049383
+Dynamic accuracy : 0.661323378714683
+Precision : 0.17391304347826086
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "SWI6"]), "NDD1" => Set(["CLN3", "MBP1", "SWI6"]), "MBP1" => Set(["SWI4", "MBP1"]), "MCM1" => Set(["SWI6", "SWI5"]), "CLN3" => Set(["SWI4", "NDD1", "FKH2", "SWI5"]), "ACE2" => Set(["CLN3", "NDD1", "SWI5"]), "FKH2" => Set(["SWI4", "CLN3", "NDD1", "MBP1", "ACE2"]), "SWI6" => Set(["MBP1", "SWI5"]))
+Validated dynamic acc 0.8070181629964239
+Structural acc for FIT
+TP : 5
+FP : 14
+FN : 12
+TN : 50
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.9185854403245709
+Precision : 0.2631578947368421
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "SWI5"]), "SWI4" => Set(["SWI5"]), "NDD1" => Set(["CLN3", "MBP1", "SWI6"]), "MBP1" => Set(["SWI4"]), "MCM1" => Set(["MBP1"]), "CLN3" => Set(["MCM1", "NDD1", "SWI5"]), "ACE2" => Set(["CLN3", "NDD1", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["SWI4", "MBP1", "ACE2"]))
+Validated dynamic acc 0.8146788798962712
+Structural acc for MLP
+TP : 5
+FP : 15
+FN : 12
+TN : 49
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.9185854403245709
+Precision : 0.25
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "SWI5"]), "SWI4" => Set(["SWI5"]), "NDD1" => Set(["CLN3", "MBP1", "SWI6"]), "MBP1" => Set(["SWI4"]), "MCM1" => Set(["MBP1"]), "CLN3" => Set(["MCM1", "NDD1", "SWI5"]), "ACE2" => Set(["CLN3", "NDD1", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["SWI4", "MBP1", "CLN3", "SWI5"]))
+Validated dynamic acc 0.8151180542484889
+########### iteration 14 completed ###############
+########## Starting iteration 15 #################
+Structural acc for STD
+TP : 5
+FP : 10
+FN : 12
+TN : 54
+Structural accuracy : 0.7283950617283951
+Dynamic accuracy : 0.6599849425936383
+Precision : 0.3333333333333333
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI5" => Set(["NDD1", "MBP1", "ACE2"]), "SWI4" => Set(["MBP1", "ACE2"]), "NDD1" => Set(["NDD1", "MBP1", "SWI6"]), "CLN3" => Set(["SWI4", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["NDD1", "ACE2"]), "SWI6" => Set(["SWI4"]))
+Validated dynamic acc 0.8279691323169585
+Structural acc for FIT
+TP : 3
+FP : 13
+FN : 14
+TN : 51
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.9140159357550662
+Precision : 0.1875
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "ACE2", "SWI5"]), "SWI4" => Set(["ACE2"]), "MCM1" => Set(["CLN3", "ACE2"]), "NDD1" => Set(["MBP1", "SWI6"]), "CLN3" => Set(["SWI4", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["NDD1", "ACE2"]), "SWI6" => Set(["SWI4", "MCM1"]))
+Validated dynamic acc 0.8254752493882929
+Structural acc for MLP
+TP : 3
+FP : 13
+FN : 14
+TN : 51
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.9140159357550662
+Precision : 0.1875
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "ACE2", "SWI5"]), "SWI4" => Set(["ACE2"]), "MCM1" => Set(["CLN3", "ACE2"]), "NDD1" => Set(["MBP1", "SWI6"]), "CLN3" => Set(["SWI4", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["NDD1", "ACE2"]), "SWI6" => Set(["SWI4", "MCM1"]))
+Validated dynamic acc 0.8254752493882929
+########### iteration 15 completed ###############
+########## Starting iteration 16 #################
+Structural acc for STD
+TP : 2
+FP : 5
+FN : 15
+TN : 59
+Structural accuracy : 0.7530864197530864
+Dynamic accuracy : 0.5312545747328357
+Precision : 0.2857142857142857
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["SWI6"]), "MCM1" => Set(["MBP1", "SWI5"]), "NDD1" => Set(["MBP1"]), "CLN3" => Set(["CLN3"]), "ACE2" => Set(["SWI4"]), "SWI6" => Set(["SWI5"]))
+Validated dynamic acc 0.7496706192358366
+Structural acc for FIT
+TP : 2
+FP : 11
+FN : 15
+TN : 53
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.889443085095259
+Precision : 0.15384615384615385
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["SWI5"]), "NDD1" => Set(["CLN3", "MBP1", "SWI5"]), "MBP1" => Set(["SWI4", "MCM1"]), "CLN3" => Set(["CLN3", "SWI5"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["SWI4"]), "FKH2" => Set(["SWI4"]), "SWI6" => Set(["MBP1", "SWI5"]))
+Validated dynamic acc 0.8236166007905139
+Structural acc for MLP
+TP : 2
+FP : 11
+FN : 15
+TN : 53
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.889443085095259
+Precision : 0.15384615384615385
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["SWI5"]), "NDD1" => Set(["CLN3", "MBP1", "SWI5"]), "MBP1" => Set(["SWI4", "MCM1"]), "CLN3" => Set(["CLN3", "SWI5"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["SWI4"]), "FKH2" => Set(["SWI4"]), "SWI6" => Set(["MBP1", "SWI5"]))
+Validated dynamic acc 0.8236166007905139
+########### iteration 16 completed ###############
+########## Starting iteration 17 #################
+Structural acc for STD
+TP : 2
+FP : 14
+FN : 15
+TN : 50
+Structural accuracy : 0.6419753086419753
+Dynamic accuracy : 0.6777401342618734
+Precision : 0.125
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI5" => Set(["SWI6"]), "SWI4" => Set(["NDD1", "ACE2"]), "NDD1" => Set(["NDD1", "CLN3", "SWI6"]), "MCM1" => Set(["SWI4", "CLN3"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["CLN3", "NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "MBP1"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.7635163749294185
+Structural acc for FIT
+TP : 3
+FP : 14
+FN : 14
+TN : 50
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.9057971014492754
+Precision : 0.17647058823529413
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "NDD1" => Set(["CLN3", "SWI6"]), "MCM1" => Set(["CLN3", "ACE2"]), "MBP1" => Set(["SWI4", "MCM1", "CLN3"]), "CLN3" => Set(["SWI4", "CLN3", "SWI5"]), "ACE2" => Set(["SWI4", "MBP1"]), "FKH2" => Set(["NDD1", "ACE2"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8270750988142291
+Structural acc for MLP
+TP : 3
+FP : 15
+FN : 14
+TN : 49
+Structural accuracy : 0.6419753086419753
+Dynamic accuracy : 0.9057971014492754
+Precision : 0.16666666666666666
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "MBP1" => Set(["SWI4", "MCM1", "CLN3", "ACE2"]), "NDD1" => Set(["CLN3", "SWI6"]), "MCM1" => Set(["CLN3", "ACE2"]), "CLN3" => Set(["SWI4", "CLN3", "SWI5"]), "ACE2" => Set(["SWI4", "MBP1"]), "FKH2" => Set(["NDD1", "ACE2"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8327569169960474
+########### iteration 17 completed ###############
+########## Starting iteration 18 #################
+Structural acc for STD
+TP : 3
+FP : 11
+FN : 14
+TN : 53
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.545966915532133
+Precision : 0.21428571428571427
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["ACE2", "FKH2"]), "MCM1" => Set(["SWI4", "CLN3", "SWI5"]), "CLN3" => Set(["SWI4", "ACE2", "SWI5"]), "NDD1" => Set(["CLN3", "ACE2"]), "ACE2" => Set(["CLN3", "SWI5"]), "SWI5" => Set(["ACE2", "FKH2"]))
+Validated dynamic acc 0.7795658447832361
+Structural acc for FIT
+TP : 4
+FP : 11
+FN : 13
+TN : 53
+Structural accuracy : 0.7037037037037037
+Dynamic accuracy : 0.8993245080201601
+Precision : 0.26666666666666666
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "CLN3" => Set(["SWI4", "ACE2", "SWI5"]), "NDD1" => Set(["CLN3", "SWI6"]), "MBP1" => Set(["MCM1"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["SWI5"]), "SWI5" => Set(["MCM1", "MBP1", "ACE2", "SWI5"]))
+Validated dynamic acc 0.8326863354037266
+Structural acc for MLP
+TP : 3
+FP : 11
+FN : 14
+TN : 53
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.8887424974381495
+Precision : 0.21428571428571427
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "CLN3" => Set(["SWI4", "ACE2"]), "NDD1" => Set(["CLN3", "SWI6"]), "MBP1" => Set(["MCM1"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["SWI5"]), "SWI5" => Set(["MCM1", "MBP1", "ACE2", "SWI5"]))
+Validated dynamic acc 0.8267339544513457
+########### iteration 18 completed ###############
+########## Starting iteration 19 #################
+Structural acc for STD
+TP : 2
+FP : 12
+FN : 15
+TN : 52
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.6963632181023485
+Precision : 0.14285714285714285
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI5" => Set(["MBP1"]), "SWI4" => Set(["ACE2"]), "NDD1" => Set(["MBP1", "SWI5"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "CLN3", "SWI5"]), "FKH2" => Set(["SWI4", "CLN3", "ACE2"]), "SWI6" => Set(["NDD1"]))
+Validated dynamic acc 0.7989130434782609
+Structural acc for FIT
+TP : 5
+FP : 14
+FN : 12
+TN : 50
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.9241378589204676
+Precision : 0.2631578947368421
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2", "SWI5"]), "SWI4" => Set(["MBP1", "NDD1", "ACE2", "SWI6"]), "NDD1" => Set(["CLN3", "MBP1", "SWI5"]), "MBP1" => Set(["SWI4"]), "MCM1" => Set(["MBP1"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "CLN3", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.8238178890352804
+Structural acc for MLP
+TP : 5
+FP : 14
+FN : 12
+TN : 50
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.9241378589204676
+Precision : 0.2631578947368421
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "ACE2", "SWI5"]), "SWI4" => Set(["MBP1", "NDD1", "ACE2", "SWI6"]), "NDD1" => Set(["CLN3", "MBP1", "SWI5"]), "MBP1" => Set(["SWI4"]), "MCM1" => Set(["MBP1"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "CLN3", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.8238178890352804
+########### iteration 19 completed ###############
+########## Starting iteration 20 #################
+Structural acc for STD
+TP : 2
+FP : 10
+FN : 15
+TN : 54
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.4339983687809775
+Precision : 0.16666666666666666
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["SWI4"]), "MCM1" => Set(["NDD1", "MBP1", "SWI6"]), "MBP1" => Set(["CLN3"]), "NDD1" => Set(["ACE2"]), "CLN3" => Set(["SWI4", "SWI5"]), "ACE2" => Set(["SWI5"]), "FKH2" => Set(["NDD1"]), "SWI5" => Set(["ACE2", "SWI6"]))
+Validated dynamic acc 0.7570463956333521
+Structural acc for FIT
+TP : 2
+FP : 13
+FN : 15
+TN : 51
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.9144969362360666
+Precision : 0.13333333333333333
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "MCM1" => Set(["NDD1", "MBP1", "SWI6"]), "NDD1" => Set(["CLN3", "SWI6"]), "MBP1" => Set(["SWI4", "MCM1", "SWI5"]), "CLN3" => Set(["SWI4", "SWI5"]), "ACE2" => Set(["SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8160878976096367
+Structural acc for MLP
+TP : 2
+FP : 13
+FN : 15
+TN : 51
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.9144969362360666
+Precision : 0.13333333333333333
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "MCM1" => Set(["NDD1", "MBP1", "SWI6"]), "NDD1" => Set(["CLN3", "SWI6"]), "MBP1" => Set(["SWI4", "MCM1", "SWI5"]), "CLN3" => Set(["SWI4", "SWI5"]), "ACE2" => Set(["SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8160878976096367
+########### iteration 20 completed ###############
+########## Starting iteration 21 #################
+Structural acc for STD
+TP : 2
+FP : 7
+FN : 15
+TN : 57
+Structural accuracy : 0.7283950617283951
+Dynamic accuracy : 0.5949453123366166
+Precision : 0.2222222222222222
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["MCM1"]), "MCM1" => Set(["MCM1", "NDD1"]), "MBP1" => Set(["SWI5"]), "NDD1" => Set(["SWI4"]), "FKH2" => Set(["SWI6"]), "SWI5" => Set(["MBP1", "CLN3", "SWI5"]))
+Validated dynamic acc 0.7554269402095489
+Structural acc for FIT
+TP : 2
+FP : 13
+FN : 15
+TN : 51
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.9004433569650961
+Precision : 0.13333333333333333
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "MCM1" => Set(["NDD1"]), "NDD1" => Set(["MCM1", "MBP1"]), "MBP1" => Set(["SWI4", "MCM1", "NDD1"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "MBP1"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8081357048748353
+Structural acc for MLP
+TP : 2
+FP : 13
+FN : 15
+TN : 51
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.8997845954367693
+Precision : 0.13333333333333333
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "MCM1" => Set(["NDD1"]), "NDD1" => Set(["SWI4", "CLN3"]), "MBP1" => Set(["SWI4", "MCM1", "NDD1"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "MBP1"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8089473931865235
+########### iteration 21 completed ###############
+########## Starting iteration 22 #################
+Structural acc for STD
+TP : 1
+FP : 10
+FN : 16
+TN : 54
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.747893008762574
+Precision : 0.09090909090909091
+Recall : 0.058823529411764705
+Dict{String, Set{String}}("SWI5" => Set(["CLN3"]), "SWI4" => Set(["ACE2"]), "NDD1" => Set(["SWI4", "NDD1", "ACE2"]), "MCM1" => Set(["SWI6"]), "FKH2" => Set(["CLN3", "MCM1", "SWI5"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8035322165756948
+Structural acc for FIT
+TP : 3
+FP : 10
+FN : 14
+TN : 54
+Structural accuracy : 0.7037037037037037
+Dynamic accuracy : 0.8951523516740908
+Precision : 0.23076923076923078
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI6" => Set(["MBP1"]), "SWI4" => Set(["ACE2"]), "NDD1" => Set(["SWI4", "CLN3"]), "MBP1" => Set(["SWI4"]), "MCM1" => Set(["MBP1"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI5" => Set(["CLN3", "FKH2"]))
+Validated dynamic acc 0.803155781416651
+Structural acc for MLP
+TP : 4
+FP : 13
+FN : 13
+TN : 51
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.8951523516740908
+Precision : 0.23529411764705882
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["CLN3", "MCM1", "MBP1", "FKH2"]), "SWI4" => Set(["ACE2"]), "NDD1" => Set(["SWI4", "CLN3", "FKH2"]), "MBP1" => Set(["SWI4"]), "MCM1" => Set(["MBP1"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8098479620218751
+########### iteration 22 completed ###############
+########## Starting iteration 23 #################
+Structural acc for STD
+TP : 6
+FP : 16
+FN : 11
+TN : 48
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.5848443022356066
+Precision : 0.2727272727272727
+Recall : 0.35294117647058826
+Dict{String, Set{String}}("SWI5" => Set(["MCM1"]), "SWI4" => Set(["NDD1", "ACE2", "SWI5"]), "MCM1" => Set(["NDD1", "MBP1"]), "NDD1" => Set(["SWI6", "SWI4", "NDD1", "SWI5"]), "CLN3" => Set(["ACE2", "SWI5"]), "MBP1" => Set(["MCM1", "NDD1", "CLN3", "MBP1", "ACE2"]), "ACE2" => Set(["SWI6"]), "FKH2" => Set(["SWI4", "CLN3"]), "SWI6" => Set(["SWI4", "MBP1"]))
+Validated dynamic acc 0.8134659221615742
+Structural acc for FIT
+TP : 4
+FP : 12
+FN : 13
+TN : 52
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.9038730995252736
+Precision : 0.25
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI6" => Set(["SWI4", "MBP1"]), "SWI4" => Set(["SWI5"]), "CLN3" => Set(["ACE2", "SWI5"]), "MBP1" => Set(["MCM1"]), "MCM1" => Set(["SWI5"]), "NDD1" => Set(["MBP1", "SWI6"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["SWI4", "CLN3"]), "SWI5" => Set(["CLN3", "MBP1", "ACE2"]))
+Validated dynamic acc 0.8140201183679445
+Structural acc for MLP
+TP : 4
+FP : 14
+FN : 13
+TN : 50
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.9038730995252736
+Precision : 0.2222222222222222
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI6" => Set(["SWI4", "MBP1"]), "SWI4" => Set(["SWI5"]), "MCM1" => Set(["SWI4", "NDD1", "MBP1"]), "CLN3" => Set(["ACE2", "SWI5"]), "MBP1" => Set(["MCM1"]), "NDD1" => Set(["MBP1", "SWI6"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["SWI4", "CLN3"]), "SWI5" => Set(["CLN3", "MBP1", "ACE2"]))
+Validated dynamic acc 0.82736265344961
+########### iteration 23 completed ###############
+########## Starting iteration 24 #################
+Structural acc for STD
+TP : 1
+FP : 14
+FN : 16
+TN : 50
+Structural accuracy : 0.6296296296296297
+Dynamic accuracy : 0.5874061526235439
+Precision : 0.06666666666666667
+Recall : 0.058823529411764705
+Dict{String, Set{String}}("SWI5" => Set(["SWI5", "SWI6"]), "SWI4" => Set(["ACE2"]), "MBP1" => Set(["MBP1", "ACE2"]), "NDD1" => Set(["SWI4", "CLN3"]), "CLN3" => Set(["CLN3"]), "ACE2" => Set(["SWI4", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["MCM1", "ACE2", "SWI5"]))
+Validated dynamic acc 0.8150997553171466
+Structural acc for FIT
+TP : 2
+FP : 13
+FN : 15
+TN : 51
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.9069054938620157
+Precision : 0.13333333333333333
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI5" => Set(["CLN3", "SWI5"]), "SWI4" => Set(["SWI5"]), "NDD1" => Set(["SWI4", "CLN3"]), "MBP1" => Set(["MCM1"]), "MCM1" => Set(["MBP1"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["ACE2", "SWI5"]))
+Validated dynamic acc 0.817878578748144
+Structural acc for MLP
+TP : 2
+FP : 13
+FN : 15
+TN : 51
+Structural accuracy : 0.654320987654321
+Dynamic accuracy : 0.9069054938620157
+Precision : 0.13333333333333333
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI5" => Set(["CLN3", "SWI5"]), "SWI4" => Set(["SWI5"]), "NDD1" => Set(["SWI4", "CLN3"]), "MBP1" => Set(["MCM1"]), "MCM1" => Set(["MBP1"]), "CLN3" => Set(["NDD1", "SWI5"]), "ACE2" => Set(["SWI4", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["ACE2", "SWI5"]))
+Validated dynamic acc 0.817878578748144
+########### iteration 24 completed ###############
+########## Starting iteration 25 #################
+Structural acc for STD
+TP : 5
+FP : 13
+FN : 12
+TN : 51
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.6580295710730494
+Precision : 0.2777777777777778
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI5" => Set(["MCM1", "MBP1"]), "SWI4" => Set(["CLN3", "SWI5"]), "NDD1" => Set(["SWI4", "NDD1", "MBP1", "SWI5"]), "MBP1" => Set(["MBP1", "ACE2"]), "MCM1" => Set(["CLN3"]), "CLN3" => Set(["SWI4", "NDD1", "SWI5"]), "FKH2" => Set(["SWI4", "CLN3"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.7767974778844344
+Structural acc for FIT
+TP : 3
+FP : 15
+FN : 14
+TN : 49
+Structural accuracy : 0.6419753086419753
+Dynamic accuracy : 0.9045946002467742
+Precision : 0.16666666666666666
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI5" => Set(["NDD1", "SWI5"]), "SWI4" => Set(["ACE2", "SWI5"]), "NDD1" => Set(["SWI4", "CLN3", "SWI5"]), "MCM1" => Set(["CLN3", "ACE2"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["SWI4", "NDD1", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["SWI4"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8257732605558693
+Structural acc for MLP
+TP : 3
+FP : 15
+FN : 14
+TN : 49
+Structural accuracy : 0.6419753086419753
+Dynamic accuracy : 0.9045946002467742
+Precision : 0.16666666666666666
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI5" => Set(["NDD1", "SWI5"]), "SWI4" => Set(["ACE2", "SWI5"]), "NDD1" => Set(["SWI4", "CLN3", "SWI5"]), "MCM1" => Set(["CLN3", "ACE2"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["SWI4", "NDD1", "SWI5"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["SWI4"]), "SWI6" => Set(["MBP1", "ACE2"]))
+Validated dynamic acc 0.8257732605558693
+########### iteration 25 completed ###############
+########## Starting iteration 26 #################
+Structural acc for STD
+TP : 4
+FP : 7
+FN : 13
+TN : 57
+Structural accuracy : 0.7530864197530864
+Dynamic accuracy : 0.7121421251856036
+Precision : 0.36363636363636365
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI4" => Set(["MBP1"]), "NDD1" => Set(["SWI6", "CLN3", "MBP1", "SWI5"]), "MBP1" => Set(["SWI4", "FKH2"]), "CLN3" => Set(["SWI5"]), "ACE2" => Set(["SWI4", "ACE2"]), "SWI5" => Set(["ACE2"]))
+Validated dynamic acc 0.7537643515904384
+Structural acc for FIT
+TP : 4
+FP : 13
+FN : 13
+TN : 51
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.9089863437689526
+Precision : 0.23529411764705882
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "SWI5"]), "SWI4" => Set(["SWI5"]), "CLN3" => Set(["SWI4", "ACE2", "SWI5"]), "NDD1" => Set(["CLN3", "MBP1", "SWI5"]), "MCM1" => Set(["MCM1", "ACE2"]), "MBP1" => Set(["SWI4"]), "ACE2" => Set(["CLN3", "NDD1", "SWI5"]), "SWI6" => Set(["SWI4", "CLN3"]))
+Validated dynamic acc 0.8019127611518917
+Structural acc for MLP
+TP : 4
+FP : 12
+FN : 13
+TN : 52
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.9037162515423387
+Precision : 0.25
+Recall : 0.23529411764705882
+Dict{String, Set{String}}("SWI5" => Set(["SWI4", "SWI5"]), "SWI4" => Set(["SWI5"]), "CLN3" => Set(["SWI4", "ACE2", "SWI5"]), "NDD1" => Set(["CLN3", "MBP1", "SWI5"]), "MCM1" => Set(["MCM1", "ACE2"]), "MBP1" => Set(["SWI4"]), "ACE2" => Set(["CLN3", "NDD1", "SWI5"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.8019127611518917
+########### iteration 26 completed ###############
+########## Starting iteration 27 #################
+Structural acc for STD
+TP : 3
+FP : 12
+FN : 14
+TN : 52
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.5971411840977058
+Precision : 0.2
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["SWI4", "MCM1", "SWI5"]), "MCM1" => Set(["NDD1", "CLN3", "ACE2", "FKH2"]), "MBP1" => Set(["SWI4", "FKH2"]), "ACE2" => Set(["MBP1", "MCM1", "NDD1"]), "FKH2" => Set(["ACE2"]), "SWI6" => Set(["SWI4", "ACE2"]))
+Validated dynamic acc 0.796583850931677
+Structural acc for FIT
+TP : 3
+FP : 12
+FN : 14
+TN : 52
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.8967522011000272
+Precision : 0.2
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["MCM1", "SWI5"]), "MCM1" => Set(["CLN3", "ACE2"]), "NDD1" => Set(["SWI4", "MCM1"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["SWI5", "NDD1", "SWI6"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.8107825145868625
+Structural acc for MLP
+TP : 3
+FP : 13
+FN : 14
+TN : 51
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.8967522011000272
+Precision : 0.1875
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["MCM1", "SWI5"]), "NDD1" => Set(["SWI4", "NDD1", "MCM1"]), "MCM1" => Set(["CLN3", "ACE2"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["SWI5", "NDD1", "SWI6"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.8107825145868625
+########### iteration 27 completed ###############
+########## Starting iteration 28 #################
+Structural acc for STD
+TP : 3
+FP : 13
+FN : 14
+TN : 51
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.6635297070079679
+Precision : 0.1875
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI5" => Set(["ACE2"]), "SWI4" => Set(["CLN3", "ACE2"]), "CLN3" => Set(["ACE2", "FKH2"]), "MCM1" => Set(["MBP1", "ACE2"]), "ACE2" => Set(["SWI4", "CLN3", "MBP1", "NDD1", "ACE2", "SWI5"]), "FKH2" => Set(["NDD1", "FKH2"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.8322981366459627
+Structural acc for FIT
+TP : 5
+FP : 11
+FN : 12
+TN : 53
+Structural accuracy : 0.7160493827160493
+Dynamic accuracy : 0.9056925361273187
+Precision : 0.3125
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI4" => Set(["CLN3", "SWI6"]), "NDD1" => Set(["SWI4", "NDD1", "MBP1", "ACE2"]), "CLN3" => Set(["ACE2", "SWI6"]), "MBP1" => Set(["SWI4"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["SWI4", "CLN3", "ACE2", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.8100884622623753
+Structural acc for MLP
+TP : 5
+FP : 11
+FN : 12
+TN : 53
+Structural accuracy : 0.7160493827160493
+Dynamic accuracy : 0.9056925361273187
+Precision : 0.3125
+Recall : 0.29411764705882354
+Dict{String, Set{String}}("SWI4" => Set(["CLN3", "SWI6"]), "NDD1" => Set(["SWI4", "NDD1", "MBP1", "ACE2"]), "CLN3" => Set(["ACE2", "SWI6"]), "MBP1" => Set(["SWI4"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["SWI4", "CLN3", "ACE2", "SWI5"]), "FKH2" => Set(["NDD1"]), "SWI6" => Set(["ACE2"]))
+Validated dynamic acc 0.8100884622623753
+########### iteration 28 completed ###############
+########## Starting iteration 29 #################
+Structural acc for STD
+TP : 2
+FP : 12
+FN : 15
+TN : 52
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.6297760210803689
+Precision : 0.14285714285714285
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["FKH2"]), "CLN3" => Set(["MBP1", "NDD1", "ACE2", "SWI6"]), "NDD1" => Set(["CLN3", "MBP1"]), "MCM1" => Set(["MCM1"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1", "MBP1"]), "SWI5" => Set(["SWI4"]))
+Validated dynamic acc 0.7765588448818264
+Structural acc for FIT
+TP : 2
+FP : 11
+FN : 15
+TN : 53
+Structural accuracy : 0.6790123456790124
+Dynamic accuracy : 0.8995440951962692
+Precision : 0.15384615384615385
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "MCM1" => Set(["NDD1", "ACE2", "SWI5"]), "CLN3" => Set(["ACE2", "SWI6"]), "MBP1" => Set(["SWI4"]), "NDD1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["MBP1"]))
+Validated dynamic acc 0.799018915866742
+Structural acc for MLP
+TP : 2
+FP : 10
+FN : 15
+TN : 54
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.8942530899052638
+Precision : 0.16666666666666666
+Recall : 0.11764705882352941
+Dict{String, Set{String}}("SWI4" => Set(["ACE2"]), "MCM1" => Set(["NDD1", "ACE2", "SWI5"]), "CLN3" => Set(["ACE2", "SWI6"]), "NDD1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["CLN3", "NDD1"]), "SWI6" => Set(["MBP1"]))
+Validated dynamic acc 0.8111236589497459
+########### iteration 29 completed ###############
+########## Starting iteration 30 #################
+Structural acc for STD
+TP : 3
+FP : 13
+FN : 14
+TN : 51
+Structural accuracy : 0.6666666666666666
+Dynamic accuracy : 0.6744881527490222
+Precision : 0.1875
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["NDD1", "SWI5"]), "MBP1" => Set(["SWI4"]), "MCM1" => Set(["MCM1"]), "CLN3" => Set(["CLN3"]), "NDD1" => Set(["MBP1", "SWI6"]), "ACE2" => Set(["SWI6", "SWI4", "CLN3", "SWI5"]), "FKH2" => Set(["MBP1", "MCM1", "FKH2"]), "SWI5" => Set(["CLN3", "MCM1"]))
+Validated dynamic acc 0.7705745341614907
+Structural acc for FIT
+TP : 3
+FP : 11
+FN : 14
+TN : 53
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.9126147604408474
+Precision : 0.21428571428571427
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["SWI5"]), "NDD1" => Set(["MCM1", "MBP1", "SWI6"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["MBP1", "SWI5"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["MBP1", "MCM1"]), "SWI6" => Set(["MBP1", "NDD1"]))
+Validated dynamic acc 0.8119000564652739
+Structural acc for MLP
+TP : 3
+FP : 11
+FN : 14
+TN : 53
+Structural accuracy : 0.691358024691358
+Dynamic accuracy : 0.9126147604408474
+Precision : 0.21428571428571427
+Recall : 0.17647058823529413
+Dict{String, Set{String}}("SWI4" => Set(["SWI5"]), "NDD1" => Set(["MCM1", "MBP1", "SWI6"]), "MBP1" => Set(["SWI4"]), "CLN3" => Set(["MBP1", "SWI5"]), "MCM1" => Set(["MBP1"]), "ACE2" => Set(["CLN3", "SWI5"]), "FKH2" => Set(["MBP1", "MCM1"]), "SWI6" => Set(["MBP1", "NDD1"]))
+Validated dynamic acc 0.8119000564652739
+########### iteration 30 completed ###############
+Statistics for STD
+###############Statistics######################
+Structural accuracy
+Max: 0.7530864197530864 Min: 0.6049382716049383 Mean: 0.6695473251028807 Var: 0.0013631577748696143
+Dynamic accuracy
+Max: 0.747893008762574 Min: 0.4339983687809775 Mean: 0.6412639159015969 Var: 0.005042913476934176
+Precision
+Max: 0.36363636363636365 Min: 0.0 Mean: 0.1836041639918339 Var: 0.007373352840657494
+Recall
+Max: 0.35294117647058826 Min: 0.0 Mean: 0.17254901960784313 Var: 0.009052221294197197
+TP
+Max: 6 Min: 0 Mean: 2.933333333333333 Var: 2.6160919540229886
+FP
+Max: 19 Min: 5 Mean: 12.7 Var: 9.941379310344827
+FN
+Max: 17 Min: 11 Mean: 14.066666666666666 Var: 2.616091954022988
+TN
+Max: 59 Min: 45 Mean: 51.3 Var: 9.941379310344827
+###############################################
+Statistics for FIT
+###############Statistics######################
+Structural accuracy
+Max: 0.7283950617283951 Min: 0.5925925925925926 Mean: 0.6720164609053499 Var: 0.0007324717461418657
+Dynamic accuracy
+Max: 0.9303490390446912 Min: 0.8891816717903674 Mean: 0.9093934514224369 Var: 0.0001288146676042057
+Precision
+Max: 0.35294117647058826 Min: 0.06666666666666667 Mean: 0.20351619055179432 Var: 0.004085343677367328
+Recall
+Max: 0.35294117647058826 Min: 0.058823529411764705 Mean: 0.19607843137254902 Var: 0.005090880165453605
+TP
+Max: 6 Min: 1 Mean: 3.3333333333333335 Var: 1.4712643678160924
+FP
+Max: 18 Min: 10 Mean: 12.9 Var: 2.9896551724137934
+FN
+Max: 16 Min: 11 Mean: 13.666666666666666 Var: 1.4712643678160924
+TN
+Max: 54 Min: 46 Mean: 51.1 Var: 2.9896551724137943
+###############################################
+Statistics for MLP
+###############Statistics######################
+Structural accuracy
+Max: 0.7160493827160493 Min: 0.6049382716049383 Mean: 0.6687242798353911 Var: 0.000589516246296909
+Dynamic accuracy
+Max: 0.9291883639709726 Min: 0.8707781751260012 Mean: 0.9060229625447017 Var: 0.0001593683660298263
+Precision
+Max: 0.3125 Min: 0.07142857142857142 Mean: 0.19865301451214767 Var: 0.0030851237160582708
+Recall
+Max: 0.29411764705882354 Min: 0.058823529411764705 Mean: 0.19411764705882353 Var: 0.004331225390764824
+TP
+Max: 5 Min: 1 Mean: 3.3 Var: 1.2517241379310349
+FP
+Max: 17 Min: 10 Mean: 13.133333333333333 Var: 3.360919540229886
+FN
+Max: 16 Min: 12 Mean: 13.7 Var: 1.2517241379310344
+TN
+Max: 54 Min: 47 Mean: 50.86666666666667 Var: 3.360919540229886
+###############################################
+
+Julia debuggee finished. Press ENTER to close this terminal.

@@ -1,8 +1,8 @@
 # settings
 seed: 0
 d_fitness: 1
-n_population: 20
-n_elite: 10
+n_population: 50
+n_elite: 20
 n_gen: 1000
 log_gen: 1000
 save_gen: 1000
