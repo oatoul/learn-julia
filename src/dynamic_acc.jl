@@ -88,7 +88,7 @@ function dynamic_consistency(df::DataFrame, conns::Set, tlag::Int)
             popfirst!(Y)
 
             g_c = gene_wise_consistency(X, Y)
-            println("$(ta) $(g_c)")
+            # println("$(ta) $(g_c)")
             g_c_max = max(g_c_max, g_c)
         end
         println("Max $(ta) $(g_c_max)")
