@@ -47,6 +47,9 @@ end
 
 
 function dynamic_consistency(df::DataFrame, conns::Set)
+    if length(conns) < 1
+        return 0
+    end
     conn_map = get_conn_map(conns)
     gene_consis = []
     for (ta, res) in conn_map
