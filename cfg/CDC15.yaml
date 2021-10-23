@@ -3,7 +3,7 @@ seed: 0
 d_fitness: 1
 n_population: 50
 n_elite: 20
-n_gen: 1000
+n_gen: 1500
 log_gen: 1000
 save_gen: 1000
 m_rate: 0.1
@@ -14,7 +14,7 @@ recur: 0.2
 in_idx: 3
 n_in: 29
 n_out: 1
-t_lag: 2
+t_lag: 3
 out_m_rate: 0.3
 functions:
   - f_and

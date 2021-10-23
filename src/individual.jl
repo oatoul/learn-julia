@@ -25,6 +25,7 @@ struct CGPInd <: Cambrian.Individual
     fitness::Array{Float64}
     sparsity::Int16
     n_active::Int16
+    t_lag::Int16
 end
 
 # "compare graph sparsity when fitness equals"
@@ -62,9 +63,21 @@ end
 
 function get_sparsity!(ind::CGPInd)
     "col 1 & 2 are dummy inputs"
-    low_idx = 3
+    dum = 2
+    low_idx = dum + 1
     high_idx = Int64(ind.n_in)
-    length(get_active_connections!(ind, low_idx, high_idx))
+    active_conn = get_active_connections!(ind, low_idx, high_idx)
+    if ind.t_lag == 1
+        return length(active_conn)
+    else
+        o_in = (ind.n_in - dum)/ind.t_lag
+        active = Set()
+        for i in active_conn
+            c = (i - dum) % o_in + dum
+            push!(active, c)
+        end
+        return length(active)
+    end
 end
 
 function get_active_connections!(nodes_in::Array{Node}, low::Int64, high::Int64)
@@ -171,7 +184,7 @@ function CGPInd(cfg::NamedTuple, chromosome::Array{Float64}, genes::Array{Int16}
 
     sparsity = length(get_active_connections!(nodes, cfg.in_idx, cfg.n_in))
     n_active = size(nodes[[n.active for n in nodes]])[1]
-    CGPInd(cfg.n_in, cfg.n_out, chromosome, genes, outputs, nodes, buffer, fitness, sparsity, n_active)
+    CGPInd(cfg.n_in, cfg.n_out, chromosome, genes, outputs, nodes, buffer, fitness, sparsity, n_active, cfg.t_lag)
 end
 
 function CGPInd(cfg::NamedTuple, chromosome::Array{Float64})::CGPInd
