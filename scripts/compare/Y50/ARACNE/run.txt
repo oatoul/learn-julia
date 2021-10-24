@@ -1,0 +1,13 @@
+https://github.com/califano-lab/ARACNe-AP
+
+java -jar dist/aracne.jar -e Y50/Y50.txt -o Y50/out --tfs Y50/tfs.txt --pvalue 1E-8 --seed 1 --calculateThreshold
+
+java -jar dist/aracne.jar -e Y50/Y50.txt -o Y50/out --tfs Y50/tfs.txt --pvalue 1E-8 --seed 1
+
+java -jar dist/aracne.jar -e Y50/Y50.txt -o Y50/out --tfs Y50/tfs.txt --pvalue 1E-8 --seed 1 --nobootstrap --noDPI
+
+for /l %i in (1, 1, 100) do java -jar dist/aracne.jar -e Y50/Y50.txt -o Y50/out --tfs Y50/tfs.txt --pvalue 1E-8 --seed %i
+
+java -jar dist/aracne.jar -o Y50/out --consolidate
+
+java -jar dist/aracne.jar -o Y50/out --consolidate --nobonferroni
